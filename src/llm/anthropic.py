@@ -18,7 +18,7 @@ class AnthropicClient(LLMClient):
         self._client = _anthropic.Anthropic(
             api_key=api_key or os.environ.get("ANTHROPIC_API_KEY", "")
         )
-        self.model = model or os.environ.get("LLM_MODEL", DEFAULT_MODEL)
+        self.model = model or os.environ.get("LLM_MODEL") or DEFAULT_MODEL
 
     def complete(self, prompt: str, max_tokens: int = 2000) -> str:
         response = self._client.messages.create(
