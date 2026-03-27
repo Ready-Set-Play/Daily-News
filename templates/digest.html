@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daily Brief — {{ date_str }}</title>
+<style>
+  /* Reset */
+  body, table, td, a { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+  table, td { mso-table-lspace: 0pt; mso-table-rspace: 0pt; }
+  img { -ms-interpolation-mode: bicubic; border: 0; }
+
+  /* Base */
+  body {
+    margin: 0; padding: 0;
+    background-color: #f5f5f0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+    color: #1a1a1a;
+  }
+
+  .wrapper {
+    width: 100%;
+    background-color: #f5f5f0;
+    padding: 24px 0;
+  }
+
+  .container {
+    max-width: 620px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  }
+
+  /* Header */
+  .header {
+    background-color: #1a1a1a;
+    padding: 28px 32px 24px;
+    border-bottom: 3px solid #d4a843;
+  }
+
+  .header-label {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #d4a843;
+    margin: 0 0 6px;
+  }
+
+  .header-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #ffffff;
+    margin: 0 0 4px;
+    letter-spacing: -0.3px;
+  }
+
+  .header-meta {
+    font-size: 12px;
+    color: #888;
+    margin: 0;
+  }
+
+  /* Sections */
+  .section {
+    padding: 0 32px;
+    border-bottom: 1px solid #f0f0ec;
+  }
+
+  .section:last-child {
+    border-bottom: none;
+  }
+
+  .section-header {
+    padding: 20px 0 12px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 4px;
+  }
+
+  .section-emoji {
+    font-size: 16px;
+    margin-right: 8px;
+  }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0;
+  }
+
+  /* Article items */
+  .article {
+    padding: 16px 0;
+    border-bottom: 1px solid #f5f5f0;
+  }
+
+  .article:last-child {
+    border-bottom: none;
+    padding-bottom: 20px;
+  }
+
+  .article-title {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.35;
+    margin: 0 0 6px;
+    color: #1a1a1a;
+    letter-spacing: -0.1px;
+  }
+
+  .article-title a {
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .article-title a:hover {
+    text-decoration: underline;
+    color: #1a1a1a;
+  }
+
+  .article-sources {
+    font-size: 11px;
+    color: #999;
+    margin: 0 0 8px;
+    font-weight: 500;
+  }
+
+  .source-link {
+    color: #999;
+    text-decoration: none;
+  }
+
+  .source-link:hover {
+    color: #666;
+    text-decoration: underline;
+  }
+
+  /* NYT branding — required per developer.nytimes.com/branding */
+  .nyt-badge {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 6px;
+    line-height: 1;
+  }
+
+  .nyt-badge img {
+    height: 14px;
+    width: auto;
+    vertical-align: middle;
+    border: 0;
+  }
+
+  .nyt-attribution {
+    font-size: 10px;
+    color: #bbb;
+    margin: 0 0 4px;
+    letter-spacing: 0.2px;
+  }
+
+  .nyt-attribution a {
+    color: #bbb;
+    text-decoration: none;
+  }
+
+  .nyt-attribution a:hover {
+    color: #888;
+    text-decoration: underline;
+  }
+
+  .article-summary {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 10px;
+  }
+
+  .article-feedback {
+    font-size: 12px;
+    color: #bbb;
+  }
+
+  .article-feedback a {
+    color: #bbb;
+    text-decoration: none;
+    margin-right: 8px;
+    font-size: 14px;
+  }
+
+  .article-feedback a:hover {
+    color: #666;
+  }
+
+  /* XKCD section */
+  .xkcd-section {
+    padding: 20px 32px;
+    background-color: #fafaf8;
+    border-top: 1px solid #eee;
+  }
+
+  .xkcd-header {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: #666;
+    margin: 0 0 12px;
+  }
+
+  .xkcd-title {
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 0 10px;
+  }
+
+  .xkcd-title a {
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .xkcd-img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 8px;
+    display: block;
+  }
+
+  .xkcd-alt {
+    font-size: 12px;
+    color: #777;
+    font-style: italic;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Podcast items */
+  .podcast-item {
+    padding: 14px 0;
+    border-bottom: 1px solid #f5f5f0;
+  }
+
+  .podcast-item:last-child {
+    border-bottom: none;
+    padding-bottom: 20px;
+  }
+
+  .podcast-show {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: #d4a843;
+    margin: 0 0 4px;
+  }
+
+  .podcast-title {
+    font-size: 15px;
+    font-weight: 600;
+    margin: 0 0 6px;
+    line-height: 1.3;
+  }
+
+  .podcast-title a {
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+
+  .podcast-meta {
+    font-size: 11px;
+    color: #999;
+    margin: 0 0 6px;
+  }
+
+  .podcast-summary {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* Footer */
+  .footer {
+    background-color: #1a1a1a;
+    padding: 20px 32px;
+    text-align: center;
+  }
+
+  .footer p {
+    font-size: 11px;
+    color: #666;
+    margin: 0 0 6px;
+    line-height: 1.5;
+  }
+
+  .footer a {
+    color: #888;
+    text-decoration: none;
+  }
+
+  .footer a:hover {
+    color: #aaa;
+    text-decoration: underline;
+  }
+
+  /* Mobile */
+  @media only screen and (max-width: 640px) {
+    .container { border-radius: 0; }
+    .header, .section, .xkcd-section, .footer { padding-left: 20px; padding-right: 20px; }
+    .header-title { font-size: 20px; }
+    .article-title { font-size: 15px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+<div class="container">
+
+  <!-- Header -->
+  <div class="header">
+    <p class="header-label">Daily Brief</p>
+    <h1 class="header-title">{{ date_str }}</h1>
+    <p class="header-meta">{{ total_items }} items · 2-minute read</p>
+  </div>
+
+  <!-- Sections -->
+  {% for section in sections %}
+    {% if section.get('is_xkcd_section') %}
+      <!-- XKCD -->
+      {% for item in section['items'] %}
+      <div class="xkcd-section">
+        <p class="xkcd-header">😄 XKCD</p>
+        <p class="xkcd-title"><a href="{{ item.url }}" target="_blank">{{ item.title }}</a></p>
+        {% if item.image_url %}
+          <img src="{{ item.image_url }}" alt="{{ item.xkcd_alt }}" class="xkcd-img">
+        {% endif %}
+        {% if item.xkcd_alt %}
+          <p class="xkcd-alt">"{{ item.xkcd_alt }}"</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    {% elif section.id == 'podcasts' %}
+      <!-- Podcasts -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-emoji">🎙️</span>
+          <p class="section-label">New Podcasts</p>
+        </div>
+        {% for item in section['items'] %}
+        <div class="podcast-item">
+          <p class="podcast-show">{{ item.podcast_name }}</p>
+          <p class="podcast-title"><a href="{{ item.url }}" target="_blank">{{ item.title }}</a></p>
+          {% if item.podcast_duration %}
+          <p class="podcast-meta">⏱ {{ item.podcast_duration }}</p>
+          {% endif %}
+          {% if item.tldr_summary %}
+          <p class="podcast-summary">{{ item.tldr_summary }}</p>
+          {% elif item.summary %}
+          <p class="podcast-summary">{{ item.summary[:200] }}</p>
+          {% endif %}
+        </div>
+        {% endfor %}
+      </div>
+    {% else %}
+      <!-- Regular section -->
+      <div class="section">
+        <div class="section-header">
+          <span class="section-emoji">{{ section.emoji }}</span>
+          <p class="section-label">{{ section.label }}</p>
+        </div>
+        {% for item in section['items'] %}
+        <div class="article">
+          <h2 class="article-title">
+            <a href="{{ item.url }}" target="_blank">{{ item.title }}</a>
+          </h2>
+          <p class="article-sources">
+            {% if item.get('all_sources') %}
+              {% for s in item.all_sources %}
+                <a href="{{ s.url }}" class="source-link" target="_blank">{{ s.label }}</a>
+                {%- if s.get('is_nyt') and nyt_logo_uri %}
+                  <a href="https://developer.nytimes.com" class="nyt-badge" target="_blank" title="Data provided by The New York Times">
+                    <img src="{{ nyt_logo_uri }}" alt="Data provided by The New York Times" width="88" height="14">
+                  </a>
+                {%- endif %}
+                {%- if not loop.last %} · {% endif %}
+              {% endfor %}
+            {% else %}
+              <a href="{{ item.url }}" class="source-link" target="_blank">{{ item.source_label }}</a>
+              {%- if item.get('is_nyt') and nyt_logo_uri %}
+                <a href="https://developer.nytimes.com" class="nyt-badge" target="_blank" title="Data provided by The New York Times">
+                  <img src="{{ nyt_logo_uri }}" alt="Data provided by The New York Times" width="88" height="14">
+                </a>
+              {%- endif %}
+            {% endif %}
+          </p>
+          {% if item.tldr_summary %}
+          <p class="article-summary">{{ item.tldr_summary }}</p>
+          {% elif item.summary %}
+          <p class="article-summary">{{ item.summary[:200] }}</p>
+          {% endif %}
+          <div class="article-feedback">
+            <a href="{{ item.feedback_up_url }}" title="Interesting">👍</a>
+            <a href="{{ item.feedback_down_url }}" title="Not for me">👎</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>Your personal daily brief · Powered by Claude AI</p>
+    {% if has_nyt_content and nyt_logo_uri %}
+    <!-- Required NYT attribution per developer.nytimes.com/branding -->
+    <p style="margin-top:10px;">
+      <a href="https://developer.nytimes.com" target="_blank" style="display:inline-block;">
+        <img src="{{ nyt_logo_uri }}" alt="Data provided by The New York Times"
+             width="130" height="21" style="border:0;opacity:0.6;">
+      </a>
+    </p>
+    {% endif %}
+    <p><a href="mailto:unsubscribe@yourdomain.com">Unsubscribe</a></p>
+  </div>
+
+</div>
+</div>
+</body>
+</html>

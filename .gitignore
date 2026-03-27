@@ -1,0 +1,23 @@
+# Secrets and local config
+.env
+
+# Claude Code local settings (contains absolute paths)
+.claude/
+
+# Python artifacts
+__pycache__/
+*.pyc
+.venv/
+venv/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# OS artifacts
+.DS_Store
+
+# Firebase debug log
+firebase-debug.log
+
+# Feedback history (accumulates personal vote data)
+feedback/history.jsonl

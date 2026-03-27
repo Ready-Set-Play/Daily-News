@@ -1,0 +1,56 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - xkcd.com
+      User-Agent:
+      - Python-urllib/3.11
+    method: GET
+    uri: https://xkcd.com/info.0.json
+  response:
+    body:
+      string: '{"month": "3", "num": 3223, "link": "", "year": "2026", "news": "",
+        "safe_title": "Inflation Timeline", "transcript": "", "alt": "Depending what
+        corners of the internet you hang out on, ''regular'' may at times awkwardly
+        coexist with ''sexy.''", "img": "https://imgs.xkcd.com/comics/inflation_timeline.png",
+        "title": "Inflation Timeline", "day": "23"}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Age:
+      - '0'
+      Cache-Control:
+      - max-age=300
+      Connection:
+      - close
+      Content-Length:
+      - '347'
+      Content-Type:
+      - application/json
+      Date:
+      - Tue, 24 Mar 2026 07:07:34 GMT
+      ETag:
+      - '"69c18650-15b"'
+      Expires:
+      - Tue, 24 Mar 2026 07:12:34 GMT
+      Server:
+      - nginx
+      Vary:
+      - Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Cache:
+      - MISS
+      X-Cache-Hits:
+      - '0'
+      X-Served-By:
+      - cache-phx1710141-PHX
+      X-Timer:
+      - S1774336054.118245,VS0,VE168
+    status:
+      code: 200
+      message: OK
+version: 1

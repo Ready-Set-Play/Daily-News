@@ -1,0 +1,431 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - www.reddit.com
+      User-Agent:
+      - daily-news-digest/1.0 (personal project)
+    method: GET
+    uri: https://www.reddit.com/r/LocalLLaMA/hot.json?limit=5
+  response:
+    body:
+      string: '{"kind": "Listing", "data": {"after": "t3_1s1z17h", "dist": 5, "modhash":
+        "", "geo_filter": null, "children": [{"kind": "t3", "data": {"approved_at_utc":
+        null, "subreddit": "LocalLLaMA", "selftext": "INVITE: https://discord.gg/rC922KfEwj\n\nThere
+        used to be one old discord server for the subreddit but it was deleted by
+        the previous mod.\n\nWhy?\nThe subreddit has grown to 500k users - inevitably,
+        some users like a niche community with more technical discussion and fewer
+        memes (even if relevant).\n\nWe have a discord bot to test out open source
+        models.\n\nBetter contest and events organization.\n\nBest for quick questions
+        or showcasing your rig!", "author_fullname": "t2_gi7a36v6", "saved": false,
+        "mod_reason_title": null, "gilded": 0, "clicked": false, "is_gallery": true,
+        "title": "Announcing LocalLlama discord server &amp; bot!", "link_flair_richtext":
+        [{"e": "text", "t": "News"}], "subreddit_name_prefixed": "r/LocalLLaMA", "hidden":
+        false, "pwls": 6, "link_flair_css_class": "", "downs": 0, "thumbnail_height":
+        104, "top_awarded_type": null, "hide_score": false, "media_metadata": {"9m1syl7kdvif1":
+        {"status": "valid", "e": "Image", "m": "image/png", "p": [{"y": 122, "x":
+        108, "u": "https://preview.redd.it/9m1syl7kdvif1.png?width=108&amp;crop=smart&amp;auto=webp&amp;s=f5e0a069d53875bb66210e26decae608a86b9995"},
+        {"y": 245, "x": 216, "u": "https://preview.redd.it/9m1syl7kdvif1.png?width=216&amp;crop=smart&amp;auto=webp&amp;s=9572c23dd2548d55eae385090ba462c5513e74bf"},
+        {"y": 364, "x": 320, "u": "https://preview.redd.it/9m1syl7kdvif1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=115d61af9ebbebd95fb9bb0f0700d90bf98d4bbb"},
+        {"y": 728, "x": 640, "u": "https://preview.redd.it/9m1syl7kdvif1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=bc6c15bcdb135d8fe4457505677deeb82836a57c"},
+        {"y": 1093, "x": 960, "u": "https://preview.redd.it/9m1syl7kdvif1.png?width=960&amp;crop=smart&amp;auto=webp&amp;s=9ac0fcdf9bd1cb683f9b712691c6fe94524a653b"},
+        {"y": 1229, "x": 1080, "u": "https://preview.redd.it/9m1syl7kdvif1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=de7139bab6a7ac44cc1611705e34a6cc1d3fe65b"}],
+        "s": {"y": 1510, "x": 1326, "u": "https://preview.redd.it/9m1syl7kdvif1.png?width=1326&amp;format=png&amp;auto=webp&amp;s=1a14d93c73d28919aab74bce1d3f7687aeea50f1"},
+        "id": "9m1syl7kdvif1"}, "lqxydhkjdvif1": {"status": "valid", "e": "Image",
+        "m": "image/png", "p": [{"y": 80, "x": 108, "u": "https://preview.redd.it/lqxydhkjdvif1.png?width=108&amp;crop=smart&amp;auto=webp&amp;s=2f9ea785ed54571d1e00caadc049d3dbdd3f90f8"},
+        {"y": 161, "x": 216, "u": "https://preview.redd.it/lqxydhkjdvif1.png?width=216&amp;crop=smart&amp;auto=webp&amp;s=eeeb9f02addcae04f13ab9d931534a59599fea9c"},
+        {"y": 238, "x": 320, "u": "https://preview.redd.it/lqxydhkjdvif1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=b1f2247db2c2827fb130487a15f9a60562afa1a6"},
+        {"y": 477, "x": 640, "u": "https://preview.redd.it/lqxydhkjdvif1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a5800e3c54e96eb399ae8ec3ee249546d9d1920d"},
+        {"y": 716, "x": 960, "u": "https://preview.redd.it/lqxydhkjdvif1.png?width=960&amp;crop=smart&amp;auto=webp&amp;s=033c36ecc55fab354b1e14f39bd9a446b9e00a51"},
+        {"y": 805, "x": 1080, "u": "https://preview.redd.it/lqxydhkjdvif1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=f47b84e79d5d7a5e574c0ca75cbdccf1cf34d1a4"}],
+        "s": {"y": 970, "x": 1300, "u": "https://preview.redd.it/lqxydhkjdvif1.png?width=1300&amp;format=png&amp;auto=webp&amp;s=f0d771ecfc252112ba94c079e2ca11dbb8a92d75"},
+        "id": "lqxydhkjdvif1"}}, "name": "t3_1mpk2va", "quarantine": false, "link_flair_text_color":
+        "light", "upvote_ratio": 0.85, "author_flair_background_color": "transparent",
+        "ups": 141, "domain": "reddit.com", "media_embed": {}, "thumbnail_width":
+        140, "author_flair_template_id": "c07aa42e-51fe-11f0-afcc-462aad931709", "is_original_content":
+        false, "user_reports": [], "secure_media": null, "is_reddit_media_domain":
+        false, "is_meta": false, "category": null, "secure_media_embed": {}, "gallery_data":
+        {"items": [{"media_id": "lqxydhkjdvif1", "id": 727971310}, {"media_id": "9m1syl7kdvif1",
+        "id": 727971311}]}, "link_flair_text": "News", "can_mod_post": false, "score":
+        141, "approved_by": null, "is_created_from_ads_ui": false, "author_premium":
+        false, "thumbnail": "https://b.thumbs.redditmedia.com/QBscWhXGvo8sy9oNNt-7et1ByOGRWY1UckDAudAWACM.jpg",
+        "edited": false, "author_flair_css_class": null, "author_flair_richtext":
+        [{"a": ":X:", "e": "emoji", "u": "https://emoji.redditmedia.com/tbgegafk739f1_t5_81eyvm/X"},
+        {"e": "text", "t": " Sorcerer Supreme"}], "gildings": {}, "content_categories":
+        null, "is_self": false, "subreddit_type": "public", "created": 1755127265.0,
+        "link_flair_type": "richtext", "wls": 6, "removed_by_category": null, "banned_by":
+        null, "author_flair_type": "richtext", "total_awards_received": 0, "allow_live_comments":
+        false, "selftext_html": "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;INVITE:
+        &lt;a href=\"https://discord.gg/rC922KfEwj\"&gt;https://discord.gg/rC922KfEwj&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;There
+        used to be one old discord server for the subreddit but it was deleted by
+        the previous mod.&lt;/p&gt;\n\n&lt;p&gt;Why?\nThe subreddit has grown to 500k
+        users - inevitably, some users like a niche community with more technical
+        discussion and fewer memes (even if relevant).&lt;/p&gt;\n\n&lt;p&gt;We have
+        a discord bot to test out open source models.&lt;/p&gt;\n\n&lt;p&gt;Better
+        contest and events organization.&lt;/p&gt;\n\n&lt;p&gt;Best for quick questions
+        or showcasing your rig!&lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;", "likes":
+        null, "suggested_sort": null, "banned_at_utc": null, "url_overridden_by_dest":
+        "https://www.reddit.com/gallery/1mpk2va", "view_count": null, "archived":
+        false, "no_follow": false, "is_crosspostable": false, "pinned": false, "over_18":
+        false, "all_awardings": [], "awarders": [], "media_only": false, "link_flair_template_id":
+        "f8cc0dfe-c1eb-11ed-8d79-72bc34fff7d9", "can_gild": false, "spoiler": false,
+        "locked": false, "author_flair_text": ":X: Sorcerer Supreme", "treatment_tags":
+        [], "visited": false, "removed_by": null, "mod_note": null, "distinguished":
+        "moderator", "subreddit_id": "t5_81eyvm", "author_is_blocked": false, "mod_reason_by":
+        null, "num_reports": null, "removal_reason": null, "link_flair_background_color":
+        "#cc3600", "id": "1mpk2va", "is_robot_indexable": true, "report_reasons":
+        null, "author": "HOLUPREDICTIONS", "discussion_type": null, "num_comments":
+        78, "send_replies": true, "contest_mode": false, "mod_reports": [], "author_patreon_flair":
+        false, "author_flair_text_color": "dark", "permalink": "/r/LocalLLaMA/comments/1mpk2va/announcing_localllama_discord_server_bot/",
+        "stickied": true, "url": "https://www.reddit.com/gallery/1mpk2va", "subreddit_subscribers":
+        661054, "created_utc": 1755127265.0, "num_crossposts": 0, "media": null, "is_video":
+        false}}, {"kind": "t3", "data": {"approved_at_utc": null, "subreddit": "LocalLLaMA",
+        "selftext": "So, I''ve had my H100s grind for you all, and have some interesting
+        new results AND fresh models!\n\nSo, what did I find?  Well because my blog
+        article are too damn long (*I know some of you are not reading the whole thing...*),
+        here is a **TL;DR**:\n\n1. I found that LLMs seem to *think in a universal
+        language*.  During the middle layers, the models latent representations are
+        more similar on the same content in Chinese and English than different content
+        in the same language.\n2. I tried a bunch of different stuff, but in the end,
+        repeating blocks in the middle of the transformer stack works the best.\n3.
+        You should still read the blog: [https://dnhkng.github.io/posts/rys-ii/](https://dnhkng.github.io/posts/rys-ii/)\n\n\n\nIf
+        you still didnt read the blog, well, I guess you can just try the models?\n\n[https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-S](https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-S)\n\n[https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-M](https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-M)\n\n[https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-L](https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-L)\n\n[https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-XL](https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-XL)\n\nWen
+        GGUF? *When someone GGUF''s them I guess?*\n\nWhen you repeat layers, you
+        benefit a lot from fine tuning. I expect the first team to fine tune RYS-Qwen3.5-27B-FP8-XL
+        will have a new SOTA for that size range.  Lastly, Ive been chatting with
+        TurboDerp; hopefully we can get this into a new format where you can keep
+        the duplicated later as copies, and not use more VRAM (except for the KV cache).
+        S***tay tuned!***", "author_fullname": "t2_3xhc6", "saved": false, "mod_reason_title":
+        null, "gilded": 0, "clicked": false, "is_gallery": true, "title": "RYS II
+        - Repeated layers with Qwen3.5 27B and some hints at a ''Universal Language''",
+        "link_flair_richtext": [{"e": "text", "t": "Resources"}], "subreddit_name_prefixed":
+        "r/LocalLLaMA", "hidden": false, "pwls": 6, "link_flair_css_class": "", "downs":
+        0, "thumbnail_height": 120, "top_awarded_type": null, "hide_score": false,
+        "media_metadata": {"dpmrhqwvvuqg1": {"status": "valid", "e": "Image", "m":
+        "image/png", "p": [{"y": 92, "x": 108, "u": "https://preview.redd.it/dpmrhqwvvuqg1.png?width=108&amp;crop=smart&amp;auto=webp&amp;s=1bb3d4e19223e59b0e6e2f8b791e6d3376060ce0"},
+        {"y": 185, "x": 216, "u": "https://preview.redd.it/dpmrhqwvvuqg1.png?width=216&amp;crop=smart&amp;auto=webp&amp;s=6a2629cb1abf5120bd39cd346ddc884bd5700fb1"},
+        {"y": 275, "x": 320, "u": "https://preview.redd.it/dpmrhqwvvuqg1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=d999f3f3d6f861241b511163c2e7b50742ae3f38"},
+        {"y": 550, "x": 640, "u": "https://preview.redd.it/dpmrhqwvvuqg1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=954a31f82d4d349031fb8db26ca3be878bb3a864"},
+        {"y": 825, "x": 960, "u": "https://preview.redd.it/dpmrhqwvvuqg1.png?width=960&amp;crop=smart&amp;auto=webp&amp;s=342ddf01ab92d7bcfa622c902d6ec8fed1e901b9"}],
+        "s": {"y": 881, "x": 1024, "u": "https://preview.redd.it/dpmrhqwvvuqg1.png?width=1024&amp;format=png&amp;auto=webp&amp;s=eb91fa31dcd1d4429bb5df74572c4bb309425a03"},
+        "id": "dpmrhqwvvuqg1"}, "8ycc38gnvuqg1": {"status": "valid", "e": "Image",
+        "m": "image/png", "p": [{"y": 92, "x": 108, "u": "https://preview.redd.it/8ycc38gnvuqg1.png?width=108&amp;crop=smart&amp;auto=webp&amp;s=8a2408fa2d16c3466f52d8597c91073a1dffda59"},
+        {"y": 185, "x": 216, "u": "https://preview.redd.it/8ycc38gnvuqg1.png?width=216&amp;crop=smart&amp;auto=webp&amp;s=177cbb6372cb1f21fd2a906696e3d6a12299e0ac"},
+        {"y": 274, "x": 320, "u": "https://preview.redd.it/8ycc38gnvuqg1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=e7230b12ed24a30e42df532206ab5c3f4f906239"},
+        {"y": 548, "x": 640, "u": "https://preview.redd.it/8ycc38gnvuqg1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=a3627837f07c3e3ee6fbae81f240ad688915c3e3"},
+        {"y": 823, "x": 960, "u": "https://preview.redd.it/8ycc38gnvuqg1.png?width=960&amp;crop=smart&amp;auto=webp&amp;s=322d237e791ab236333c9b151fcd0cc98209c8b3"},
+        {"y": 926, "x": 1080, "u": "https://preview.redd.it/8ycc38gnvuqg1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=3f3dec360f722903263a1bf0344dfbfff25aa3d0"}],
+        "s": {"y": 1474, "x": 1719, "u": "https://preview.redd.it/8ycc38gnvuqg1.png?width=1719&amp;format=png&amp;auto=webp&amp;s=e4e56e9445c94ec8adc0155f8c9a5ac8a20e1d74"},
+        "id": "8ycc38gnvuqg1"}, "fu1np1ipvuqg1": {"status": "valid", "e": "Image",
+        "m": "image/png", "p": [{"y": 50, "x": 108, "u": "https://preview.redd.it/fu1np1ipvuqg1.png?width=108&amp;crop=smart&amp;auto=webp&amp;s=0277bb05cacd528d72dffb5a423ec08062946b91"},
+        {"y": 101, "x": 216, "u": "https://preview.redd.it/fu1np1ipvuqg1.png?width=216&amp;crop=smart&amp;auto=webp&amp;s=bcad15d6522c4abe5d7114d641b995d646f29cce"},
+        {"y": 150, "x": 320, "u": "https://preview.redd.it/fu1np1ipvuqg1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=779a7cd7551f4bdab9a58738e2d6781a60670b5c"},
+        {"y": 300, "x": 640, "u": "https://preview.redd.it/fu1np1ipvuqg1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b6a18de35d1030f37d9b9b8d524612ed99b096a5"},
+        {"y": 451, "x": 960, "u": "https://preview.redd.it/fu1np1ipvuqg1.png?width=960&amp;crop=smart&amp;auto=webp&amp;s=175256331a049d27de9a9acf2f2b2063dd7823ed"},
+        {"y": 507, "x": 1080, "u": "https://preview.redd.it/fu1np1ipvuqg1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=1754fc1c94bcb810e23d167b8e022761af6a9a2e"}],
+        "s": {"y": 744, "x": 1582, "u": "https://preview.redd.it/fu1np1ipvuqg1.png?width=1582&amp;format=png&amp;auto=webp&amp;s=06f166bbcb6d8a3d90094385f80faec5c5db7939"},
+        "id": "fu1np1ipvuqg1"}, "pu4k68vrvuqg1": {"status": "valid", "e": "Image",
+        "m": "image/png", "p": [{"y": 68, "x": 108, "u": "https://preview.redd.it/pu4k68vrvuqg1.png?width=108&amp;crop=smart&amp;auto=webp&amp;s=e9a55f72de239fca15d9b01054afd92f9a2eb973"},
+        {"y": 137, "x": 216, "u": "https://preview.redd.it/pu4k68vrvuqg1.png?width=216&amp;crop=smart&amp;auto=webp&amp;s=2aa76e970140abab88659b1df47b5b9431e322e1"},
+        {"y": 203, "x": 320, "u": "https://preview.redd.it/pu4k68vrvuqg1.png?width=320&amp;crop=smart&amp;auto=webp&amp;s=71967b104dcc8f24da2856fb175809d44d087e11"},
+        {"y": 406, "x": 640, "u": "https://preview.redd.it/pu4k68vrvuqg1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=b6099ebe332d98c6be36bd053de3005ef64d9260"},
+        {"y": 609, "x": 960, "u": "https://preview.redd.it/pu4k68vrvuqg1.png?width=960&amp;crop=smart&amp;auto=webp&amp;s=1df56f8e9db738bd90c7cf3bf20d0ec9ae055d6e"},
+        {"y": 685, "x": 1080, "u": "https://preview.redd.it/pu4k68vrvuqg1.png?width=1080&amp;crop=smart&amp;auto=webp&amp;s=1136bb7c335c5b3e44fe023b203b09a3b11db972"}],
+        "s": {"y": 1237, "x": 1949, "u": "https://preview.redd.it/pu4k68vrvuqg1.png?width=1949&amp;format=png&amp;auto=webp&amp;s=082bec627306bd782c6bdc234fc6961fc69bdfae"},
+        "id": "pu4k68vrvuqg1"}}, "name": "t3_1s1t5ot", "quarantine": false, "link_flair_text_color":
+        "light", "upvote_ratio": 0.97, "author_flair_background_color": "", "ups":
+        327, "domain": "reddit.com", "media_embed": {}, "thumbnail_width": 140, "author_flair_template_id":
+        null, "is_original_content": false, "user_reports": [], "secure_media": null,
+        "is_reddit_media_domain": false, "is_meta": false, "category": null, "secure_media_embed":
+        {}, "gallery_data": {"items": [{"media_id": "8ycc38gnvuqg1", "id": 893771562},
+        {"media_id": "fu1np1ipvuqg1", "id": 893771563}, {"media_id": "pu4k68vrvuqg1",
+        "id": 893771564}, {"media_id": "dpmrhqwvvuqg1", "id": 893771565}]}, "link_flair_text":
+        "Resources", "can_mod_post": false, "score": 327, "approved_by": null, "is_created_from_ads_ui":
+        false, "author_premium": false, "thumbnail": "https://preview.redd.it/8ycc38gnvuqg1.png?width=140&amp;height=120&amp;auto=webp&amp;s=18ed61da18557528bf3a550023559c8e8346cd0a",
+        "edited": false, "author_flair_css_class": null, "author_flair_richtext":
+        [{"a": ":Discord:", "e": "emoji", "u": "https://emoji.redditmedia.com/08m5x9chttjf1_t5_81eyvm/Discord"}],
+        "gildings": {}, "content_categories": null, "is_self": false, "subreddit_type":
+        "public", "created": 1774299011.0, "link_flair_type": "richtext", "wls": 6,
+        "removed_by_category": null, "banned_by": null, "author_flair_type": "richtext",
+        "total_awards_received": 0, "allow_live_comments": false, "selftext_html":
+        "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;So, I&amp;#39;ve had
+        my H100s grind for you all, and have some interesting new results AND fresh
+        models!&lt;/p&gt;\n\n&lt;p&gt;So, what did I find?  Well because my blog article
+        are too damn long (&lt;em&gt;I know some of you are not reading the whole
+        thing...&lt;/em&gt;), here is a &lt;strong&gt;TL;DR&lt;/strong&gt;:&lt;/p&gt;\n\n&lt;ol&gt;\n&lt;li&gt;I
+        found that LLMs seem to &lt;em&gt;think in a universal language&lt;/em&gt;.  During
+        the middle layers, the models latent representations are more similar on the
+        same content in Chinese and English than different content in the same language.&lt;/li&gt;\n&lt;li&gt;I
+        tried a bunch of different stuff, but in the end, repeating blocks in the
+        middle of the transformer stack works the best.&lt;/li&gt;\n&lt;li&gt;You
+        should still read the blog: &lt;a href=\"https://dnhkng.github.io/posts/rys-ii/\"&gt;https://dnhkng.github.io/posts/rys-ii/&lt;/a&gt;&lt;/li&gt;\n&lt;/ol&gt;\n\n&lt;p&gt;If
+        you still didnt read the blog, well, I guess you can just try the models?&lt;/p&gt;\n\n&lt;p&gt;&lt;a
+        href=\"https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-S\"&gt;https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-S&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a
+        href=\"https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-M\"&gt;https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-M&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a
+        href=\"https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-L\"&gt;https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-L&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;a
+        href=\"https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-XL\"&gt;https://huggingface.co/dnhkng/RYS-Qwen3.5-27B-FP8-XL&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;Wen
+        GGUF? &lt;em&gt;When someone GGUF&amp;#39;s them I guess?&lt;/em&gt;&lt;/p&gt;\n\n&lt;p&gt;When
+        you repeat layers, you benefit a lot from fine tuning. I expect the first
+        team to fine tune RYS-Qwen3.5-27B-FP8-XL will have a new SOTA for that size
+        range.  Lastly, Ive been chatting with TurboDerp; hopefully we can get this
+        into a new format where you can keep the duplicated later as copies, and not
+        use more VRAM (except for the KV cache). S&lt;strong&gt;&lt;em&gt;tay tuned!&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;\n&lt;/div&gt;&lt;!--
+        SC_ON --&gt;", "likes": null, "suggested_sort": null, "banned_at_utc": null,
+        "url_overridden_by_dest": "https://www.reddit.com/gallery/1s1t5ot", "view_count":
+        null, "archived": false, "no_follow": false, "is_crosspostable": false, "pinned":
+        false, "over_18": false, "all_awardings": [], "awarders": [], "media_only":
+        false, "link_flair_template_id": "ab9120c4-bf8e-11ed-ae5e-2eb8b7c7e10b", "can_gild":
+        false, "spoiler": false, "locked": false, "author_flair_text": ":Discord:",
+        "treatment_tags": [], "visited": false, "removed_by": null, "mod_note": null,
+        "distinguished": null, "subreddit_id": "t5_81eyvm", "author_is_blocked": false,
+        "mod_reason_by": null, "num_reports": null, "removal_reason": null, "link_flair_background_color":
+        "#ccac2b", "id": "1s1t5ot", "is_robot_indexable": true, "report_reasons":
+        null, "author": "Reddactor", "discussion_type": null, "num_comments": 53,
+        "send_replies": true, "contest_mode": false, "mod_reports": [], "author_patreon_flair":
+        false, "author_flair_text_color": "dark", "permalink": "/r/LocalLLaMA/comments/1s1t5ot/rys_ii_repeated_layers_with_qwen35_27b_and_some/",
+        "stickied": false, "url": "https://www.reddit.com/gallery/1s1t5ot", "subreddit_subscribers":
+        661054, "created_utc": 1774299011.0, "num_crossposts": 1, "media": null, "is_video":
+        false}}, {"kind": "t3", "data": {"approved_at_utc": null, "subreddit": "LocalLLaMA",
+        "selftext": "Wrote a deep dive on **FlashAttention-4 (03/05/2026)** that''s
+        relevant for anyone thinking about inference performance.\n\n**TL;DR for inference:**\n\n*
+        **BF16 forward: 1,613 TFLOPs/s on B200 (71% utilization). Attention is basically
+        at matmul speed now.**\n* **2.1-2.7x faster than Triton, up to 1.3x faster
+        than cuDNN 9.13**\n* **vLLM 0.17.0 (released March 7) integrates FA-4. If
+        you''re on B200, it''s automatic.**\n* **PyTorch FlexAttention also has an
+        FA-4 backend (1.2-3.2x over Triton backend)**\n* **GQA and MQA fully supported
+        (Llama, Mistral, Qwen, Gemma all work)**\n* **Sliding window available via
+        window\\_size parameter**\n\n**Bad news for most of us:** \n\nFA-4 is Hopper
+        + Blackwell only. Works on H100/H800 and B200/B100. Not on A100 or consumer
+        cards. The optimizations exploit specific Blackwell hardware features (TMEM,
+        2-CTA MMA, async TMA) that don''t exist on older GPUs.\n\n**If you''re on
+        A100**: stay on FA-2. \n\nI**f you''re on H100**: FA-4 is supported but gains
+        are smaller than on Blackwell. Worth testing. \n\n**If you''re on B200**:
+        just update vLLM and you''re good.\n\n*The article breaks down why softmax
+        (not matmul) is now the bottleneck on Blackwell, how selective rescaling skips
+        \\~10x of the softmax correction work, and the full 5-stage pipeline architecture.*\n\n*Also
+        covers the Python angle: FA-4 is 100% CuTe-DSL (NVIDIA''s Python kernel DSL).
+        Compiles in 2.5 seconds vs 55 seconds for the C++ equivalent. Same runtime
+        perf. That''s a big deal for kernel iteration speed.*\n\n**Paper**: [https://arxiv.org/abs/2603.05451](https://arxiv.org/abs/2603.05451)
+        \n\n**Article free link**: [https://medium.com/ai-advances/flashattention-4-python-gpu-kernel-blackwell-2b18f51c8b32?sk=59bca93c369143e5f74fb0f86e57e6d0](https://medium.com/ai-advances/flashattention-4-python-gpu-kernel-blackwell-2b18f51c8b32?sk=59bca93c369143e5f74fb0f86e57e6d0)\n\n**For
+        those running local models:** \n\nThe algorithmic ideas (selective rescaling,
+        software-emulated exp) will likely trickle down to consumer GPUs eventually.
+        The CuTeDSL tooling is the real unlock for faster kernel development across
+        the board.", "author_fullname": "t2_22t0qpckdw", "saved": false, "mod_reason_title":
+        null, "gilded": 0, "clicked": false, "title": "FlashAttention-4: 1613 TFLOPs/s,
+        2.7x faster than Triton, written in Python. What it means for inference.",
+        "link_flair_richtext": [{"e": "text", "t": "Discussion"}], "subreddit_name_prefixed":
+        "r/LocalLLaMA", "hidden": false, "pwls": 6, "link_flair_css_class": "", "downs":
+        0, "thumbnail_height": null, "top_awarded_type": null, "hide_score": false,
+        "name": "t3_1s1yw23", "quarantine": false, "link_flair_text_color": "light",
+        "upvote_ratio": 0.96, "author_flair_background_color": null, "subreddit_type":
+        "public", "ups": 101, "total_awards_received": 0, "media_embed": {}, "thumbnail_width":
+        null, "author_flair_template_id": null, "is_original_content": false, "user_reports":
+        [], "secure_media": null, "is_reddit_media_domain": false, "is_meta": false,
+        "category": null, "secure_media_embed": {}, "link_flair_text": "Discussion",
+        "can_mod_post": false, "score": 101, "approved_by": null, "is_created_from_ads_ui":
+        false, "author_premium": false, "thumbnail": "default", "edited": false, "author_flair_css_class":
+        null, "author_flair_richtext": [], "gildings": {}, "content_categories": null,
+        "is_self": false, "mod_note": null, "created": 1774312284.0, "link_flair_type":
+        "richtext", "wls": 6, "removed_by_category": null, "banned_by": null, "author_flair_type":
+        "text", "domain": "medium.com", "allow_live_comments": false, "selftext_html":
+        "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;Wrote a deep dive on
+        &lt;strong&gt;FlashAttention-4 (03/05/2026)&lt;/strong&gt; that&amp;#39;s
+        relevant for anyone thinking about inference performance.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;TL;DR
+        for inference:&lt;/strong&gt;&lt;/p&gt;\n\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;BF16
+        forward: 1,613 TFLOPs/s on B200 (71% utilization). Attention is basically
+        at matmul speed now.&lt;/strong&gt;&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;2.1-2.7x
+        faster than Triton, up to 1.3x faster than cuDNN 9.13&lt;/strong&gt;&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;vLLM
+        0.17.0 (released March 7) integrates FA-4. If you&amp;#39;re on B200, it&amp;#39;s
+        automatic.&lt;/strong&gt;&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;PyTorch FlexAttention
+        also has an FA-4 backend (1.2-3.2x over Triton backend)&lt;/strong&gt;&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;GQA
+        and MQA fully supported (Llama, Mistral, Qwen, Gemma all work)&lt;/strong&gt;&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Sliding
+        window available via window_size parameter&lt;/strong&gt;&lt;/li&gt;\n&lt;/ul&gt;\n\n&lt;p&gt;&lt;strong&gt;Bad
+        news for most of us:&lt;/strong&gt; &lt;/p&gt;\n\n&lt;p&gt;FA-4 is Hopper
+        + Blackwell only. Works on H100/H800 and B200/B100. Not on A100 or consumer
+        cards. The optimizations exploit specific Blackwell hardware features (TMEM,
+        2-CTA MMA, async TMA) that don&amp;#39;t exist on older GPUs.&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;If
+        you&amp;#39;re on A100&lt;/strong&gt;: stay on FA-2. &lt;/p&gt;\n\n&lt;p&gt;I&lt;strong&gt;f
+        you&amp;#39;re on H100&lt;/strong&gt;: FA-4 is supported but gains are smaller
+        than on Blackwell. Worth testing. &lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;If
+        you&amp;#39;re on B200&lt;/strong&gt;: just update vLLM and you&amp;#39;re
+        good.&lt;/p&gt;\n\n&lt;p&gt;&lt;em&gt;The article breaks down why softmax
+        (not matmul) is now the bottleneck on Blackwell, how selective rescaling skips
+        ~10x of the softmax correction work, and the full 5-stage pipeline architecture.&lt;/em&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;em&gt;Also
+        covers the Python angle: FA-4 is 100% CuTe-DSL (NVIDIA&amp;#39;s Python kernel
+        DSL). Compiles in 2.5 seconds vs 55 seconds for the C++ equivalent. Same runtime
+        perf. That&amp;#39;s a big deal for kernel iteration speed.&lt;/em&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Paper&lt;/strong&gt;:
+        &lt;a href=\"https://arxiv.org/abs/2603.05451\"&gt;https://arxiv.org/abs/2603.05451&lt;/a&gt;
+        &lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;Article free link&lt;/strong&gt;: &lt;a
+        href=\"https://medium.com/ai-advances/flashattention-4-python-gpu-kernel-blackwell-2b18f51c8b32?sk=59bca93c369143e5f74fb0f86e57e6d0\"&gt;https://medium.com/ai-advances/flashattention-4-python-gpu-kernel-blackwell-2b18f51c8b32?sk=59bca93c369143e5f74fb0f86e57e6d0&lt;/a&gt;&lt;/p&gt;\n\n&lt;p&gt;&lt;strong&gt;For
+        those running local models:&lt;/strong&gt; &lt;/p&gt;\n\n&lt;p&gt;The algorithmic
+        ideas (selective rescaling, software-emulated exp) will likely trickle down
+        to consumer GPUs eventually. The CuTeDSL tooling is the real unlock for faster
+        kernel development across the board.&lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON
+        --&gt;", "likes": null, "suggested_sort": null, "banned_at_utc": null, "url_overridden_by_dest":
+        "https://medium.com/ai-advances/flashattention-4-python-gpu-kernel-blackwell-2b18f51c8b32?sk=59bca93c369143e5f74fb0f86e57e6d0",
+        "view_count": null, "archived": false, "no_follow": false, "is_crosspostable":
+        false, "pinned": false, "over_18": false, "all_awardings": [], "awarders":
+        [], "media_only": false, "link_flair_template_id": "5f921ea4-c7bc-11ed-9c23-3a00622979b4",
+        "can_gild": false, "spoiler": false, "locked": false, "author_flair_text":
+        null, "treatment_tags": [], "visited": false, "removed_by": null, "num_reports":
+        null, "distinguished": null, "subreddit_id": "t5_81eyvm", "author_is_blocked":
+        false, "mod_reason_by": null, "removal_reason": null, "link_flair_background_color":
+        "#646d73", "id": "1s1yw23", "is_robot_indexable": true, "report_reasons":
+        null, "author": "Sensitive-Two9732", "discussion_type": null, "num_comments":
+        37, "send_replies": true, "contest_mode": false, "mod_reports": [], "author_patreon_flair":
+        false, "author_flair_text_color": null, "permalink": "/r/LocalLLaMA/comments/1s1yw23/flashattention4_1613_tflopss_27x_faster_than/",
+        "stickied": false, "url": "https://medium.com/ai-advances/flashattention-4-python-gpu-kernel-blackwell-2b18f51c8b32?sk=59bca93c369143e5f74fb0f86e57e6d0",
+        "subreddit_subscribers": 661054, "created_utc": 1774312284.0, "num_crossposts":
+        0, "media": null, "is_video": false}}, {"kind": "t3", "data": {"approved_at_utc":
+        null, "subreddit": "LocalLLaMA", "selftext": "", "author_fullname": "t2_h3peg75w",
+        "saved": false, "mod_reason_title": null, "gilded": 0, "clicked": false, "title":
+        "China''s open-source dominance threatens US AI lead, US advisory body warns",
+        "link_flair_richtext": [{"e": "text", "t": "News"}], "subreddit_name_prefixed":
+        "r/LocalLLaMA", "hidden": false, "pwls": 6, "link_flair_css_class": "", "downs":
+        0, "thumbnail_height": 73, "top_awarded_type": null, "hide_score": false,
+        "name": "t3_1s1kmch", "quarantine": false, "link_flair_text_color": "light",
+        "upvote_ratio": 0.94, "author_flair_background_color": "", "ups": 443, "total_awards_received":
+        0, "media_embed": {}, "thumbnail_width": 140, "author_flair_template_id":
+        null, "is_original_content": false, "user_reports": [], "secure_media": null,
+        "is_reddit_media_domain": false, "is_meta": false, "category": null, "secure_media_embed":
+        {}, "link_flair_text": "News", "can_mod_post": false, "score": 443, "approved_by":
+        null, "is_created_from_ads_ui": false, "author_premium": false, "thumbnail":
+        "https://external-preview.redd.it/keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg.jpeg?width=140&amp;height=73&amp;auto=webp&amp;s=ee505297288d1e3adb498929b2bc0684924ab771",
+        "edited": false, "author_flair_css_class": null, "author_flair_richtext":
+        [{"a": ":Discord:", "e": "emoji", "u": "https://emoji.redditmedia.com/08m5x9chttjf1_t5_81eyvm/Discord"}],
+        "gildings": {}, "post_hint": "link", "content_categories": null, "is_self":
+        false, "subreddit_type": "public", "created": 1774281029.0, "link_flair_type":
+        "richtext", "wls": 6, "removed_by_category": null, "banned_by": null, "author_flair_type":
+        "richtext", "domain": "reuters.com", "allow_live_comments": false, "selftext_html":
+        null, "likes": null, "suggested_sort": null, "banned_at_utc": null, "url_overridden_by_dest":
+        "https://www.reuters.com/business/autos-transportation/chinas-open-source-dominance-threatens-us-ai-lead-us-advisory-body-warns-2026-03-23/",
+        "view_count": null, "archived": false, "no_follow": false, "is_crosspostable":
+        false, "pinned": false, "over_18": false, "preview": {"images": [{"source":
+        {"url": "https://external-preview.redd.it/keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg.jpeg?auto=webp&amp;s=2216d20d5eac4ec147446e62d2f55357257ec26b",
+        "width": 1920, "height": 1005}, "resolutions": [{"url": "https://external-preview.redd.it/keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg.jpeg?width=108&amp;crop=smart&amp;auto=webp&amp;s=e8499a6b4b724696f3c1e3bdcabbcc9b566d1424",
+        "width": 108, "height": 56}, {"url": "https://external-preview.redd.it/keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg.jpeg?width=216&amp;crop=smart&amp;auto=webp&amp;s=bbbbba88d80da039f686d1e8c70153a379f6aea4",
+        "width": 216, "height": 113}, {"url": "https://external-preview.redd.it/keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=92a2721c1bc7a26ce7fbdfc819fa9cd7177f26d8",
+        "width": 320, "height": 167}, {"url": "https://external-preview.redd.it/keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=e4c57e16f16d452dc6b2747040ad647ba37bf677",
+        "width": 640, "height": 335}, {"url": "https://external-preview.redd.it/keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg.jpeg?width=960&amp;crop=smart&amp;auto=webp&amp;s=1d3087c617acaebcf1d12f9f4dd8c19f3086ebbb",
+        "width": 960, "height": 502}, {"url": "https://external-preview.redd.it/keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg.jpeg?width=1080&amp;crop=smart&amp;auto=webp&amp;s=cf8445a0359d732b471d2120e9e413ec4f1654c0",
+        "width": 1080, "height": 565}], "variants": {}, "id": "keIMFwjBKRr3bUnTQjRzKoB8sRAzng3kSccDu6XBibg"}],
+        "enabled": false}, "all_awardings": [], "awarders": [], "media_only": false,
+        "link_flair_template_id": "f8cc0dfe-c1eb-11ed-8d79-72bc34fff7d9", "can_gild":
+        false, "spoiler": false, "locked": false, "author_flair_text": ":Discord:",
+        "treatment_tags": [], "visited": false, "removed_by": null, "mod_note": null,
+        "distinguished": null, "subreddit_id": "t5_81eyvm", "author_is_blocked": false,
+        "mod_reason_by": null, "num_reports": null, "removal_reason": null, "link_flair_background_color":
+        "#cc3600", "id": "1s1kmch", "is_robot_indexable": true, "report_reasons":
+        null, "author": "Prolapse_to_Brolapse", "discussion_type": null, "num_comments":
+        186, "send_replies": true, "contest_mode": false, "mod_reports": [], "author_patreon_flair":
+        false, "author_flair_text_color": "dark", "permalink": "/r/LocalLLaMA/comments/1s1kmch/chinas_opensource_dominance_threatens_us_ai_lead/",
+        "stickied": false, "url": "https://www.reuters.com/business/autos-transportation/chinas-open-source-dominance-threatens-us-ai-lead-us-advisory-body-warns-2026-03-23/",
+        "subreddit_subscribers": 661054, "created_utc": 1774281029.0, "num_crossposts":
+        3, "media": null, "is_video": false}}, {"kind": "t3", "data": {"approved_at_utc":
+        null, "subreddit": "LocalLLaMA", "selftext": "Really loving Qwen 27b more
+        than any other llm from when I can remember. It works so well.  Having 48gb
+        vram can anyone recommend any other alternatives? It seems that 24gb is enough
+        and currently I can''t think of any other open model to use. ", "author_fullname":
+        "t2_10mf7k", "saved": false, "mod_reason_title": null, "gilded": 0, "clicked":
+        false, "title": "Are we currently in a \"Golden Time\" for low VRAM/1 GPU
+        users with Qwen 27b?", "link_flair_richtext": [{"e": "text", "t": "Question
+        | Help"}], "subreddit_name_prefixed": "r/LocalLLaMA", "hidden": false, "pwls":
+        6, "link_flair_css_class": "", "downs": 0, "thumbnail_height": null, "top_awarded_type":
+        null, "hide_score": false, "name": "t3_1s1z17h", "quarantine": false, "link_flair_text_color":
+        "dark", "upvote_ratio": 0.89, "author_flair_background_color": null, "subreddit_type":
+        "public", "ups": 55, "total_awards_received": 0, "media_embed": {}, "thumbnail_width":
+        null, "author_flair_template_id": null, "is_original_content": false, "user_reports":
+        [], "secure_media": null, "is_reddit_media_domain": false, "is_meta": false,
+        "category": null, "secure_media_embed": {}, "link_flair_text": "Question |
+        Help", "can_mod_post": false, "score": 55, "approved_by": null, "is_created_from_ads_ui":
+        false, "author_premium": false, "thumbnail": "self", "edited": false, "author_flair_css_class":
+        null, "author_flair_richtext": [], "gildings": {}, "content_categories": null,
+        "is_self": true, "mod_note": null, "created": 1774312656.0, "link_flair_type":
+        "richtext", "wls": 6, "removed_by_category": null, "banned_by": null, "author_flair_type":
+        "text", "domain": "self.LocalLLaMA", "allow_live_comments": false, "selftext_html":
+        "&lt;!-- SC_OFF --&gt;&lt;div class=\"md\"&gt;&lt;p&gt;Really loving Qwen
+        27b more than any other llm from when I can remember. It works so well.  Having
+        48gb vram can anyone recommend any other alternatives? It seems that 24gb
+        is enough and currently I can&amp;#39;t think of any other open model to use.
+        &lt;/p&gt;\n&lt;/div&gt;&lt;!-- SC_ON --&gt;", "likes": null, "suggested_sort":
+        null, "banned_at_utc": null, "view_count": null, "archived": false, "no_follow":
+        false, "is_crosspostable": false, "pinned": false, "over_18": false, "all_awardings":
+        [], "awarders": [], "media_only": false, "link_flair_template_id": "2c9831e6-bf92-11ed-98e6-d2b8bcc02ae1",
+        "can_gild": false, "spoiler": false, "locked": false, "author_flair_text":
+        null, "treatment_tags": [], "visited": false, "removed_by": null, "num_reports":
+        null, "distinguished": null, "subreddit_id": "t5_81eyvm", "author_is_blocked":
+        false, "mod_reason_by": null, "removal_reason": null, "link_flair_background_color":
+        "#5a74cc", "id": "1s1z17h", "is_robot_indexable": true, "report_reasons":
+        null, "author": "inthesearchof", "discussion_type": null, "num_comments":
+        53, "send_replies": true, "contest_mode": false, "mod_reports": [], "author_patreon_flair":
+        false, "author_flair_text_color": null, "permalink": "/r/LocalLLaMA/comments/1s1z17h/are_we_currently_in_a_golden_time_for_low_vram1/",
+        "stickied": false, "url": "https://www.reddit.com/r/LocalLLaMA/comments/1s1z17h/are_we_currently_in_a_golden_time_for_low_vram1/",
+        "subreddit_subscribers": 661054, "created_utc": 1774312656.0, "num_crossposts":
+        0, "media": null, "is_video": false}}], "before": null}}'
+    headers:
+      Accept-Ranges:
+      - bytes
+      Connection:
+      - close
+      Content-Length:
+      - '35291'
+      Date:
+      - Tue, 24 Mar 2026 07:07:33 GMT
+      NEL:
+      - '{"report_to": "w3-reporting-nel", "max_age": 14400, "include_subdomains":
+        false, "success_fraction": 1.0, "failure_fraction": 1.0}'
+      Report-To:
+      - '{"group": "w3-reporting-nel", "max_age": 14400, "include_subdomains": true,  "endpoints":
+        [{ "url": "https://w3-reporting-nel.reddit.com/reports" }]}, {"group": "w3-reporting",
+        "max_age": 14400, "include_subdomains": true, "endpoints": [{ "url": "https://w3-reporting.reddit.com/reports"
+        }]}, {"group": "w3-reporting-csp", "max_age": 14400, "include_subdomains":
+        true, "endpoints": [{ "url": "https://w3-reporting-csp.reddit.com/reports"
+        }]}'
+      Server:
+      - snooserv
+      Set-Cookie:
+      - loid=000000002aujsgs4fg.2.1774336053345.Z0FBQUFBQnB3amcxTUlFNGRTd3NXbGpVcEFOZTRpMnFtNkEycXVNeVBnd2xGd2ljRFR1TVYtNjAyUkdpWFZ4czh1UmhjdzFzdDYtM3Q3aTk1ZDhBWjduOUpNek5LX3RzU2xxOUlIcE9UbVVKTXdDdHFubzMxTFdfRTFkaUljbFktdnJhcjVabHdyRjc;
+        Domain=reddit.com; Max-Age=63071999; Path=/; expires=Thu, 23-Mar-2028 07:07:33
+        GMT; secure; SameSite=None; Secure
+      - session_tracker=jqomqifbjfmodaainm.0.1774336053357.Z0FBQUFBQnB3amcxN0NxRXlMVkhid3FaS24taFhjZU93N09ZTS1sdHlwQXdObExIcGNuckZJbTl5Q1B4T3VKQ2FuQjdTQkNKR0JYWlFaMHRWam5sNTJsMVpPMG5HbHJ5UW1CQzI4LVlPVlU4U05hemZnRmFBZ3FsMkhUX1FrZHlrbUpEb1BwMV83TGM;
+        Domain=reddit.com; Max-Age=7199; Path=/; expires=Tue, 24-Mar-2026 09:07:33
+        GMT; secure; SameSite=None; Secure
+      - csv=2; Max-Age=63072000; Domain=.reddit.com; Path=/; Secure; SameSite=None
+      - edgebucket=ftufmyja9kRC8YL1nG; Domain=reddit.com; Max-Age=63071999; Path=/;  secure
+      Strict-Transport-Security:
+      - max-age=31536000; includeSubdomains
+      Vary:
+      - accept-encoding, Accept-Encoding
+      Via:
+      - 1.1 varnish
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - X-Moose
+      cache-control:
+      - private, s-maxage=0, max-age=0, must-revalidate, no-store
+      content-type:
+      - application/json; charset=UTF-8
+      expires:
+      - '-1'
+      x-ratelimit-remaining:
+      - '99.0'
+      x-ratelimit-reset:
+      - '146'
+      x-ratelimit-used:
+      - '1'
+      x-ua-compatible:
+      - IE=edge
+    status:
+      code: 200
+      message: OK
+version: 1

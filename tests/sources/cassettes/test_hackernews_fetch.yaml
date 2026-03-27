@@ -1,0 +1,80 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - hn.algolia.com
+      User-Agent:
+      - Python-urllib/3.11
+    method: GET
+    uri: https://hn.algolia.com/api/v1/search?tags=front_page&hitsPerPage=10
+  response:
+    body:
+      string: '{"exhaustive":{"nbHits":true,"typo":true},"exhaustiveNbHits":true,"exhaustiveTypo":true,"hits":[{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"anemll"},"story_text":{"matchLevel":"none","matchedWords":[],"value":"<a
+        href=\"https://xcancel.com/anemll/status/2035901335984611412\" rel=\"nofollow\">https://xcancel.com/anemll/status/2035901335984611412</a>"},"title":{"matchLevel":"none","matchedWords":[],"value":"iPhone
+        17 Pro Demonstrated Running a 400B LLM"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://twitter.com/anemll/status/2035901335984611412"}},"_tags":["story","author_anemll","story_47490070","front_page"],"author":"anemll","children":[47490071,47490422,47490431,47490489,47490576,47490732,47490781,47490865,47490982,47491138,47491718,47491963,47492518,47492561,47492564,47492827,47492957,47492961,47492962,47493034,47493128,47493190,47493205,47493222,47493599,47493785,47493863,47494329,47494385,47494432,47494658,47494840,47494952,47494973,47495017,47495552,47495769,47495809,47495925,47495998,47496808,47497007,47497281,47497523,47498042,47498155,47498585,47498658,47498853],"created_at":"2026-03-23T14:30:10Z","created_at_i":1774276210,"num_comments":262,"objectID":"47490070","points":569,"story_id":47490070,"story_text":"<a
+        href=\"https:&#x2F;&#x2F;xcancel.com&#x2F;anemll&#x2F;status&#x2F;2035901335984611412\"
+        rel=\"nofollow\">https:&#x2F;&#x2F;xcancel.com&#x2F;anemll&#x2F;status&#x2F;2035901335984611412</a>","title":"iPhone
+        17 Pro Demonstrated Running a 400B LLM","updated_at":"2026-03-24T07:07:24Z","url":"https://twitter.com/anemll/status/2035901335984611412"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"ykumards"},"title":{"matchLevel":"none","matchedWords":[],"value":"Autoresearch
+        on an old research idea"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://ykumar.me/blog/eclip-autoresearch/"}},"_tags":["story","author_ykumards","story_47493460","front_page"],"author":"ykumards","children":[47493841,47493869,47493871,47493879,47493882,47493927,47493957,47493988,47494104,47494297,47494404,47494511,47494551,47494566,47494597,47494761,47494896,47494964,47495238,47495352,47495366,47495737,47495743,47496021,47496097,47496750,47498371,47498656,47498739],"created_at":"2026-03-23T18:40:58Z","created_at_i":1774291258,"num_comments":72,"objectID":"47493460","points":339,"story_id":47493460,"title":"Autoresearch
+        on an old research idea","updated_at":"2026-03-24T07:07:24Z","url":"https://ykumar.me/blog/eclip-autoresearch/"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"phasE89"},"title":{"matchLevel":"none","matchedWords":[],"value":"Claude
+        Code Cheat Sheet"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://cc.storyfox.cz"}},"_tags":["story","author_phasE89","story_47495527","front_page"],"author":"phasE89","children":[47495528,47495897,47495947,47496071,47496494,47496510,47496636,47496706,47496791,47496846,47496907,47496995,47497163,47497214,47497229,47497238,47497306,47497836,47498010,47498018,47498100,47498233,47498278,47498434,47498574,47498703,47498731,47499389,47499415],"created_at":"2026-03-23T21:44:20Z","created_at_i":1774302260,"num_comments":98,"objectID":"47495527","points":312,"story_id":47495527,"title":"Claude
+        Code Cheat Sheet","updated_at":"2026-03-24T07:07:24Z","url":"https://cc.storyfox.cz"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"moonka"},"story_text":{"matchLevel":"none","matchedWords":[],"value":"<a
+        href=\"https://docs.fcc.gov/public/attachments/DOC-420034A1.pdf\" rel=\"nofollow\">https://docs.fcc.gov/public/attachments/DOC-420034A1.pdf</a><p><a
+        href=\"https://www.fcc.gov/document/fcc-adds-routers-produced-foreign-countries-covered-list\"
+        rel=\"nofollow\">https://www.fcc.gov/document/fcc-adds-routers-produced-forei...</a><p><a
+        href=\"https://docs.fcc.gov/public/attachments/DA-26-278A1.pdf\" rel=\"nofollow\">https://docs.fcc.gov/public/attachments/DA-26-278A1.pdf</a><p><a
+        href=\"https://www.bbc.com/news/articles/c74787w149zo\" rel=\"nofollow\">https://www.bbc.com/news/articles/c74787w149zo</a><p><a
+        href=\"https://www.cnet.com/home/internet/fcc-bans-foreign-made-routers-as-national-security-risk/\"
+        rel=\"nofollow\">https://www.cnet.com/home/internet/fcc-bans-foreign-made-rou...</a>"},"title":{"matchLevel":"none","matchedWords":[],"value":"FCC
+        updates covered list to include foreign-made consumer routers"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://www.fcc.gov/document/fcc-updates-covered-list-include-foreign-made-consumer-routers"}},"_tags":["story","author_moonka","story_47495344","front_page"],"author":"moonka","children":[47496101,47496102,47496115,47496176,47496185,47496214,47496226,47496278,47496342,47496372,47496404,47496420,47496470,47496517,47496853,47496990,47497004,47497012,47497073,47497126,47497204,47497210,47497289,47497317,47497606,47497660,47497897,47497964,47498255,47498462,47498468,47498475,47498676,47499282,47499312,47499435],"created_at":"2026-03-23T21:28:02Z","created_at_i":1774301282,"num_comments":191,"objectID":"47495344","points":289,"story_id":47495344,"story_text":"<a
+        href=\"https:&#x2F;&#x2F;docs.fcc.gov&#x2F;public&#x2F;attachments&#x2F;DOC-420034A1.pdf\"
+        rel=\"nofollow\">https:&#x2F;&#x2F;docs.fcc.gov&#x2F;public&#x2F;attachments&#x2F;DOC-420034A1.pdf</a><p><a
+        href=\"https:&#x2F;&#x2F;www.fcc.gov&#x2F;document&#x2F;fcc-adds-routers-produced-foreign-countries-covered-list\"
+        rel=\"nofollow\">https:&#x2F;&#x2F;www.fcc.gov&#x2F;document&#x2F;fcc-adds-routers-produced-forei...</a><p><a
+        href=\"https:&#x2F;&#x2F;docs.fcc.gov&#x2F;public&#x2F;attachments&#x2F;DA-26-278A1.pdf\"
+        rel=\"nofollow\">https:&#x2F;&#x2F;docs.fcc.gov&#x2F;public&#x2F;attachments&#x2F;DA-26-278A1.pdf</a><p><a
+        href=\"https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c74787w149zo\"
+        rel=\"nofollow\">https:&#x2F;&#x2F;www.bbc.com&#x2F;news&#x2F;articles&#x2F;c74787w149zo</a><p><a
+        href=\"https:&#x2F;&#x2F;www.cnet.com&#x2F;home&#x2F;internet&#x2F;fcc-bans-foreign-made-routers-as-national-security-risk&#x2F;\"
+        rel=\"nofollow\">https:&#x2F;&#x2F;www.cnet.com&#x2F;home&#x2F;internet&#x2F;fcc-bans-foreign-made-rou...</a>","title":"FCC
+        updates covered list to include foreign-made consumer routers","updated_at":"2026-03-24T07:07:24Z","url":"https://www.fcc.gov/document/fcc-updates-covered-list-include-foreign-made-consumer-routers"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"in-silico"},"title":{"matchLevel":"none","matchedWords":[],"value":"Epoch
+        confirms GPT5.4 Pro solved a frontier math open problem"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://epoch.ai/frontiermath/open-problems/ramsey-hypergraphs"}},"_tags":["story","author_in-silico","story_47497757","front_page"],"author":"in-silico","children":[47498113,47498273,47498289,47498290,47498388,47498392,47498401,47498412,47498422,47498477,47498501,47498526,47498563,47498568,47498660,47498684,47498700,47498791,47498822,47499054,47499055,47499221,47499303,47499317,47499328,47499385],"created_at":"2026-03-24T01:53:09Z","created_at_i":1774317189,"num_comments":205,"objectID":"47497757","points":269,"story_id":47497757,"title":"Epoch
+        confirms GPT5.4 Pro solved a frontier math open problem","updated_at":"2026-03-24T07:07:24Z","url":"https://epoch.ai/frontiermath/open-problems/ramsey-hypergraphs"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"mooreds"},"title":{"matchLevel":"none","matchedWords":[],"value":"I
+        built an AI receptionist for a mechanic shop"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://www.itsthatlady.dev/blog/building-an-ai-receptionist-for-my-brother/"}},"_tags":["story","author_mooreds","story_47487536","front_page"],"author":"mooreds","children":[47487608,47487611,47487617,47487626,47487646,47487662,47487712,47487718,47487719,47487737,47487740,47487764,47487765,47487770,47487781,47487856,47487912,47487935,47488009,47488038,47488094,47488992,47491752,47491943,47492049,47492193,47492205,47492239,47492383,47492487,47492557,47492867,47493012,47493046,47493117,47493183,47493409,47493443,47493651,47493776,47493923,47494010,47494045,47494129,47494281,47494365,47495187,47495256,47495457,47496109,47496118,47496170,47496250,47496270,47496490,47496491,47496661,47496692,47496834,47496904,47497069,47497191,47497273,47497333,47497375,47497727,47497894,47497943,47498384,47498404,47499060,47499172,47499173,47499393],"created_at":"2026-03-23T10:32:33Z","created_at_i":1774261953,"num_comments":274,"objectID":"47487536","points":260,"story_id":47487536,"title":"I
+        built an AI receptionist for a mechanic shop","updated_at":"2026-03-24T07:07:24Z","url":"https://www.itsthatlady.dev/blog/building-an-ai-receptionist-for-my-brother/"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"justsomehnguy"},"title":{"matchLevel":"none","matchedWords":[],"value":"Windows
+        3.1 tiled background .bmp archive"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://github.com/andreasjansson/win-3.1-backgrounds"}},"_tags":["story","author_justsomehnguy","story_47496221","front_page"],"author":"justsomehnguy","children":[47496626,47496722,47496760,47496805,47496824,47496828,47496830,47496832,47496884,47496949,47497093,47497097,47497101,47497293,47497377,47497383,47497410,47497437,47497512,47497540,47497624,47497694,47497818,47497833,47497935,47498011,47498300,47498357,47498470,47498547],"created_at":"2026-03-23T22:52:35Z","created_at_i":1774306355,"num_comments":64,"objectID":"47496221","points":227,"story_id":47496221,"title":"Windows
+        3.1 tiled background .bmp archive","updated_at":"2026-03-24T07:02:24Z","url":"https://github.com/andreasjansson/win-3.1-backgrounds"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"jicea"},"title":{"matchLevel":"none","matchedWords":[],"value":"Trivy
+        under attack again: Widespread GitHub Actions tag compromise secrets"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://socket.dev/blog/trivy-under-attack-again-github-actions-compromise"}},"_tags":["story","author_jicea","story_47475888","front_page"],"author":"jicea","children":[47492211,47492405,47492448,47492490,47492526,47492600,47492621,47493132,47493251,47493253,47493343,47493539,47493607,47493919,47494031,47494210,47494269,47494309,47496233,47496428,47496872,47497322,47498784,47499143],"created_at":"2026-03-22T09:45:14Z","created_at_i":1774172714,"num_comments":67,"objectID":"47475888","points":190,"story_id":47475888,"title":"Trivy
+        under attack again: Widespread GitHub Actions tag compromise secrets","updated_at":"2026-03-24T07:07:09Z","url":"https://socket.dev/blog/trivy-under-attack-again-github-actions-compromise"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"lalitmaganti"},"title":{"matchLevel":"none","matchedWords":[],"value":"Finding
+        all regex matches has always been O(n\u00b2)"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://iev.ee/blog/the-quadratic-problem-nobody-fixed/"}},"_tags":["story","author_lalitmaganti","story_47443903","front_page"],"author":"lalitmaganti","children":[47493767,47493873,47494359,47494420,47494694,47494930,47494954,47495045,47495514,47495586,47495808,47496304,47496480,47496903,47497176,47497301,47498200,47498926,47498985],"created_at":"2026-03-19T18:40:02Z","created_at_i":1773945602,"num_comments":46,"objectID":"47443903","points":190,"story_id":47443903,"title":"Finding
+        all regex matches has always been O(n\u00b2)","updated_at":"2026-03-24T06:55:24Z","url":"https://iev.ee/blog/the-quadratic-problem-nobody-fixed/"},{"_highlightResult":{"author":{"matchLevel":"none","matchedWords":[],"value":"ecshafer"},"title":{"matchLevel":"none","matchedWords":[],"value":"Local
+        Stack Archived their GitHub repo and requires an account to run"},"url":{"matchLevel":"none","matchedWords":[],"value":"https://github.com/localstack/localstack"}},"_tags":["story","author_ecshafer","story_47493657","front_page"],"author":"ecshafer","children":[47494033,47494105,47494107,47494159,47494248,47494360,47494548,47494590,47494647,47494754,47494799,47494921,47494978,47495121,47496488,47496889,47496956,47497185,47497991,47498293,47499082],"created_at":"2026-03-23T18:57:08Z","created_at_i":1774292228,"num_comments":105,"objectID":"47493657","points":186,"story_id":47493657,"title":"Local
+        Stack Archived their GitHub repo and requires an account to run","updated_at":"2026-03-24T07:07:09Z","url":"https://github.com/localstack/localstack"}],"hitsPerPage":10,"nbHits":45,"nbPages":5,"page":0,"params":"tags=front_page&hitsPerPage=10&advancedSyntax=true&analyticsTags=backend","processingTimeMS":1,"processingTimingsMS":{"_request":{"roundTrip":34},"total":0},"query":"","serverTimeMS":1}
+
+        '
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+      Content-Length:
+      - '12845'
+      access-control-allow-origin:
+      - '*'
+      content-type:
+      - application/json
+      date:
+      - Tue, 24 Mar 2026 07:07:32 GMT
+      server:
+      - Google Frontend
+      via:
+      - 1.1 google
+      x-cloud-trace-context:
+      - 05ef97478766333a1085451ddc04e619
+    status:
+      code: 200
+      message: OK
+version: 1

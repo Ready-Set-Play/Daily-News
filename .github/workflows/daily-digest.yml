@@ -1,0 +1,64 @@
+name: Daily News Digest
+
+on:
+  schedule:
+    # 11:30 UTC = 05:30 CT (CST) / 06:30 CT (CDT)
+    # Adjust to 10:30 UTC during daylight saving (mid-March through early-Nov)
+    - cron: "30 11 * * *"
+  workflow_dispatch:  # Allow manual runs
+
+jobs:
+  send-digest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run daily digest pipeline
+        env:
+          NYT_API_KEY: ${{ secrets.NYT_API_KEY }}
+          LLM_PROVIDER: ${{ secrets.LLM_PROVIDER || 'anthropic' }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL }}
+          FEEDBACK_BASE_URL: ${{ secrets.FEEDBACK_BASE_URL }}
+        run: |
+          cd src
+          python main.py
+
+      - name: Notify on failure
+        if: failure()
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+        run: |
+          python -c "
+          import urllib.request, json, os
+          payload = json.dumps({
+            'from': 'Daily Brief <digest@yourdomain.com>',
+            'to': [os.environ['RECIPIENT_EMAIL']],
+            'subject': 'Daily Brief failed to deliver',
+            'text': 'The daily digest pipeline failed. Check GitHub Actions logs for details.',
+          }).encode()
+          req = urllib.request.Request(
+            'https://api.resend.com/emails',
+            data=payload,
+            headers={'Authorization': 'Bearer ' + os.environ['RESEND_API_KEY'], 'Content-Type': 'application/json'},
+            method='POST'
+          )
+          urllib.request.urlopen(req, timeout=10)
+          "

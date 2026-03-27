@@ -1,0 +1,1023 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.nytimes.com
+      User-Agent:
+      - Python-urllib/3.11
+    method: GET
+    uri: https://api.nytimes.com/svc/topstories/v2/technology.json
+  response:
+    body:
+      string: "{\"status\":\"OK\",\"copyright\":\"Copyright (c) 2026 The New York
+        Times Company. All Rights Reserved.\",\"section\":\"Technology\",\"last_updated\":\"2026-03-20T14:34:39-04:00\",\"num_results\":29,\"results\":[{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"More!
+        More! More! Tech Workers Max Out Their A.I. Use.\",\"abstract\":\"At a number
+        of companies, employees compete on leaderboards to show how much A.I. they\u2019re
+        using. They\u2019re racking up big bills along the way.\",\"url\":\"https://www.nytimes.com/2026/03/20/technology/tokenmaxxing-ai-agents.html\",\"uri\":\"nyt://article/1ae05f13-6371-5a7b-8e38-af79b7effa52\",\"byline\":\"By
+        Kevin Roose\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-21T13:47:04-04:00\",\"created_date\":\"2026-03-20T11:55:35-04:00\",\"published_date\":\"2026-03-20T11:55:35-04:00\",\"material_type_facet\":\"\",\"kicker\":\"The
+        Shift\",\"des_facet\":[\"Artificial Intelligence\",\"Productivity\",\"Computers
+        and the Internet\",\"Open-Source Software\"],\"org_facet\":[\"OpenAI Labs\",\"Anthropic
+        AI LLC\",\"Figma Inc\",\"Mechanize AI\"],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/20/business/20biz-roose/20biz-roose-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":2048,\"width\":1366,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Erik
+        Carter\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/business/20biz-roose/20biz-roose-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Erik
+        Carter\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/business/20biz-roose/20biz-roose-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Erik
+        Carter\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Polymarket
+        Says It Predicts the Truth. Its Social Feeds Are Filled With Falsehoods.\",\"abstract\":\"A
+        review of the betting market\u2019s social media feeds found it has published
+        hundreds of false and misleading posts.\",\"url\":\"https://www.nytimes.com/2026/03/20/technology/polymarket-social-feeds-falsehoods.html\",\"uri\":\"nyt://article/b0e7b8f2-e2e9-53ba-8558-cb5d1d7fcdf4\",\"byline\":\"By
+        Stuart A. Thompson, David Yaffe-Bellany and Mike Isaac\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-21T13:48:27-04:00\",\"created_date\":\"2026-03-20T11:29:52-04:00\",\"published_date\":\"2026-03-20T11:29:52-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Social
+        Media\",\"Computers and the Internet\",\"Rumors and Misinformation\",\"Gambling\",\"Mobile
+        Applications\"],\"org_facet\":[\"Polymarket (Adventure One QSS Inc)\"],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/2026-02-12-disinfo-polymarket-index/2026-02-12-disinfo-polymarket-index-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1333,\"width\":2000,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"The
+        New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/2026-02-12-disinfo-polymarket-index/2026-02-12-disinfo-polymarket-index-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"The
+        New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/2026-02-12-disinfo-polymarket-index/2026-02-12-disinfo-polymarket-index-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"The
+        New York Times\"}],\"short_url\":\"\"},{\"section\":\"us\",\"subsection\":\"politics\",\"title\":\"White
+        House Unveils A.I. Policy Aimed at Blocking State Laws\",\"abstract\":\"The
+        Trump administration on Friday released new guidelines for federal legislation
+        on the technology, recommending some safeguards for children and consumer
+        protections for energy costs.\",\"url\":\"https://www.nytimes.com/2026/03/20/us/politics/white-house-unveils-ai-policy-aimed-at-blocking-state-laws.html\",\"uri\":\"nyt://article/112d31f2-69c9-5cb8-b255-635aaef74867\",\"byline\":\"By
+        Cecilia Kang\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-20T12:52:19-04:00\",\"created_date\":\"2026-03-20T12:52:19-04:00\",\"published_date\":\"2026-03-20T12:52:19-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"United
+        States Politics and Government\",\"Artificial Intelligence\",\"Federal-State
+        Relations (US)\",\"Regulation and Deregulation of Industry\"],\"org_facet\":[\"OpenAI
+        Labs\",\"Google Inc\",\"Meta Platforms Inc\"],\"per_facet\":[\"Trump, Donald
+        J\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/20trump-news-ai-framework-topart-fpvc/20trump-news-ai-framework-topart-fpvc-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1366,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"President
+        Trump and David Sacks, the Trump administration\u2019s A.I. and crypto czar,
+        during a round-table event in the White House last year.\",\"copyright\":\"Haiyun
+        Jiang for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/20trump-news-ai-framework-topart-fpvc/20trump-news-ai-framework-topart-fpvc-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"President
+        Trump and David Sacks, the Trump administration\u2019s A.I. and crypto czar,
+        during a round-table event in the White House last year.\",\"copyright\":\"Haiyun
+        Jiang for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/20trump-news-ai-framework-topart-fpvc/20trump-news-ai-framework-topart-fpvc-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"President
+        Trump and David Sacks, the Trump administration\u2019s A.I. and crypto czar,
+        during a round-table event in the White House last year.\",\"copyright\":\"Haiyun
+        Jiang for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"podcasts\",\"subsection\":\"\",\"title\":\"\u2018A.I.-Washing\u2019
+        Layoffs? + Why L.L.M.s Can\u2019t Write Well + Tokenmaxxing\",\"abstract\":\"Companies
+        are using A.I. as a reason for layoffs, but the truth may be more complex.\",\"url\":\"https://www.nytimes.com/2026/03/20/podcasts/hardfork-ai-washing-tokenmaxxing.html\",\"uri\":\"nyt://article/de27b5dd-ffd5-532b-a982-3e0cbbc6a017\",\"byline\":\"By
+        Kevin Roose, Casey Newton, Rachel Cohn, Whitney Jones, Vjeran Pavic, Katie
+        McMurran, Dan Powell, Rowan Niemisto and Diane Wong\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-23T06:13:23-04:00\",\"created_date\":\"2026-03-20T07:00:03-04:00\",\"published_date\":\"2026-03-20T07:00:03-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Science
+        and Technology\",\"Artificial Intelligence\",\"internal-open-access-audio\"],\"org_facet\":[\"Meta
+        Platforms Inc\",\"OpenAI Labs\"],\"per_facet\":[\"Dorsey, Jack\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/20/podcasts/20hardfork-layoffs/20hardfork-layoffs-superJumbo.png\",\"format\":\"Super
+        Jumbo\",\"height\":1365,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        Illustration: The New York Times; Photo: iStock/Getty Images\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/podcasts/20hardfork-layoffs/20hardfork-layoffs-threeByTwoSmallAt2X.png\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        Illustration: The New York Times; Photo: iStock/Getty Images\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/podcasts/20hardfork-layoffs/20hardfork-layoffs-thumbLarge-v2.png\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        Illustration: The New York Times; Photo: iStock/Getty Images\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Judge
+        Hears State Challenge to Trump\u2019s Tech Deal Settlement\",\"abstract\":\"Democratic
+        state attorneys general are fighting the Justice Department\u2019s clearance
+        of a $14 billion deal by Hewlett Packard Enterprise, arguing it was ineffective
+        and corrupt.\",\"url\":\"https://www.nytimes.com/2026/03/23/technology/hpe-juniper-hearing-settlement.html\",\"uri\":\"nyt://article/a1fc06e5-dd90-57e0-8b8e-d6a9eba7fa26\",\"byline\":\"By
+        David McCabe\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-24T01:09:54-04:00\",\"created_date\":\"2026-03-23T12:58:12-04:00\",\"published_date\":\"2026-03-23T12:58:12-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Mergers,
+        Acquisitions and Divestitures\",\"Federal-State Relations (US)\",\"Antitrust
+        Laws and Competition Issues\",\"States (US)\",\"Computers and the Internet\",\"Enterprise
+        Computing\",\"Consumer Protection\"],\"org_facet\":[\"Hewlett Packard Enterprise
+        Company\",\"Juniper Networks Inc\",\"Justice Department\"],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/23biz-trump-settlements-whfg/23biz-trump-settlements-whfg-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1514,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Democratic
+        state attorneys general are challenging the Justice Department\u2019s settlement
+        with Hewlett Packard Enterprise.\",\"copyright\":\"Brendan McDermid/Reuters\"},{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/23biz-trump-settlements-whfg/23biz-trump-settlements-whfg-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Democratic
+        state attorneys general are challenging the Justice Department\u2019s settlement
+        with Hewlett Packard Enterprise.\",\"copyright\":\"Brendan McDermid/Reuters\"},{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/23biz-trump-settlements-whfg/23biz-trump-settlements-whfg-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Democratic
+        state attorneys general are challenging the Justice Department\u2019s settlement
+        with Hewlett Packard Enterprise.\",\"copyright\":\"Brendan McDermid/Reuters\"}],\"short_url\":\"\"},{\"section\":\"arts\",\"subsection\":\"television\",\"title\":\"\u2018Real
+        Housewives\u2019 Changed the Way We Argue. Blame the Memes.\",\"abstract\":\"The
+        Bravo TV empire, which turns 20 this month, has also been a gold mine for
+        the internet.\",\"url\":\"https://www.nytimes.com/2026/03/23/arts/television/real-housewives-memes-bravo.html\",\"uri\":\"nyt://article/e4372c06-a287-5b60-a2f5-dc7ec859e7db\",\"byline\":\"By
+        Derrick Bryson Taylor\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-23T16:14:44-04:00\",\"created_date\":\"2026-03-23T05:00:20-04:00\",\"published_date\":\"2026-03-23T05:00:20-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Reality
+        Television\",\"Social Media\",\"Content Type: Service\",\"Real Housewives
+        (TV Program)\",\"The Real Housewives of Orange County (TV Program)\"],\"org_facet\":[\"Bravo\"],\"per_facet\":[\"Burruss,
+        Kandi\",\"Giudice, Teresa\",\"Medley, Dorinda\",\"Leakes, Nene\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/29/arts/29cul-housewives-memes-03/29cul-housewives-memes-03-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":2048,\"width\":1366,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        Illustration by Elizabeth Renstrom for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/29/arts/29cul-housewives-memes-03/29cul-housewives-memes-03-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        Illustration by Elizabeth Renstrom for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/29/arts/29cul-housewives-memes-03/29cul-housewives-memes-03-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        Illustration by Elizabeth Renstrom for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"personaltech\",\"title\":\"Paul
+        Brainerd Dies at 78; Pioneered Desktop Publishing With PageMaker\",\"abstract\":\"His
+        software brought printing into the digital age, allowing users to stop manually
+        splicing columns of text and graphics and instead create layouts on a virtual
+        pasteboard.\",\"url\":\"https://www.nytimes.com/2026/03/21/technology/personaltech/paul-brainerd-dead.html\",\"uri\":\"nyt://article/dc6834df-8c53-5c8f-8332-5d3ea4ce3521\",\"byline\":\"By
+        Michael S. Rosenwald\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-22T22:39:33-04:00\",\"created_date\":\"2026-03-21T12:14:24-04:00\",\"published_date\":\"2026-03-21T12:14:24-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Deaths
+        (Obituaries)\",\"Computers and the Internet\",\"Book Trade and Publishing\",\"Software\",\"Desktop
+        Computers\",\"Printing and Allied Trades\",\"Word Processing\"],\"org_facet\":[\"Aldus
+        Corp\",\"Apple Inc\",\"Adobe Systems Inc\"],\"per_facet\":[\"Brainerd, Paul
+        S\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/19Brainard-02-wmhq/19Brainard-02-wmhq-superJumbo-v2.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1445,\"width\":1058,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Mr.
+        Brainerd in an undated photo. After Aldus merged with Adobe Systems in 1994,
+        he left the company and devoted the rest of his life to philanthropy, especially
+        environmental conservation efforts in the Pacific Northwest.\",\"copyright\":\"IslandWood\"},{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/19Brainard-02-wmhq/19Brainard-02-wmhq-threeByTwoSmallAt2X-v2.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Mr.
+        Brainerd in an undated photo. After Aldus merged with Adobe Systems in 1994,
+        he left the company and devoted the rest of his life to philanthropy, especially
+        environmental conservation efforts in the Pacific Northwest.\",\"copyright\":\"IslandWood\"},{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/19Brainard-02-wmhq/19Brainard-02-wmhq-thumbLarge-v2.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Mr.
+        Brainerd in an undated photo. After Aldus merged with Adobe Systems in 1994,
+        he left the company and devoted the rest of his life to philanthropy, especially
+        environmental conservation efforts in the Pacific Northwest.\",\"copyright\":\"IslandWood\"}],\"short_url\":\"\"},{\"section\":\"business\",\"subsection\":\"energy-environment\",\"title\":\"What
+        to Know About Electric Cars When Gas Prices Are Surging\",\"abstract\":\"War
+        in Iran has disrupted global oil supplies, which is prompting some car shoppers
+        to look for ways to climb off \u201Cthe gas-price roller coaster.\u201D\",\"url\":\"https://www.nytimes.com/2026/03/21/business/energy-environment/gas-prices-electric-vehicles-iran.html\",\"uri\":\"nyt://article/8f818019-92b0-5272-953e-30af36640f6c\",\"byline\":\"By
+        Jack Ewing\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-22T23:14:11-04:00\",\"created_date\":\"2026-03-21T05:01:40-04:00\",\"published_date\":\"2026-03-21T05:01:40-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Electric
+        and Hybrid Vehicles\",\"Automobiles\",\"Oil (Petroleum) and Gasoline\",\"Prices
+        (Fares, Fees and Rates)\",\"US and Israeli Attack on Iran (2026)\",\"Fuel
+        Efficiency\",\"Content Type: Service\"],\"org_facet\":[],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/21biz-iran-ev-guide-qbzp/21biz-iran-ev-guide-qbzp-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1536,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"A
+        pre-owned electric vehicle dealership in North Hampton, N.H. There are exceptionally
+        good deals to be had on used battery-powered cars.\",\"copyright\":\"Tristan
+        Spinski for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/21biz-iran-ev-guide-qbzp/21biz-iran-ev-guide-qbzp-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"A
+        pre-owned electric vehicle dealership in North Hampton, N.H. There are exceptionally
+        good deals to be had on used battery-powered cars.\",\"copyright\":\"Tristan
+        Spinski for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/23/multimedia/21biz-iran-ev-guide-qbzp/21biz-iran-ev-guide-qbzp-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"A
+        pre-owned electric vehicle dealership in North Hampton, N.H. There are exceptionally
+        good deals to be had on used battery-powered cars.\",\"copyright\":\"Tristan
+        Spinski for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Elon
+        Musk Is Responsible for Some Twitter Investor Losses, Jury Finds\",\"abstract\":\"The
+        verdict was a rare loss for Mr. Musk, who investors claimed had tried to drive
+        down the share price of the social media company, now called X, to renegotiate
+        his $44 billion offer.\",\"url\":\"https://www.nytimes.com/2026/03/20/technology/elon-musk-twitter-shareholders-verdict.html\",\"uri\":\"nyt://article/eb3ac00e-0c31-5bc9-a3df-d648187c6a45\",\"byline\":\"By
+        Kate Conger and Natallie Rocha\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-24T01:09:16-04:00\",\"created_date\":\"2026-03-20T17:56:41-04:00\",\"published_date\":\"2026-03-20T17:56:41-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Social
+        Media\",\"Suits and Litigation (Civil)\",\"Mergers, Acquisitions and Divestitures\",\"Computers
+        and the Internet\",\"Decisions and Verdicts\",\"Shareholder Rights and Activism\"],\"org_facet\":[\"X
+        (Formerly Twitter)\"],\"per_facet\":[\"Musk, Elon\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/05/multimedia/00biz-musk-verdict-1-zvwc/00biz-musk-verdict-1-zvwc-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1366,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Elon
+        Musk arriving at the Phillip Burton Federal Building and U.S. Courthouse in
+        San Francisco in March.\",\"copyright\":\"Jason Henry for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/05/multimedia/00biz-musk-verdict-1-zvwc/00biz-musk-verdict-1-zvwc-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Elon
+        Musk arriving at the Phillip Burton Federal Building and U.S. Courthouse in
+        San Francisco in March.\",\"copyright\":\"Jason Henry for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/05/multimedia/00biz-musk-verdict-1-zvwc/00biz-musk-verdict-1-zvwc-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Elon
+        Musk arriving at the Phillip Burton Federal Building and U.S. Courthouse in
+        San Francisco in March.\",\"copyright\":\"Jason Henry for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"U.S.
+        Says 3 Tied to Silicon Valley Server Maker Broke Export Laws\",\"abstract\":\"Prosecutors
+        said the men, including a co-founder of the company, Super Micro, had diverted
+        servers containing Nvidia A.I. chips to China.\",\"url\":\"https://www.nytimes.com/2026/03/19/technology/super-micro-servers-china-indicted.html\",\"uri\":\"nyt://article/01400412-34b8-5311-8d51-7870ae692d1c\",\"byline\":\"By
+        Kalley Huang and Ana Swanson\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-20T20:41:50-04:00\",\"created_date\":\"2026-03-19T20:50:38-04:00\",\"published_date\":\"2026-03-19T20:50:38-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Computer Chips\",\"Computers and the Internet\",\"Smuggling\",\"United
+        States International Relations\"],\"org_facet\":[\"Super Micro Computer Inc\",\"NVIDIA
+        Corporation\"],\"per_facet\":[],\"geo_facet\":[\"China\",\"Taiwan\"],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/19biz-chip-indictments-qjgb/19biz-chip-indictments-qjgb-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1365,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Super
+        Micro\u2019s exhibit area at the Mobile World Congress in Shanghai in June.
+        \",\"copyright\":\"Hector Retamal/Agence France-Presse \u2014 Getty Images\"},{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/19biz-chip-indictments-qjgb/19biz-chip-indictments-qjgb-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Super
+        Micro\u2019s exhibit area at the Mobile World Congress in Shanghai in June.
+        \",\"copyright\":\"Hector Retamal/Agence France-Presse \u2014 Getty Images\"},{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/19biz-chip-indictments-qjgb/19biz-chip-indictments-qjgb-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Super
+        Micro\u2019s exhibit area at the Mobile World Congress in Shanghai in June.
+        \",\"copyright\":\"Hector Retamal/Agence France-Presse \u2014 Getty Images\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Jeff
+        Bezos in Talks to Raise $100 Billion Fund to Transform Companies With A.I.\",\"abstract\":\"The
+        new fund would operate alongside the Amazon founder\u2019s A.I. start-up,
+        Project Prometheus.\",\"url\":\"https://www.nytimes.com/2026/03/19/technology/jeff-bezos-ai-fund-project-prometheus.html\",\"uri\":\"nyt://article/c4efe07a-23b3-5364-8cff-2b011310b854\",\"byline\":\"By
+        Cade Metz and Karen Weise\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-20T20:42:31-04:00\",\"created_date\":\"2026-03-19T18:24:11-04:00\",\"published_date\":\"2026-03-19T18:24:11-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Venture Capital\",\"Computers and the Internet\",\"Factories
+        and Manufacturing\",\"Engineering and Engineers\"],\"org_facet\":[\"Project
+        Prometheus\"],\"per_facet\":[\"Bezos, Jeffrey P\",\"Bajaj, Vik (1977- )\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/19biz-bezos-mztq/19biz-bezos-mztq-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1365,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Jeff
+        Bezos\u2019 new investment fund could be among the largest in the world. \",\"copyright\":\"Jeenah
+        Moon for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/19biz-bezos-mztq/19biz-bezos-mztq-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Jeff
+        Bezos\u2019 new investment fund could be among the largest in the world. \",\"copyright\":\"Jeenah
+        Moon for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/19biz-bezos-mztq/19biz-bezos-mztq-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Jeff
+        Bezos\u2019 new investment fund could be among the largest in the world. \",\"copyright\":\"Jeenah
+        Moon for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Have
+        You Turned to A.I. For Advice on a Romantic Relationship?\",\"abstract\":\"People
+        are using generative A.I. chatbots for help on everything from starting to
+        ending a relationship. Have you? How did it turn out?\",\"url\":\"https://www.nytimes.com/2026/03/19/technology/have-you-turned-to-ai-for-advice-on-a-romantic-relationship.html\",\"uri\":\"nyt://article/8eec32ce-cd84-5b49-be2b-731b693d1d04\",\"byline\":\"By
+        Kashmir Hill\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-19T15:28:42-04:00\",\"created_date\":\"2026-03-19T15:28:42-04:00\",\"published_date\":\"2026-03-19T15:28:42-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Dating and Relationships\"],\"org_facet\":[],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/00BIZ-AI-ADVICE-CALLOUT-hwtb/00BIZ-AI-ADVICE-CALLOUT-hwtb-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1931,\"width\":1931,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Helen
+        Orr for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/00BIZ-AI-ADVICE-CALLOUT-hwtb/00BIZ-AI-ADVICE-CALLOUT-hwtb-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Helen
+        Orr for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/19/multimedia/00BIZ-AI-ADVICE-CALLOUT-hwtb/00BIZ-AI-ADVICE-CALLOUT-hwtb-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Helen
+        Orr for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"The
+        Long Farewell to Mark Zuckerberg\u2019s Metaverse\",\"abstract\":\"Meta announced
+        changes that effectively leave Mr. Zuckerberg\u2019s vision of an immersive
+        digital world based in virtual reality only on life support.\",\"url\":\"https://www.nytimes.com/2026/03/19/technology/mark-zuckerbergs-metaverse-vr-horizon-worlds.html\",\"uri\":\"nyt://article/5be90f98-1fdb-51dd-9f76-878f5f4ed85f\",\"byline\":\"By
+        Eli Tan and Mike Isaac\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-21T11:20:26-04:00\",\"created_date\":\"2026-03-19T11:25:10-04:00\",\"published_date\":\"2026-03-19T11:25:10-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Virtual
+        Reality (Computers)\",\"Social Media\",\"Computers and the Internet\",\"Headphones
+        and Headsets\",\"Metaverse (Internet)\",\"Augmented Reality (Computers)\",\"Artificial
+        Intelligence\"],\"org_facet\":[\"Meta Platforms Inc\",\"Oculus VR Inc\"],\"per_facet\":[\"Zuckerberg,
+        Mark E\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/20/business/00metaverse-obit-sub/00metaverse-obit-sub-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":2048,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Paul
+        Windle\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/business/00metaverse-obit-sub/00metaverse-obit-sub-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Paul
+        Windle\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/business/00metaverse-obit-sub/00metaverse-obit-sub-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Paul
+        Windle\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"A.I.
+        Agents: They\u2019re Fun. They\u2019re Useful. But Don\u2019t Give Them the
+        Credit Card.\",\"abstract\":\"New A.I. bots can do more than just chat. They
+        can edit files, send emails, book trips and cause trouble.\",\"url\":\"https://www.nytimes.com/2026/03/19/technology/ai-agents-uses.html\",\"uri\":\"nyt://article/6987932b-12af-5848-b44b-1467770a80ec\",\"byline\":\"By
+        Cade Metz\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-19T14:22:32-04:00\",\"created_date\":\"2026-03-19T05:00:35-04:00\",\"published_date\":\"2026-03-19T05:00:35-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Computers and the Internet\",\"Open-Source Software\"],\"org_facet\":[\"Anthropic
+        AI LLC\",\"Block Inc\",\"OpenAI Labs\"],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/AI-AGENTS-promo-wbth/AI-AGENTS-promo-wbth-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1366,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"A
+        Vals AI employee uses Claude Code to debug failures in an agent trace at their
+        office in San Francisco.\",\"copyright\":\"Manuel Orbegozo for The New York
+        Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/AI-AGENTS-promo-wbth/AI-AGENTS-promo-wbth-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"A
+        Vals AI employee uses Claude Code to debug failures in an agent trace at their
+        office in San Francisco.\",\"copyright\":\"Manuel Orbegozo for The New York
+        Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/AI-AGENTS-promo-wbth/AI-AGENTS-promo-wbth-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"A
+        Vals AI employee uses Claude Code to debug failures in an agent trace at their
+        office in San Francisco.\",\"copyright\":\"Manuel Orbegozo for The New York
+        Times\"}],\"short_url\":\"\"},{\"section\":\"movies\",\"subsection\":\"\",\"title\":\"A.I.
+        Replica of Val Kilmer to Appear in Film After His Death\",\"abstract\":\"Kilmer\u2019s
+        estate collaborated with the filmmakers to make a digital likeness of the
+        actor, who died of cancer last year.\",\"url\":\"https://www.nytimes.com/2026/03/18/movies/val-kilmer-ai-movie.html\",\"uri\":\"nyt://article/fef61f47-0f36-5dc7-b4c9-74ef22396981\",\"byline\":\"By
+        Reggie Ugwu\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-19T22:36:18-04:00\",\"created_date\":\"2026-03-18T20:18:08-04:00\",\"published_date\":\"2026-03-18T20:18:08-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Movies\",\"Artificial
+        Intelligence\",\"As Deep as the Grave (Movie)\"],\"org_facet\":[],\"per_facet\":[\"Kilmer,
+        Val\",\"Voorhees, Coerte\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/18cul-kilmer-ai-lbpc/18cul-kilmer-ai-lbpc-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1125,\"width\":1995,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"An
+        A.I.-generated version of Val Kilmer in the upcoming movie \u201CAs Deep as
+        the Grave.\u201D\",\"copyright\":\"First Line Films\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/18cul-kilmer-ai-lbpc/18cul-kilmer-ai-lbpc-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"An
+        A.I.-generated version of Val Kilmer in the upcoming movie \u201CAs Deep as
+        the Grave.\u201D\",\"copyright\":\"First Line Films\"},{\"url\":\"https://static01.nyt.com/images/2026/03/20/multimedia/18cul-kilmer-ai-lbpc/18cul-kilmer-ai-lbpc-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"An
+        A.I.-generated version of Val Kilmer in the upcoming movie \u201CAs Deep as
+        the Grave.\u201D\",\"copyright\":\"First Line Films\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Silicon
+        Valley Musters Behind-the-Scenes Support for Anthropic\",\"abstract\":\"Tech
+        companies have been reluctant to directly confront Trump administration officials
+        over their contract feud with the A.I. start-up.\",\"url\":\"https://www.nytimes.com/2026/03/18/technology/silicon-valley-anthropic-pentagon.html\",\"uri\":\"nyt://article/2cfad4c7-0540-5329-95f6-f35f83013bc1\",\"byline\":\"By
+        Mike Isaac\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-19T12:33:35-04:00\",\"created_date\":\"2026-03-18T11:56:46-04:00\",\"published_date\":\"2026-03-18T11:56:46-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Computers and the Internet\",\"United States Defense and
+        Military Forces\",\"Defense Contracts\",\"Suits and Litigation (Civil)\"],\"org_facet\":[\"Defense
+        Department\",\"Anthropic AI LLC\",\"Google Inc\",\"Palantir Technologies\",\"OpenAI
+        Labs\",\"Microsoft Corp\",\"Amazon.com Inc\"],\"per_facet\":[\"Amodei, Dario\",\"Altman,
+        Samuel H\",\"Dean, Jeff (1968- )\",\"Huang, Jen-Hsun\",\"Karp, Alex\",\"Trump,
+        Donald J\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/17-biz-Anthropic-frenemy-pentagon-1/00biz-valley-war-bets-pentagon-bkhw-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1365,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Anthropic\u2019s
+        stance on how its artificial intelligence can be used in autonomous weapons
+        and domestic surveillance infuriated officials at the Pentagon.\",\"copyright\":\"Tierney
+        L. Cross/The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/17-biz-Anthropic-frenemy-pentagon-1/00biz-valley-war-bets-pentagon-bkhw-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Anthropic\u2019s
+        stance on how its artificial intelligence can be used in autonomous weapons
+        and domestic surveillance infuriated officials at the Pentagon.\",\"copyright\":\"Tierney
+        L. Cross/The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/17-biz-Anthropic-frenemy-pentagon-1/00biz-valley-war-bets-pentagon-bkhw-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Anthropic\u2019s
+        stance on how its artificial intelligence can be used in autonomous weapons
+        and domestic surveillance infuriated officials at the Pentagon.\",\"copyright\":\"Tierney
+        L. Cross/The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Google
+        Sits Pretty as A.I. Rivals Compete for Pentagon Favor\",\"abstract\":\"The
+        tech giant has been rebuilding its relationship with the Defense Department
+        and is poised to benefit as it sidesteps competitors\u2019 controversies.\",\"url\":\"https://www.nytimes.com/2026/03/18/technology/google-ai-pentagon.html\",\"uri\":\"nyt://article/2e31b59c-8425-5bac-985f-611957016309\",\"byline\":\"By
+        Kate Conger and Julian E. Barnes\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-19T22:25:22-04:00\",\"created_date\":\"2026-03-18T11:30:09-04:00\",\"published_date\":\"2026-03-18T11:30:09-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Computers and the Internet\",\"United States Defense and
+        Military Forces\",\"Defense Contracts\",\"Cloud Computing\"],\"org_facet\":[\"Defense
+        Department\",\"Google Inc\",\"Alphabet Inc\",\"Anthropic AI LLC\",\"OpenAI
+        Labs\"],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00biz-google-vpkt/00biz-google-vpkt-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1536,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Google,
+        which swore off military work in 2018, is quietly rebuilding its relationship
+        with the Defense Department.\",\"copyright\":\"Kelsey McClellan for The New
+        York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00biz-google-vpkt/00biz-google-vpkt-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Google,
+        which swore off military work in 2018, is quietly rebuilding its relationship
+        with the Defense Department.\",\"copyright\":\"Kelsey McClellan for The New
+        York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00biz-google-vpkt/00biz-google-vpkt-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Google,
+        which swore off military work in 2018, is quietly rebuilding its relationship
+        with the Defense Department.\",\"copyright\":\"Kelsey McClellan for The New
+        York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"personaltech\",\"title\":\"How
+        to Follow the Game, Even When You Can\u2019t See It Live\",\"abstract\":\"When
+        previous commitments keep you from catching your team on television, keep
+        up with it using free apps that quietly deliver scores and more to your phone.\",\"url\":\"https://www.nytimes.com/2026/03/18/technology/personaltech/how-to-follow-the-game-even-when-you-cant-see-it-live.html\",\"uri\":\"nyt://article/32048750-b799-5c50-b1f7-66024f8b2068\",\"byline\":\"By
+        J. D. Biersdorfer\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-22T23:13:26-04:00\",\"created_date\":\"2026-03-18T09:00:13-04:00\",\"published_date\":\"2026-03-18T09:00:13-04:00\",\"material_type_facet\":\"\",\"kicker\":\"Tech
+        Tip\",\"des_facet\":[\"Athletics and Sports\",\"iPhone\",\"Android (Operating
+        System)\",\"Smartphones\",\"NCAA Basketball Championships (Men)\",\"NCAA Basketball
+        Championships (Women)\",\"World Cup (Soccer)\",\"Baseball\",\"Content Type:
+        Service\",\"Computers and the Internet\"],\"org_facet\":[],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/18/technology/personaltech/18BIZ-TECHTIP-TOP/18BIZ-TECHTIP-TOP-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":712,\"width\":1320,\"type\":\"image\",\"subtype\":\"photoillustration\",\"caption\":\"Google\u2019s
+        \u201CPin Live Score\u201D feature in the \u201CDynamic Island\u201D tab,
+        on an iPhone 17 Pro Max. \",\"copyright\":\"Apple\"},{\"url\":\"https://static01.nyt.com/images/2026/03/18/technology/personaltech/18BIZ-TECHTIP-TOP/18BIZ-TECHTIP-TOP-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photoillustration\",\"caption\":\"Google\u2019s
+        \u201CPin Live Score\u201D feature in the \u201CDynamic Island\u201D tab,
+        on an iPhone 17 Pro Max. \",\"copyright\":\"Apple\"},{\"url\":\"https://static01.nyt.com/images/2026/03/18/technology/personaltech/18BIZ-TECHTIP-TOP/18BIZ-TECHTIP-TOP-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photoillustration\",\"caption\":\"Google\u2019s
+        \u201CPin Live Score\u201D feature in the \u201CDynamic Island\u201D tab,
+        on an iPhone 17 Pro Max. \",\"copyright\":\"Apple\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Turing
+        Award Goes to Inventors of Quantum Cryptography\",\"abstract\":\"In the 1980s,
+        Charles Bennett and Gilles Brassard created a new kind of encryption that
+        would be impregnable.\",\"url\":\"https://www.nytimes.com/2026/03/18/technology/turing-award-winners-quantum-cryptography.html\",\"uri\":\"nyt://article/405d276e-de01-5845-9102-3661a82db11d\",\"byline\":\"By
+        Cade Metz\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-21T11:15:07-04:00\",\"created_date\":\"2026-03-18T05:01:54-04:00\",\"published_date\":\"2026-03-18T05:01:54-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Cryptography,
+        Codes and Ciphers\",\"Turing Award\",\"Computers and the Internet\",\"Quantum
+        Computing\",\"Physics\",\"Research\",\"Computer Security\",\"internal-open-access-from-nl\"],\"org_facet\":[\"Assn
+        for Computing Machinery\"],\"per_facet\":[\"Brassard, Gilles (1955- )\",\"Bennett,
+        Charles V\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/17/business/BIZ-TURNING-1/BIZ-TURNING-1-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1536,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"On
+        Wednesday, the Association for Computing Machinery said Charles Bennett, left,
+        and Gilles Brassard had won this year\u2019s Turing Award, often called the
+        Nobel Prize of computing.\",\"copyright\":\"Lise Raymond, via Association
+        for Computing Machinery\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/business/BIZ-TURNING-1/BIZ-TURNING-1-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"On
+        Wednesday, the Association for Computing Machinery said Charles Bennett, left,
+        and Gilles Brassard had won this year\u2019s Turing Award, often called the
+        Nobel Prize of computing.\",\"copyright\":\"Lise Raymond, via Association
+        for Computing Machinery\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/business/BIZ-TURNING-1/BIZ-TURNING-1-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"On
+        Wednesday, the Association for Computing Machinery said Charles Bennett, left,
+        and Gilles Brassard had won this year\u2019s Turing Award, often called the
+        Nobel Prize of computing.\",\"copyright\":\"Lise Raymond, via Association
+        for Computing Machinery\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Silicon
+        Valley Bet on War. The Bets Are Paying Off.\",\"abstract\":\"After years of
+        criticism and financial risk, Palantir, Anthropic and small start-ups are
+        generating rewards from their investments in defense tech.\",\"url\":\"https://www.nytimes.com/2026/03/18/technology/silicon-valley-war-defense-tech.html\",\"uri\":\"nyt://article/895dfbc2-7e44-5695-92cf-49d9e28f2acc\",\"byline\":\"By
+        Sheera Frenkel\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-21T15:51:32-04:00\",\"created_date\":\"2026-03-18T05:01:26-04:00\",\"published_date\":\"2026-03-18T05:01:26-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"US and Israeli Attack on Iran (2026)\",\"Defense Contracts\",\"Computers
+        and the Internet\",\"United States Defense and Military Forces\",\"Drones
+        (Pilotless Planes)\",\"Start-ups\",\"Government Contracts and Procurement\",\"audio-neutral-informative\"],\"org_facet\":[\"Anduril
+        Industries Inc\",\"Anthropic AI LLC\",\"Defense Department\",\"Google Inc\",\"OpenAI
+        Labs\",\"Palantir Technologies\"],\"per_facet\":[\"Altman, Samuel H\",\"Andreessen,
+        Marc L\",\"Karp, Alex\",\"Schmidt, Eric E\"],\"geo_facet\":[\"Silicon Valley
+        (Calif)\"],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/17/business/00biz-valley-war-bets/00biz-valley-war-bets-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":2048,\"width\":1352,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        illustration by Max-o-Matic\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/business/00biz-valley-war-bets/00biz-valley-war-bets-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        illustration by Max-o-Matic\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/business/00biz-valley-war-bets/00biz-valley-war-bets-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Photo
+        illustration by Max-o-Matic\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"U.S.
+        Says Anthropic Is an \u2018Unacceptable\u2019 National Security Risk\",\"abstract\":\"In
+        a legal filing, the government said it questioned whether the A.I. start-up
+        could be a \u201Ctrusted partner\u201D in wartime, which led it to label the
+        company a supply chain risk.\",\"url\":\"https://www.nytimes.com/2026/03/17/technology/anthropic-pentagon-national-security-risk.html\",\"uri\":\"nyt://article/8c1bf134-8ee1-529c-8940-55a5c2afa68b\",\"byline\":\"By
+        Sheera Frenkel\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-18T12:27:20-04:00\",\"created_date\":\"2026-03-17T20:54:04-04:00\",\"published_date\":\"2026-03-17T20:54:04-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"internal-open-access-from-nl\",\"Artificial
+        Intelligence\",\"United States Defense and Military Forces\",\"Defense Contracts\",\"Surveillance
+        of Citizens by Government\",\"Computers and the Internet\",\"Suits and Litigation
+        (Civil)\",\"Supply Chain\",\"First Amendment (US Constitution)\"],\"org_facet\":[\"Anthropic
+        AI LLC\",\"Defense Department\"],\"per_facet\":[\"Hegseth, Pete\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17biz-anthropic-sub-gvpj/17biz-anthropic-sub-gvpj-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1365,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Anthropic
+        has accused the Pentagon of labeling it a \u201Csupply chain risk\u201D to
+        punish it on ideological grounds.\",\"copyright\":\"Tierney L. Cross/The New
+        York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17biz-anthropic-sub-gvpj/17biz-anthropic-sub-gvpj-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Anthropic
+        has accused the Pentagon of labeling it a \u201Csupply chain risk\u201D to
+        punish it on ideological grounds.\",\"copyright\":\"Tierney L. Cross/The New
+        York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17biz-anthropic-sub-gvpj/17biz-anthropic-sub-gvpj-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Anthropic
+        has accused the Pentagon of labeling it a \u201Csupply chain risk\u201D to
+        punish it on ideological grounds.\",\"copyright\":\"Tierney L. Cross/The New
+        York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Arizona
+        Files Criminal Charges Against Kalshi, the Prediction Site\",\"abstract\":\"The
+        state accused Kalshi of operating an illegal gambling business, escalating
+        the legal battle between states and prediction markets.\",\"url\":\"https://www.nytimes.com/2026/03/17/technology/arizona-criminal-charges-kalshi.html\",\"uri\":\"nyt://article/d50c29eb-7e1d-5c35-9998-a24c2e797905\",\"byline\":\"By
+        Natallie Rocha and David Yaffe-Bellany\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-18T23:20:01-04:00\",\"created_date\":\"2026-03-17T15:18:52-04:00\",\"published_date\":\"2026-03-17T15:18:52-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Gambling\",\"Attorneys
+        General\",\"Regulation and Deregulation of Industry\",\"Computers and the
+        Internet\",\"States (US)\",\"Elections\"],\"org_facet\":[\"Polymarket (Adventure
+        One QSS Inc)\",\"Kalshi Inc\"],\"per_facet\":[\"Mayes, Kristin\"],\"geo_facet\":[\"Arizona\"],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17BIZ-ARIZONA-KALSHI-mljg/17BIZ-ARIZONA-KALSHI-mljg-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1365,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Kris
+        Mayes, the Arizona attorney general. On Tuesday, she filed criminal charges
+        against Kalshi.\",\"copyright\":\"Rebecca Noble/Reuters\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17BIZ-ARIZONA-KALSHI-mljg/17BIZ-ARIZONA-KALSHI-mljg-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Kris
+        Mayes, the Arizona attorney general. On Tuesday, she filed criminal charges
+        against Kalshi.\",\"copyright\":\"Rebecca Noble/Reuters\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17BIZ-ARIZONA-KALSHI-mljg/17BIZ-ARIZONA-KALSHI-mljg-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Kris
+        Mayes, the Arizona attorney general. On Tuesday, she filed criminal charges
+        against Kalshi.\",\"copyright\":\"Rebecca Noble/Reuters\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"China
+        Ramps Up Scrutiny of a Meta A.I. Deal\",\"abstract\":\"The country appears
+        to be cracking down on people linked to the acquisition of Manus, a Singapore
+        company with Chinese roots, as President Trump prepares to visit Beijing.\",\"url\":\"https://www.nytimes.com/2026/03/17/technology/china-scrutiny-meta-manus.html\",\"uri\":\"nyt://article/9c7623f6-c65a-5ba5-ad5c-e46a061b5e87\",\"byline\":\"By
+        Ana Swanson, Meaghan Tobin, Paul Mozur and Eli Tan\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-19T11:41:15-04:00\",\"created_date\":\"2026-03-17T15:12:05-04:00\",\"published_date\":\"2026-03-17T15:12:05-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"United
+        States International Relations\",\"Artificial Intelligence\",\"Computers and
+        the Internet\",\"Mergers, Acquisitions and Divestitures\",\"Regulation and
+        Deregulation of Industry\",\"Start-ups\",\"Relocation of Business\",\"Politics
+        and Government\"],\"org_facet\":[\"Manus (Artificial Intelligence Co)\",\"Meta
+        Platforms Inc\",\"National Development and Reform Commission (China)\"],\"per_facet\":[],\"geo_facet\":[\"China\",\"Singapore\"],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17dc-meta-china-hlpc/17dc-meta-china-hlpc-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1192,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Meta
+        announced in December that it had bought Manus, a Singapore artificial intelligence
+        start-up that has Chinese roots.\",\"copyright\":\"Alex Plavevski/EPA, via
+        Shutterstock\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17dc-meta-china-hlpc/17dc-meta-china-hlpc-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Meta
+        announced in December that it had bought Manus, a Singapore artificial intelligence
+        start-up that has Chinese roots.\",\"copyright\":\"Alex Plavevski/EPA, via
+        Shutterstock\"},{\"url\":\"https://static01.nyt.com/images/2026/03/17/multimedia/17dc-meta-china-hlpc/17dc-meta-china-hlpc-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Meta
+        announced in December that it had bought Manus, a Singapore artificial intelligence
+        start-up that has Chinese roots.\",\"copyright\":\"Alex Plavevski/EPA, via
+        Shutterstock\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Netanyahu
+        Posts \u2018Proof of Life\u2019 Video as A.I. Sows Doubts About What\u2019s
+        Real\",\"abstract\":\"The unusual video is the latest demonstration that artificial
+        intelligence is undermining trust \u2014 even in footage that is authentic.\",\"url\":\"https://www.nytimes.com/2026/03/17/technology/netanyahu-ai-video-iran-israel.html\",\"uri\":\"nyt://article/926491c1-a19d-5224-af69-7b3345bd00de\",\"byline\":\"By
+        Stuart A. Thompson and Tiffany Hsu\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-17T22:06:51-04:00\",\"created_date\":\"2026-03-17T12:01:45-04:00\",\"published_date\":\"2026-03-17T12:01:45-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"US and Israeli Attack on Iran (2026)\",\"Social Media\",\"Video
+        Recordings, Downloads and Streaming\",\"Politics and Government\",\"Rumors
+        and Misinformation\",\"Computers and the Internet\"],\"org_facet\":[\"Citizen
+        Lab\",\"Meta Platforms Inc\",\"X.ai Inc\"],\"per_facet\":[\"Netanyahu, Benjamin\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/16/arts/Screenshot-2026-03-16-at-12/Screenshot-2026-03-16-at-12-superJumbo.png\",\"format\":\"Super
+        Jumbo\",\"height\":748,\"width\":1342,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"\"},{\"url\":\"https://static01.nyt.com/images/2026/03/16/arts/Screenshot-2026-03-16-at-12/Screenshot-2026-03-16-at-12-threeByTwoSmallAt2X.png\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"\"},{\"url\":\"https://static01.nyt.com/images/2026/03/16/arts/Screenshot-2026-03-16-at-12/Screenshot-2026-03-16-at-12-thumbLarge.png\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Trapped!
+        Inside a Self-Driving Car During an Anti-Robot Attack.\",\"abstract\":\"In
+        San Francisco, some passengers of autonomous taxis have experienced an unexpected
+        hazard: being stuck in the vehicles when the cars are assaulted.\",\"url\":\"https://www.nytimes.com/2026/03/17/technology/trapped-inside-a-self-driving-car-during-an-anti-robot-attack.html\",\"uri\":\"nyt://article/67d9626d-a389-5ee1-8c79-f17c94ca5112\",\"byline\":\"By
+        Erin Griffith\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-17T22:23:34-04:00\",\"created_date\":\"2026-03-17T05:01:36-04:00\",\"published_date\":\"2026-03-17T05:01:36-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Driverless
+        and Semiautonomous Vehicles\",\"Car Services and Livery Cabs\",\"Robots and
+        Robotics\",\"Traffic Accidents and Safety\",\"Assaults\",\"Computers and the
+        Internet\",\"Innovation\"],\"org_facet\":[\"Police Department (San Francisco,
+        Calif)\",\"Waymo\"],\"per_facet\":[],\"geo_facet\":[\"San Francisco (Calif)\"],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/10/multimedia/00biz-waymo-attack-2-vmlt/00biz-waymo-attack-2-vmlt-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":2048,\"width\":1834,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Self-driving
+        cars have introduced novel and sometimes worrisome quirks to car travel. \",\"copyright\":\"Loren
+        Elliott for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/10/multimedia/00biz-waymo-attack-2-vmlt/00biz-waymo-attack-2-vmlt-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Self-driving
+        cars have introduced novel and sometimes worrisome quirks to car travel. \",\"copyright\":\"Loren
+        Elliott for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/10/multimedia/00biz-waymo-attack-2-vmlt/00biz-waymo-attack-2-vmlt-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Self-driving
+        cars have introduced novel and sometimes worrisome quirks to car travel. \",\"copyright\":\"Loren
+        Elliott for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Nvidia
+        Built the A.I. Era. Now It Has to Defend It.\",\"abstract\":\"At the opening
+        of the company\u2019s annual conference, Jensen Huang leaned on technology
+        from a recent deal to show how artificial intelligence is changing.\",\"url\":\"https://www.nytimes.com/2026/03/16/technology/nvidia-gtc-ai-chips-huang.html\",\"uri\":\"nyt://article/61f8bcc5-5a01-58f9-a933-3e3e6a879b7e\",\"byline\":\"By
+        Kalley Huang and Tripp Mickle\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-21T11:22:21-04:00\",\"created_date\":\"2026-03-16T15:34:03-04:00\",\"published_date\":\"2026-03-16T15:34:03-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Computer Chips\",\"Computers and the Internet\",\"internal-open-access-from-nl\"],\"org_facet\":[\"NVIDIA
+        Corporation\",\"Cerebras Systems\",\"OpenAI Labs\"],\"per_facet\":[\"Huang,
+        Jen-Hsun\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/NVIDIA-promo-1-kgwl/NVIDIA-promo-1-kgwl-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1366,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Nvidia
+        chief executive Jensen Huang at the company\u2019s GTC conference in San Jose
+        on Monday.\",\"copyright\":\"Manuel Orbegozo for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/NVIDIA-promo-1-kgwl/NVIDIA-promo-1-kgwl-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Nvidia
+        chief executive Jensen Huang at the company\u2019s GTC conference in San Jose
+        on Monday.\",\"copyright\":\"Manuel Orbegozo for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/NVIDIA-promo-1-kgwl/NVIDIA-promo-1-kgwl-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Nvidia
+        chief executive Jensen Huang at the company\u2019s GTC conference in San Jose
+        on Monday.\",\"copyright\":\"Manuel Orbegozo for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"How
+        Trump Drove a Wedge Between Florida Republicans Over A.I.\",\"abstract\":\"A
+        Florida bill that would have regulated artificial intelligence, backed by
+        Gov. Ron DeSantis, failed to gain traction after President Trump made it clear
+        he did not want states to rein in the technology.\",\"url\":\"https://www.nytimes.com/2026/03/16/technology/ai-florida-republicans.html\",\"uri\":\"nyt://article/b205b00e-c393-5b22-8d79-93e63c4ffad6\",\"byline\":\"By
+        David McCabe and Patricia Mazzei\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-17T22:05:51-04:00\",\"created_date\":\"2026-03-16T12:30:14-04:00\",\"published_date\":\"2026-03-16T12:30:14-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Computers and the Internet\",\"Regulation and Deregulation
+        of Industry\",\"Law and Legislation\",\"United States Politics and Government\",\"State
+        Legislatures\",\"Midterm Elections (2026)\"],\"org_facet\":[\"Republican Party\"],\"per_facet\":[\"DeSantis,
+        Ron\",\"Trump, Donald J\"],\"geo_facet\":[\"Florida\"],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/FLORIDA-AI-3-qgzt/FLORIDA-AI-3-qgzt-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1366,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Gov.
+        Ron DeSantis of Florida proposed a package of rules he called an A.I. \u201Cbill
+        of rights.\u201D\",\"copyright\":\"Eric Lee for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/FLORIDA-AI-3-qgzt/FLORIDA-AI-3-qgzt-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Gov.
+        Ron DeSantis of Florida proposed a package of rules he called an A.I. \u201Cbill
+        of rights.\u201D\",\"copyright\":\"Eric Lee for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/FLORIDA-AI-3-qgzt/FLORIDA-AI-3-qgzt-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Gov.
+        Ron DeSantis of Florida proposed a package of rules he called an A.I. \u201Cbill
+        of rights.\u201D\",\"copyright\":\"Eric Lee for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"business\",\"subsection\":\"\",\"title\":\"TikTok
+        Investors Set to Pay $10 Billion Fee to Trump Administration\",\"abstract\":\"The
+        large fee is the latest example of the White House\u2019s inserting itself
+        into corporate deal making in unusual and aggressive ways.\",\"url\":\"https://www.nytimes.com/2026/03/13/business/trump-tiktok-10-billion-fee.html\",\"uri\":\"nyt://article/425ef74e-8cb0-5bc1-9560-a896c9df093e\",\"byline\":\"By
+        Lauren Hirsch and Andrew Duehren\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-16T11:35:12-04:00\",\"created_date\":\"2026-03-13T21:56:47-04:00\",\"published_date\":\"2026-03-13T21:56:47-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Social
+        Media\",\"Mergers, Acquisitions and Divestitures\",\"United States Politics
+        and Government\"],\"org_facet\":[\"TikTok (ByteDance)\",\"Beijing Bytedance
+        Technology Co Ltd\",\"MGX Fund Management Ltd\",\"Oracle Corporation\",\"Silver
+        Lake Partners\"],\"per_facet\":[\"Trump, Donald J\"],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13biz-TikTok-fee-ktcf/13biz-TikTok-fee-ktcf-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":1366,\"width\":2048,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"The
+        new investors paid the Treasury roughly $2.5 billion of the fee when the deal
+        closed in January.\",\"copyright\":\"Eric Lee for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13biz-TikTok-fee-ktcf/13biz-TikTok-fee-ktcf-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"The
+        new investors paid the Treasury roughly $2.5 billion of the fee when the deal
+        closed in January.\",\"copyright\":\"Eric Lee for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13biz-TikTok-fee-ktcf/13biz-TikTok-fee-ktcf-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"The
+        new investors paid the Treasury roughly $2.5 billion of the fee when the deal
+        closed in January.\",\"copyright\":\"Eric Lee for The New York Times\"}],\"short_url\":\"\"},{\"section\":\"technology\",\"subsection\":\"\",\"title\":\"Adobe
+        Settles With U.S. Over Hard-to-Cancel Subscriptions\",\"abstract\":\"The maker
+        of Photoshop agreed to pay $75 million to the government, which had accused
+        it of hiding details of expensive fees.\",\"url\":\"https://www.nytimes.com/2026/03/13/technology/adobe-settlement-doj.html\",\"uri\":\"nyt://article/eb65cc4d-92dd-5224-a80b-2d367539aa4c\",\"byline\":\"By
+        David McCabe\",\"item_type\":\"Article\",\"updated_date\":\"2026-03-14T11:47:58-04:00\",\"created_date\":\"2026-03-13T15:01:09-04:00\",\"published_date\":\"2026-03-13T15:01:09-04:00\",\"material_type_facet\":\"\",\"kicker\":\"\",\"des_facet\":[\"Software\",\"Compensation
+        for Damages (Law)\",\"Consumer Protection\",\"United States Politics and Government\"],\"org_facet\":[\"Adobe
+        Systems Inc\",\"Justice Department\"],\"per_facet\":[],\"geo_facet\":[],\"multimedia\":[{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13biz-adobe-1-vpwf/13biz-adobe-1-vpwf-superJumbo.jpg\",\"format\":\"Super
+        Jumbo\",\"height\":2048,\"width\":1366,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Under
+        the terms of a settlement, Adobe will pay $75 million to the Department of
+        Justice and provide customers with $75 million worth of free services.\",\"copyright\":\"Alex
+        Goodlett for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13biz-adobe-1-vpwf/13biz-adobe-1-vpwf-threeByTwoSmallAt2X.jpg\",\"format\":\"threeByTwoSmallAt2X\",\"height\":400,\"width\":600,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Under
+        the terms of a settlement, Adobe will pay $75 million to the Department of
+        Justice and provide customers with $75 million worth of free services.\",\"copyright\":\"Alex
+        Goodlett for The New York Times\"},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13biz-adobe-1-vpwf/13biz-adobe-1-vpwf-thumbLarge.jpg\",\"format\":\"Large
+        Thumbnail\",\"height\":150,\"width\":150,\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Under
+        the terms of a settlement, Adobe will pay $75 million to the Department of
+        Justice and provide customers with $75 million worth of free services.\",\"copyright\":\"Alex
+        Goodlett for The New York Times\"}],\"short_url\":\"\"}]}"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+      Connection:
+      - close
+      Content-Length:
+      - '59535'
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - Accept, Content-Type, X-Forwarded-For, X-Prototype-Version, X-Requested-With
+      access-control-allow-methods:
+      - GET, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length, X-JSON
+      age:
+      - '478'
+      cache-control:
+      - max-age=600, public
+      content-type:
+      - application/json
+      date:
+      - Tue, 24 Mar 2026 07:08:19 GMT
+      strict-transport-security:
+      - max-age=63072000; preload; includeSubdomains
+      vary:
+      - Accept-Encoding
+      via:
+      - 1.1 varnish, 1.1 google
+      x-cache:
+      - HIT
+      x-cache-hits:
+      - '0'
+      x-nyt-mktg-group:
+      - group1
+      x-request-id:
+      - 9e3006be-ea78-4f6b-bee9-578eb6297d71
+      x-served-by:
+      - cache-iad-kjyo7100126-IAD
+      x-timer:
+      - S1774336100.694618,VS0,VE1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.nytimes.com
+      User-Agent:
+      - Python-urllib/3.11
+    method: GET
+    uri: https://api.nytimes.com/svc/mostpopular/v2/shared/7.json
+  response:
+    body:
+      string: "{\"status\":\"OK\",\"copyright\":\"Copyright (c) 2026 The New York
+        Times Company.  All Rights Reserved.\",\"num_results\":20,\"results\":[{\"uri\":\"nyt://article/6fea14ec-f9ab-5707-b57b-a87782c3b281\",\"url\":\"https://www.nytimes.com/2026/03/12/us/politics/trump-epstein-statue-titanic-national-mall.html\",\"id\":100000010767881,\"asset_id\":100000010767881,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-12\",\"updated\":\"2026-03-12 17:28:22\",\"section\":\"U.S.\",\"subsection\":\"Politics\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"United
+        States Politics and Government;Epstein, Jeffrey E (1953- );Trump, Donald J;National
+        Park Service;Washington (DC)\",\"column\":null,\"byline\":\"By Ashley Ahn\",\"type\":\"Article\",\"title\":\"A
+        Statue of Trump and Epstein Re-enacting \u2018Titanic\u2019 Pose Appears on
+        National Mall\",\"abstract\":\"The installation is the latest in a series
+        of satirical statues created by an anonymous group of artists called the Secret
+        Handshake.\",\"des_facet\":[\"United States Politics and Government\"],\"org_facet\":[\"National
+        Park Service\"],\"per_facet\":[\"Epstein, Jeffrey E (1953- )\",\"Trump, Donald
+        J\"],\"geo_facet\":[\"Washington (DC)\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"A
+        statue titled \u201CThe King of the World\u201D depicting President Trump
+        and Jeffrey Epstein. \",\"copyright\":\"Evelyn Hockstein/Reuters\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/11trump-news-titanic-statue-wjqv/11trump-news-titanic-statue-wjqv-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/11trump-news-titanic-statue-wjqv/11trump-news-titanic-statue-wjqv-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/11trump-news-titanic-statue-wjqv/11trump-news-titanic-statue-wjqv-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/34264fb5-c6fd-5878-a5fd-94a50bd50e2d\",\"url\":\"https://www.nytimes.com/2026/03/15/us/politics/farm-labor-trump-migrant-workers-h2a.html\",\"id\":100000010695653,\"asset_id\":100000010695653,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-15\",\"updated\":\"2026-03-16 11:28:22\",\"section\":\"U.S.\",\"subsection\":\"Politics\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"Agriculture
+        and Farming;Migrant Labor (Agriculture);Labor and Jobs;Shortages;United States
+        Politics and Government;live-detached;Illegal Immigration;Deportation;Immigration
+        and Emigration;Visas;Trump, Donald J;American Farm Bureau Federation;Center
+        for Immigration Studies;Economic Policy Institute;Labor Department (US);Colorado;California;Mexico;United
+        States\",\"column\":null,\"byline\":\"By Linda Qiu\",\"type\":\"Article\",\"title\":\"To
+        Address Farm Labor Shortage, Trump Administration Turns to Migrant Workers\",\"abstract\":\"As
+        the president\u2019s immigration policies squeeze an already tight supply
+        of farm labor, the Trump administration is making it cheaper to hire foreign
+        farmworkers.\",\"des_facet\":[\"Agriculture and Farming\",\"Migrant Labor
+        (Agriculture)\",\"Labor and Jobs\",\"Shortages\",\"United States Politics
+        and Government\",\"live-detached\",\"Illegal Immigration\",\"Deportation\",\"Immigration
+        and Emigration\",\"Visas\"],\"org_facet\":[\"American Farm Bureau Federation\",\"Center
+        for Immigration Studies\",\"Economic Policy Institute\",\"Labor Department
+        (US)\"],\"per_facet\":[\"Trump, Donald J\"],\"geo_facet\":[\"Colorado\",\"California\",\"Mexico\",\"United
+        States\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Ernesto
+        Martinez and Noe Rub\xEDo, both workers from the H-2A program, pruning peach
+        trees on at Talbott Farms on Monday.\",\"copyright\":\"Rachel Woolf for The
+        New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/10/us/politics/dc-farmers-promo/dc-farmers-promo-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/10/us/politics/dc-farmers-promo/dc-farmers-3-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/10/us/politics/dc-farmers-promo/dc-farmers-3-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/8a5eae77-f9c3-5fc7-b272-5ea70d2abf34\",\"url\":\"https://www.nytimes.com/2026/03/13/us/politics/wall-street-access-pentagon.html\",\"id\":100000010773377,\"asset_id\":100000010773377,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-13\",\"updated\":\"2026-03-13 20:41:26\",\"section\":\"U.S.\",\"subsection\":\"Politics\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"United
+        States Politics and Government;United States Defense and Military Forces;Private
+        Equity;Corruption (Institutional);Feinberg, Stephen A;Trump, Donald J;Cerberus
+        Capital Management;Commerce Department;Defense Department;HEIDRICK \\u0026
+        STRUGGLES INC\",\"column\":null,\"byline\":\"By Ana Swanson\",\"type\":\"Article\",\"title\":\"Wall
+        Street Bankers Offered Lucrative Access to Join the Pentagon\",\"abstract\":\"A
+        presentation from a headhunting firm aimed to recruit Wall Street investors
+        to the Pentagon by offering \u201Cunmatched access\u201D to government officials
+        and fund-raising opportunities among foreign sovereigns.\",\"des_facet\":[\"United
+        States Politics and Government\",\"United States Defense and Military Forces\",\"Private
+        Equity\",\"Corruption (Institutional)\"],\"org_facet\":[\"Cerberus Capital
+        Management\",\"Commerce Department\",\"Defense Department\",\"HEIDRICK \\u0026
+        STRUGGLES INC\"],\"per_facet\":[\"Feinberg, Stephen A\",\"Trump, Donald J\"],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"The
+        Pentagon recruiting effort offers Wall Street investors the opportunity to
+        manage \u201Cmore capital than most investors deploy in their entire careers.\u201D\",\"copyright\":\"Kenny
+        Holston/The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2025/01/01/multimedia/13dc-dodinvest/01trump-news-pentagon-press-01-whjm-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2025/01/01/multimedia/13dc-dodinvest/01trump-news-pentagon-press-01-whjm-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2025/01/01/multimedia/13dc-dodinvest/01trump-news-pentagon-press-01-whjm-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://interactive/4ee4fa6d-f185-59c7-8fa7-57ca9eaca79e\",\"url\":\"https://www.nytimes.com/interactive/2026/03/17/us/joe-kent-resignation-letter-iran.html\",\"id\":100000010784139,\"asset_id\":100000010784139,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-17\",\"updated\":\"2026-03-17 14:17:28\",\"section\":\"U.S.\",\"subsection\":\"\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"US
+        and Israeli Attack on Iran (2026);United States Politics and Government;International
+        Relations;Letters;Appointments and Executive Changes;Kent, Joe (1980- )\",\"column\":null,\"byline\":\"\",\"type\":\"Interactive\",\"title\":\"Read
+        Joe Kent\u2019s Resignation Letter\",\"abstract\":\"Joe Kent, the director
+        of the National Counterterrorism Center, announced on Tuesday that he would
+        resign immediately, citing his opposition to the Iran war.\",\"des_facet\":[\"US
+        and Israeli Attack on Iran (2026)\",\"United States Politics and Government\",\"International
+        Relations\",\"Letters\",\"Appointments and Executive Changes\"],\"org_facet\":[],\"per_facet\":[\"Kent,
+        Joe (1980- )\"],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"\",\"caption\":\"\",\"copyright\":\"\",\"approved_for_syndication\":0,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/17/doc-hdnawxtw8aauamr-promo/doc-hdnawxtw8aauamr-promo-thumbStandard.png\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/17/doc-hdnawxtw8aauamr-promo/doc-hdnawxtw8aauamr-promo-mediumThreeByTwo210.png\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/17/doc-hdnawxtw8aauamr-promo/doc-hdnawxtw8aauamr-promo-mediumThreeByTwo440.png\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/c3ab9432-cf48-5913-9a99-d35be045276d\",\"url\":\"https://www.nytimes.com/2026/03/16/us/politics/uss-ford-fire-iran-venezuela.html\",\"id\":100000010782695,\"asset_id\":100000010782695,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-16\",\"updated\":\"2026-03-17 22:42:04\",\"section\":\"U.S.\",\"subsection\":\"Politics\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"United
+        States Defense and Military Forces;US and Israeli Attack on Iran (2026);United
+        States Politics and Government;United States International Relations;US-Venezuela
+        Conflict (2025- );Fires and Firefighters;Trump, Donald J;United States Navy;Iran\",\"column\":null,\"byline\":\"By
+        Helene Cooper\",\"type\":\"Article\",\"title\":\"Fire on U.S. Aircraft Carrier
+        Raged for Hours, Sailors Say\",\"abstract\":\"The Ford is now entering its
+        10th month of deployment after arriving in the Middle East from the Caribbean.\",\"des_facet\":[\"United
+        States Defense and Military Forces\",\"US and Israeli Attack on Iran (2026)\",\"United
+        States Politics and Government\",\"United States International Relations\",\"US-Venezuela
+        Conflict (2025- )\",\"Fires and Firefighters\"],\"org_facet\":[\"United States
+        Navy\"],\"per_facet\":[\"Trump, Donald J\"],\"geo_facet\":[\"Iran\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"The
+        crew on the U.S.S. Gerald R. Ford have been told that their deployment will
+        likely be extended into May, which would put them at an entire year at sea.\",\"copyright\":\"Giannis
+        Angelakis/Associated Press\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/16dc-ford-jqmw/16dc-ford-jqmw-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/16dc-ford-jqmw/16dc-ford-jqmw-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/16dc-ford-jqmw/16dc-ford-jqmw-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/f769b446-4d12-54b2-a265-c4b503a44eb4\",\"url\":\"https://www.nytimes.com/2026/03/16/us/politics/trump-operation-epic-fury-anger.html\",\"id\":100000010777928,\"asset_id\":100000010777928,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-16\",\"updated\":\"2026-03-21 11:00:48\",\"section\":\"U.S.\",\"subsection\":\"Politics\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"United
+        States Politics and Government;US and Israeli Attack on Iran (2026);United
+        States International Relations;Anger (Emotion);Trump, Donald J\",\"column\":null,\"byline\":\"By
+        Peter Baker\",\"type\":\"Article\",\"title\":\"In Choosing \u2018Epic Fury,\u2019
+        Trump Names a War and Defines His Presidency\",\"abstract\":\"The branding
+        of the U.S. military operation against Iran is a quintessentially Trumpian
+        choice for a leader whose tenure has been marked by anger.\",\"des_facet\":[\"United
+        States Politics and Government\",\"US and Israeli Attack on Iran (2026)\",\"United
+        States International Relations\",\"Anger (Emotion)\"],\"org_facet\":[],\"per_facet\":[\"Trump,
+        Donald J\"],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Doug
+        Mills/The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/16DC-MEMO-mjtw/16DC-MEMO-mjtw-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/16DC-MEMO-mjtw/16DC-MEMO-mjtw-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/f23546a7-576e-5330-85c0-ad2bfbb9c4ed\",\"url\":\"https://www.nytimes.com/2026/03/12/magazine/ai-coding-programming-jobs-claude-chatgpt.html\",\"id\":100000010747604,\"asset_id\":100000010747604,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-12\",\"updated\":\"2026-03-19 21:00:44\",\"section\":\"Magazine\",\"subsection\":\"\",\"nytdsection\":\"magazine\",\"adx_keywords\":\"Artificial
+        Intelligence;Software;Computers and the Internet;Careers and Professions;Layoffs
+        and Job Reductions;Productivity;internal-open-access-from-nl;internal-audio-rules;Amazon.com
+        Inc;Anthropic AI LLC;Google Inc;OpenAI Labs\",\"column\":null,\"byline\":\"By
+        Clive Thompson\",\"type\":\"Article\",\"title\":\"Coding After Coders: The
+        End of Computer Programming as We Know It\",\"abstract\":\"In the era of A.I.
+        agents, many Silicon Valley programmers are now barely programming. Instead,
+        what they\u2019re doing is deeply, deeply weird.\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Software\",\"Computers and the Internet\",\"Careers and Professions\",\"Layoffs
+        and Job Reductions\",\"Productivity\",\"internal-open-access-from-nl\",\"internal-audio-rules\"],\"org_facet\":[\"Amazon.com
+        Inc\",\"Anthropic AI LLC\",\"Google Inc\",\"OpenAI Labs\"],\"per_facet\":[],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"\",\"approved_for_syndication\":0,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/12/03/multimedia/12mag-aicoding-topper-image/12mag-aicoding-topper-image-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/12/03/multimedia/12mag-aicoding-topper-image/12mag-aicoding-topper-image-mediumThreeByTwo210-v2.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/12/03/multimedia/12mag-aicoding-topper-image/12mag-aicoding-topper-image-mediumThreeByTwo440-v2.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/da25382a-4bf3-5be4-afa9-a0b656792438\",\"url\":\"https://www.nytimes.com/2026/03/13/business/jared-kushner-affinity-mideast-funds.html\",\"id\":100000010771399,\"asset_id\":100000010771399,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-13\",\"updated\":\"2026-03-15 22:38:30\",\"section\":\"Business\",\"subsection\":\"\",\"nytdsection\":\"business\",\"adx_keywords\":\"Private
+        Equity;Conflicts of Interest;Sovereign Wealth Funds;United States International
+        Relations;Kushner, Jared;Trump, Donald J;Affinity Partners;Public Investment
+        Fund (Saudi Arabia);Citizens for Responsibility and Ethics in Washington;Middle
+        East;Saudi Arabia\",\"column\":null,\"byline\":\"By Rob Copeland and Maureen
+        Farrell\",\"type\":\"Article\",\"title\":\"Jared Kushner Solicits Funds for
+        His Firm While Working as Mideast Envoy\",\"abstract\":\"President Trump\u2019s
+        son-in-law is trying to raise $5 billion or more from foreign governments
+        and others for his private equity firm.\",\"des_facet\":[\"Private Equity\",\"Conflicts
+        of Interest\",\"Sovereign Wealth Funds\",\"United States International Relations\"],\"org_facet\":[\"Affinity
+        Partners\",\"Public Investment Fund (Saudi Arabia)\",\"Citizens for Responsibility
+        and Ethics in Washington\"],\"per_facet\":[\"Kushner, Jared\",\"Trump, Donald
+        J\"],\"geo_facet\":[\"Middle East\",\"Saudi Arabia\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Jared
+        Kushner, the founder of Affinity Partners, at the World Economic Forum in
+        Davos, Switzerland, in January.\",\"copyright\":\"Chip Somodevilla/Getty Images\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00kushner-fund-sub-glkz/00kushner-fund-sub-glkz-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00kushner-fund-sub-glkz/00kushner-fund-sub-glkz-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00kushner-fund-sub-glkz/00kushner-fund-sub-glkz-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/4bbf9deb-b1a8-5f65-a907-98fcbdc3df3c\",\"url\":\"https://www.nytimes.com/2026/03/15/us/politics/trump-markwayne-mullin-homeland-security-stocks.html\",\"id\":100000010764691,\"asset_id\":100000010764691,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-15\",\"updated\":\"2026-03-16 21:01:09\",\"section\":\"U.S.\",\"subsection\":\"Politics\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"Stocks
+        and Bonds;Ethics and Official Misconduct;Conflicts of Interest;Appointments
+        and Executive Changes;United States Politics and Government;Mullin, Markwayne;Collins,
+        Christopher C;Trump, Donald J;Homeland Security Department\",\"column\":null,\"byline\":\"By
+        Christopher Flavelle, Madeleine Ngo and Georgia Gee\",\"type\":\"Article\",\"title\":\"How
+        Trump\u2019s Homeland Security Pick, a Prolific Investor, Got a Lot Wealthier
+        in Congress\",\"abstract\":\"Markwayne Mullin\u2019s financial dealings take
+        on new importance as the Senate considers his nomination to lead an agency
+        whose budget has vastly expanded.\",\"des_facet\":[\"Stocks and Bonds\",\"Ethics
+        and Official Misconduct\",\"Conflicts of Interest\",\"Appointments and Executive
+        Changes\",\"United States Politics and Government\"],\"org_facet\":[\"Homeland
+        Security Department\"],\"per_facet\":[\"Mullin, Markwayne\",\"Collins, Christopher
+        C\",\"Trump, Donald J\"],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Senator
+        Markwayne Mullin, Republican of Oklahoma, is one of the most prolific investors
+        in the U.S. Senate.\",\"copyright\":\"Kenny Holston/The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00dc-mullin-money-01-jmwf/00dc-mullin-money-01-jmwf-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00dc-mullin-money-01-jmwf/00dc-mullin-money-01-jmwf-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/00dc-mullin-money-01-jmwf/00dc-mullin-money-01-jmwf-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/c855b5d9-c2a6-52e5-9774-909fb425fb25\",\"url\":\"https://www.nytimes.com/2026/03/12/opinion/james-fishback-gen-z-republican-florida.html\",\"id\":100000010767701,\"asset_id\":100000010767701,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-12\",\"updated\":\"2026-03-14 10:11:45\",\"section\":\"Opinion\",\"subsection\":\"\",\"nytdsection\":\"opinion\",\"adx_keywords\":\"Elections,
+        Governors;Right-Wing Extremism and Alt-Right;Generation Z;Anti-Semitism;Discrimination;Race
+        and Ethnicity;United States Politics and Government;United States International
+        Relations;Fuentes, Nicholas J;Fishback, James (1995- );Republican Party;Florida;Israel\",\"column\":null,\"byline\":\"By
+        Michelle Goldberg\",\"type\":\"Article\",\"title\":\"I Went to Florida to
+        See the 31-Year-Old Candidate Thrilling Gen Z. We\u2019re in Trouble.\",\"abstract\":\"James
+        Fishback has managed to bring the paranoid, transgressive, meme-drunk spirit
+        of the right-wing internet into the real world.\",\"des_facet\":[\"Elections,
+        Governors\",\"Right-Wing Extremism and Alt-Right\",\"Generation Z\",\"Anti-Semitism\",\"Discrimination\",\"Race
+        and Ethnicity\",\"United States Politics and Government\",\"United States
+        International Relations\"],\"org_facet\":[\"Republican Party\"],\"per_facet\":[\"Fuentes,
+        Nicholas J\",\"Fishback, James (1995- )\"],\"geo_facet\":[\"Florida\",\"Israel\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Damon
+        Winter/The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/15/multimedia/15goldberg-mtzk/12goldberg-mtzk-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/15/multimedia/15goldberg-mtzk/12goldberg-mtzk-mediumThreeByTwo210-v3.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/15/multimedia/15goldberg-mtzk/12goldberg-mtzk-mediumThreeByTwo440-v3.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://interactive/20804afa-ce53-54d3-8ab4-c55fadb9009f\",\"url\":\"https://www.nytimes.com/interactive/2026/03/14/business/media/iran-disinfo-artificial-intelligence.html\",\"id\":100000010769458,\"asset_id\":100000010769458,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-14\",\"updated\":\"2026-03-15 16:48:15\",\"section\":\"Business\",\"subsection\":\"Media\",\"nytdsection\":\"business\",\"adx_keywords\":\"internal-disable-fab;Artificial
+        Intelligence;internal-open-access-from-nl;Iran\",\"column\":null,\"byline\":\"By
+        Stuart A. Thompson and Alexander Cardia\",\"type\":\"Interactive\",\"title\":\"Cascade
+        of A.I. Fakes About War With Iran Causes Chaos Online\",\"abstract\":\"The
+        technology has been used to create misleading fakes before. But never at this
+        scale.\",\"des_facet\":[\"internal-disable-fab\",\"Artificial Intelligence\",\"internal-open-access-from-nl\"],\"org_facet\":[],\"per_facet\":[],\"geo_facet\":[\"Iran\"],\"media\":[{\"type\":\"image\",\"subtype\":\"\",\"caption\":\"\",\"copyright\":\"The
+        New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/2026-03-06-disinfo-iran-ai-index/2026-03-06-disinfo-iran-ai-index-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/2026-03-06-disinfo-iran-ai-index/2026-03-06-disinfo-iran-ai-index-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/2026-03-06-disinfo-iran-ai-index/2026-03-06-disinfo-iran-ai-index-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/811a7bce-9089-5d6e-8e6e-b3ab925f5611\",\"url\":\"https://www.nytimes.com/2026/03/11/world/middleeast/iran-war-costs-pentagon.html\",\"id\":100000010769369,\"asset_id\":100000010769369,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-11\",\"updated\":\"2026-03-12 15:12:17\",\"section\":\"World\",\"subsection\":\"Middle
+        East\",\"nytdsection\":\"world\",\"adx_keywords\":\"US and Israeli Attack
+        on Iran (2026);McConnell, Mitch;Defense Department;Republican Party\",\"column\":null,\"byline\":\"By
+        Catie Edmondson\",\"type\":\"Article\",\"title\":\"Pentagon Tells Congress
+        First Week of Iran War Cost More Than $11.3 Billion\",\"abstract\":\"In a
+        Capitol Hill briefing, officials gave their most comprehensive assessment
+        of the cost of the first six days of the war, but the number omitted several
+        aspects of the operation.\",\"des_facet\":[\"US and Israeli Attack on Iran
+        (2026)\"],\"org_facet\":[\"Defense Department\",\"Republican Party\"],\"per_facet\":[\"McConnell,
+        Mitch\"],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"A
+        closed-door briefing at the Capitol with Pentagon officials discussed the
+        cost of the war.\",\"copyright\":\"Kenny Holston/The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/11israel-iran-dod-briefing-cjzq/11israel-iran-dod-briefing-cjzq-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/11israel-iran-dod-briefing-cjzq/11israel-iran-dod-briefing-cjzq-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/11/multimedia/11israel-iran-dod-briefing-cjzq/11israel-iran-dod-briefing-cjzq-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/55610df9-dff0-524f-80e0-92ed7ff2bf9d\",\"url\":\"https://www.nytimes.com/2026/03/18/opinion/trump-save-america-act.html\",\"id\":100000010782749,\"asset_id\":100000010782749,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-18\",\"updated\":\"2026-03-22 01:54:23\",\"section\":\"Opinion\",\"subsection\":\"\",\"nytdsection\":\"opinion\",\"adx_keywords\":\"Voting
+        Rights, Registration and Requirements;Identification Devices;Citizenship and
+        Naturalization;Voter Fraud (Election Fraud);Midterm Elections (2026);United
+        States Politics and Government;Trump, Donald J\",\"column\":null,\"byline\":\"By
+        Jamelle Bouie\",\"type\":\"Article\",\"title\":\"This Is What the President
+        Is Fixated on Right Now?\",\"abstract\":\"Trump\u2019s SAVE Act would do anything
+        but save America.\",\"des_facet\":[\"Voting Rights, Registration and Requirements\",\"Identification
+        Devices\",\"Citizenship and Naturalization\",\"Voter Fraud (Election Fraud)\",\"Midterm
+        Elections (2026)\",\"United States Politics and Government\"],\"org_facet\":[],\"per_facet\":[\"Trump,
+        Donald J\"],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Daniel
+        Ribar for The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/22/multimedia/22bouie-zmgb/18bouie-zmgb-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/22/multimedia/22bouie-zmgb/18bouie-zmgb-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/22/multimedia/22bouie-zmgb/18bouie-zmgb-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/4f91651b-1476-590b-94da-ddade838d20d\",\"url\":\"https://www.nytimes.com/2026/03/16/opinion/kash-patel-fbi-iran.html\",\"id\":100000010766284,\"asset_id\":100000010766284,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-16\",\"updated\":\"2026-03-18 02:35:20\",\"section\":\"Opinion\",\"subsection\":\"\",\"nytdsection\":\"opinion\",\"adx_keywords\":\"US
+        and Israeli Attack on Iran (2026);Terrorism;United States International Relations;Patel,
+        Kashyap;Federal Bureau of Investigation;Islamic Revolutionary Guards Corps;Iran\",\"column\":null,\"byline\":\"By
+        Jacqueline Maguire\",\"type\":\"Article\",\"title\":\"I Was an F.B.I. Agent
+        for 25 Years. Kash Patel Is Playing a Dangerous Game.\",\"abstract\":\"Let\u2019s
+        hope it doesn\u2019t take another Sept. 11 to snap the F.B.I.\u2019s leadership
+        into action.\",\"des_facet\":[\"US and Israeli Attack on Iran (2026)\",\"Terrorism\",\"United
+        States International Relations\"],\"org_facet\":[\"Federal Bureau of Investigation\",\"Islamic
+        Revolutionary Guards Corps\"],\"per_facet\":[\"Patel, Kashyap\"],\"geo_facet\":[\"Iran\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Illustration
+        by The New York Times; source photographs by Borka Kiss and islander11, via
+        Getty Images\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/17/opinion/16maguire/16maguire-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/17/opinion/16maguire/16maguire-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/17/opinion/16maguire/16maguire-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/41779ee6-7b79-5037-bdb6-71b1c5442b62\",\"url\":\"https://www.nytimes.com/2026/03/12/us/politics/trump-russia-oil-sanctions.html\",\"id\":100000010773376,\"asset_id\":100000010773376,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-12\",\"updated\":\"2026-03-13 20:40:10\",\"section\":\"U.S.\",\"subsection\":\"Politics\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"Embargoes
+        and Sanctions;Oil (Petroleum) and Gasoline;US and Israeli Attack on Iran (2026);Russian
+        Invasion of Ukraine (2022);United States Politics and Government;United States
+        International Relations;United States Economy;International Trade and World
+        Market;Trump, Donald J;Treasury Department;Russia;Europe;Iran\",\"column\":null,\"byline\":\"By
+        Alan Rappeport\",\"type\":\"Article\",\"title\":\"Trump Removes Sanctions
+        on Russia to Help Oil Flow Amid Iran Conflict\",\"abstract\":\"Treasury Secretary
+        Scott Bessent said it was \u201Cunfortunate\u201D that the move could benefit
+        Russia, but maintained that it was only for the short term.\",\"des_facet\":[\"Embargoes
+        and Sanctions\",\"Oil (Petroleum) and Gasoline\",\"US and Israeli Attack on
+        Iran (2026)\",\"Russian Invasion of Ukraine (2022)\",\"United States Politics
+        and Government\",\"United States International Relations\",\"United States
+        Economy\",\"International Trade and World Market\"],\"org_facet\":[\"Treasury
+        Department\"],\"per_facet\":[\"Trump, Donald J\"],\"geo_facet\":[\"Russia\",\"Europe\",\"Iran\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Treasury
+        Secretary Scott Bessent said on Thursday that Russia would not benefit significantly
+        from the sanctions relief but acknowledged that it would see some financial
+        benefit.\",\"copyright\":\"Eric Lee for The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/12/multimedia/12dc-russiasanctions-whjc/12dc-russiasanctions-whjc-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/12/multimedia/12dc-russiasanctions-whjc/12dc-russiasanctions-whjc-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/12/multimedia/12dc-russiasanctions-whjc/12dc-russiasanctions-whjc-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/f19464ee-7aa3-5618-9e1c-f4d0e9b39b14\",\"url\":\"https://www.nytimes.com/2026/03/13/climate/ncar-breakup-plan-nasa-noaa.html\",\"id\":100000010772605,\"asset_id\":100000010772605,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-13\",\"updated\":\"2026-03-14 22:39:17\",\"section\":\"Climate\",\"subsection\":\"\",\"nytdsection\":\"climate\",\"adx_keywords\":\"Laboratories
+        and Scientific Equipment;Weather;Global Warming;Supercomputers;Research;United
+        States Politics and Government;Trump, Donald J;National Center for Atmospheric
+        Research;National Science Foundation;Colorado\",\"column\":null,\"byline\":\"By
+        Eric Niiler\",\"type\":\"Article\",\"title\":\"Trump Administration Readies
+        Plans to Dismantle Renowned Science Lab\",\"abstract\":\"Proposals include
+        transferring a supercomputer to the University of Wyoming and shifting a space
+        weather lab to a private company.\",\"des_facet\":[\"Laboratories and Scientific
+        Equipment\",\"Weather\",\"Global Warming\",\"Supercomputers\",\"Research\",\"United
+        States Politics and Government\"],\"org_facet\":[\"National Center for Atmospheric
+        Research\",\"National Science Foundation\"],\"per_facet\":[\"Trump, Donald
+        J\"],\"geo_facet\":[\"Colorado\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"The
+        National Center for Atmospheric Research in Boulder, Colo.\",\"copyright\":\"Caine
+        Delacy for The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13cli-breakup-ncar-laboratory-bzql/13cli-breakup-ncar-laboratory-bzql-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13cli-breakup-ncar-laboratory-bzql/13cli-breakup-ncar-laboratory-bzql-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/13/multimedia/13cli-breakup-ncar-laboratory-bzql/13cli-breakup-ncar-laboratory-bzql-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/d58fbb04-b972-5617-87f8-3550618aeb4d\",\"url\":\"https://www.nytimes.com/2026/03/17/opinion/trump-iran-war-strategy.html\",\"id\":100000010781486,\"asset_id\":100000010781486,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-17\",\"updated\":\"2026-03-18 11:33:38\",\"section\":\"Opinion\",\"subsection\":\"\",\"nytdsection\":\"opinion\",\"adx_keywords\":\"US
+        and Israeli Attack on Iran (2026);United States Politics and Government;Trump,
+        Donald J;Iran\",\"column\":null,\"byline\":\"By The Editorial Board\",\"type\":\"Article\",\"title\":\"Trump
+        Can\u2019t Spin His Way Out of This War\",\"abstract\":\"The early reality
+        of the Iran war is not cooperating with the president\u2019s bluster.\",\"des_facet\":[\"US
+        and Israeli Attack on Iran (2026)\",\"United States Politics and Government\"],\"org_facet\":[],\"per_facet\":[\"Trump,
+        Donald J\"],\"geo_facet\":[\"Iran\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Illustration
+        by Rebecca Chew/The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/17/opinion/17iran-editorial-image/17iran-editorial-image-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/17/opinion/17iran-editorial-image/17iran-editorial-image-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/17/opinion/17iran-editorial-image/17iran-editorial-image-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/02549aee-acc2-5ea9-952e-cbb8089ee68c\",\"url\":\"https://www.nytimes.com/2026/03/16/opinion/financial-crisis-private-credit-ai-iran-taiwan.html\",\"id\":100000010753942,\"asset_id\":100000010753942,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-16\",\"updated\":\"2026-03-22 01:54:54\",\"section\":\"Opinion\",\"subsection\":\"\",\"nytdsection\":\"opinion\",\"adx_keywords\":\"Artificial
+        Intelligence;Stocks and Bonds;Private Equity;Subprime Mortgage Crisis;Computer
+        Chips;United States Economy;Credit and Debt;Data Centers;BlackRock Inc;Blackstone
+        Group, The\",\"column\":null,\"byline\":\"By Richard Bookstaber\",\"type\":\"Article\",\"title\":\"I
+        Predicted the 2008 Financial Crisis. What Is Coming May Be Worse.\",\"abstract\":\"Richard
+        Bookstaber warns that what appears to be disparate forces adding risk to our
+        economy are all part of one deeply connected system.\",\"des_facet\":[\"Artificial
+        Intelligence\",\"Stocks and Bonds\",\"Private Equity\",\"Subprime Mortgage
+        Crisis\",\"Computer Chips\",\"United States Economy\",\"Credit and Debt\",\"Data
+        Centers\"],\"org_facet\":[\"BlackRock Inc\",\"Blackstone Group, The\"],\"per_facet\":[],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"\",\"copyright\":\"Liana
+        Finck\",\"approved_for_syndication\":0,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/22/opinion/22bookstaber/16bookstaber-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/22/opinion/22bookstaber/16bookstaber-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/22/opinion/22bookstaber/16bookstaber-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/e8d0217d-44c7-5ac4-a63d-3fd9ac320ced\",\"url\":\"https://www.nytimes.com/2026/03/14/us/politics/fund-raising-email-trump-ritual.html\",\"id\":100000010776808,\"asset_id\":100000010776808,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-14\",\"updated\":\"2026-03-15 23:11:38\",\"section\":\"U.S.\",\"subsection\":\"Politics\",\"nytdsection\":\"u.s.\",\"adx_keywords\":\"United
+        States Politics and Government;US and Israeli Attack on Iran (2026);United
+        States Defense and Military Forces;Campaign Finance;Trump, Donald J;Never
+        Surrender\",\"column\":null,\"byline\":\"By Edward Wong\",\"type\":\"Article\",\"title\":\"Fund-raising
+        Email Features Trump at Ritual for Soldiers Killed in Iran War\",\"abstract\":\"The
+        email from the group Never Surrender seeks donations for President Trump from
+        those who want access to \u201Cprivate national security briefings\u201D from
+        him.\",\"des_facet\":[\"United States Politics and Government\",\"US and Israeli
+        Attack on Iran (2026)\",\"United States Defense and Military Forces\",\"Campaign
+        Finance\"],\"org_facet\":[\"Never Surrender\"],\"per_facet\":[\"Trump, Donald
+        J\"],\"geo_facet\":[],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"Mr.
+        Trump saluting as coffins holding six Army Reservists killed by an Iranian
+        drone strike in Kuwait were brought off a plane at Dover Air Force Base on
+        March 7.\",\"copyright\":\"Tierney L. Cross/The New York Times\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/14/multimedia/14dc-trump-troops-tfvb/14dc-trump-troops-tfvb-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/14/multimedia/14dc-trump-troops-tfvb/14dc-trump-troops-tfvb-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/14/multimedia/14dc-trump-troops-tfvb/14dc-trump-troops-tfvb-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0},{\"uri\":\"nyt://article/3a2c3d9b-6c68-5fce-95e1-b74fe03c4f3c\",\"url\":\"https://www.nytimes.com/2026/03/16/world/americas/trump-cuba-president-diaz-canel.html\",\"id\":100000010781456,\"asset_id\":100000010781456,\"source\":\"New
+        York Times\",\"published_date\":\"2026-03-16\",\"updated\":\"2026-03-17 14:34:27\",\"section\":\"World\",\"subsection\":\"Americas\",\"nytdsection\":\"world\",\"adx_keywords\":\"United
+        States International Relations;Politics and Government;Embargoes and Sanctions;US-Venezuela
+        Conflict (2025- );Communism (Theory and Philosophy);Cuban-Americans;Foreign
+        Investments;internal-open-access-from-nl;Castro, Fidel;Castro, Raul;Diaz-Canel
+        Bermudez, Miguel;Rodriguez Castro, Raul Guillermo;Rubio, Marco;Trump, Donald
+        J;Communist Party of Cuba;Cuba;United States\",\"column\":null,\"byline\":\"By
+        Frances Robles, Edward Wong and Annie Correal\",\"type\":\"Article\",\"title\":\"Trump
+        Administration Said to Tell Cuba That Its President Has to Go\",\"abstract\":\"The
+        United States has told Cuba that for meaningful progress to be made in negotiations,
+        President Miguel D\xEDaz-Canel must step down, said people familiar with the
+        talks.\",\"des_facet\":[\"United States International Relations\",\"Politics
+        and Government\",\"Embargoes and Sanctions\",\"US-Venezuela Conflict (2025-
+        )\",\"Communism (Theory and Philosophy)\",\"Cuban-Americans\",\"Foreign Investments\",\"internal-open-access-from-nl\"],\"org_facet\":[\"Communist
+        Party of Cuba\"],\"per_facet\":[\"Castro, Fidel\",\"Castro, Raul\",\"Diaz-Canel
+        Bermudez, Miguel\",\"Rodriguez Castro, Raul Guillermo\",\"Rubio, Marco\",\"Trump,
+        Donald J\"],\"geo_facet\":[\"Cuba\",\"United States\"],\"media\":[{\"type\":\"image\",\"subtype\":\"photo\",\"caption\":\"President
+        Miguel D\xEDaz-Canel of Cuba during a visit to Venezuela last year.\",\"copyright\":\"Juan
+        Barreto/Agence France-Presse \u2014 Getty Images\",\"approved_for_syndication\":1,\"media-metadata\":[{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/16int-cuba-president-fvqc/16int-cuba-president-fvqc-thumbStandard.jpg\",\"format\":\"Standard
+        Thumbnail\",\"height\":75,\"width\":75},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/16int-cuba-president-fvqc/16int-cuba-president-fvqc-mediumThreeByTwo210.jpg\",\"format\":\"mediumThreeByTwo210\",\"height\":140,\"width\":210},{\"url\":\"https://static01.nyt.com/images/2026/03/16/multimedia/16int-cuba-president-fvqc/16int-cuba-president-fvqc-mediumThreeByTwo440.jpg\",\"format\":\"mediumThreeByTwo440\",\"height\":293,\"width\":440}]}],\"eta_id\":0}]}"
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+      Content-Length:
+      - '38824'
+      accept-ranges:
+      - bytes
+      access-control-allow-headers:
+      - Accept, Content-Type, X-Forwarded-For, X-Prototype-Version, X-Requested-With
+      access-control-allow-methods:
+      - GET, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length, X-JSON
+      age:
+      - '0'
+      cache-control:
+      - max-age=60
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Tue, 24 Mar 2026 07:08:20 GMT
+      strict-transport-security:
+      - max-age=63072000; preload; includeSubdomains
+      vary:
+      - Accept-Encoding
+      via:
+      - 1.1 varnish, 1.1 google
+      x-cache:
+      - MISS
+      x-cache-hits:
+      - '0'
+      x-nyt-mktg-group:
+      - group1
+      x-nyt-most-popular-values:
+      - FACEBOOK 7
+      x-request-id:
+      - 0a011cc4-72b6-420f-9570-ad7abdd7f50d
+      x-served-by:
+      - cache-iad-kcgs7200144-IAD
+      x-timer:
+      - S1774336100.989823,VS0,VE39
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.nytimes.com
+      User-Agent:
+      - Python-urllib/3.11
+    method: GET
+    uri: https://api.nytimes.com/svc/topstories/v2/technology.json
+  response:
+    body:
+      string: '{"fault":{"faultstring":"Invalid ApiKey","detail":{"errorcode":"oauth.v2.InvalidApiKey"}}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+      access-control-allow-headers:
+      - Accept, Content-Type, Origin, X-Forwarded-For, X-Prototype-Version, X-Requested-With
+      access-control-allow-methods:
+      - GET, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length, X-JSON
+      content-type:
+      - application/json
+      date:
+      - Tue, 24 Mar 2026 07:08:33 GMT
+      via:
+      - 1.1 google
+      x-request-id:
+      - 356e2fc2-5c5c-4abf-b509-012232980b00
+    status:
+      code: 401
+      message: Unauthorized
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.nytimes.com
+      User-Agent:
+      - Python-urllib/3.11
+    method: GET
+    uri: https://api.nytimes.com/svc/mostpopular/v2/shared/7.json
+  response:
+    body:
+      string: '{"fault":{"faultstring":"Invalid ApiKey","detail":{"errorcode":"oauth.v2.InvalidApiKey"}}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+      access-control-allow-headers:
+      - Accept, Content-Type, Origin, X-Forwarded-For, X-Prototype-Version, X-Requested-With
+      access-control-allow-methods:
+      - GET, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length, X-JSON
+      content-type:
+      - application/json
+      date:
+      - Tue, 24 Mar 2026 07:08:33 GMT
+      via:
+      - 1.1 google
+      x-request-id:
+      - 4597e00e-25c8-4b5b-a6be-98ebd678e136
+    status:
+      code: 401
+      message: Unauthorized
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.nytimes.com
+      User-Agent:
+      - Python-urllib/3.11
+    method: GET
+    uri: https://api.nytimes.com/svc/topstories/v2/technology.json
+  response:
+    body:
+      string: '{"fault":{"faultstring":"Invalid ApiKey","detail":{"errorcode":"oauth.v2.InvalidApiKey"}}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+      access-control-allow-headers:
+      - Accept, Content-Type, Origin, X-Forwarded-For, X-Prototype-Version, X-Requested-With
+      access-control-allow-methods:
+      - GET, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length, X-JSON
+      content-type:
+      - application/json
+      date:
+      - Tue, 24 Mar 2026 08:04:50 GMT
+      via:
+      - 1.1 google
+      x-request-id:
+      - fcf6e25f-75cb-4b07-ba33-a290a976b5a7
+    status:
+      code: 401
+      message: Unauthorized
+- request:
+    body: null
+    headers:
+      Connection:
+      - close
+      Host:
+      - api.nytimes.com
+      User-Agent:
+      - Python-urllib/3.11
+    method: GET
+    uri: https://api.nytimes.com/svc/mostpopular/v2/shared/7.json
+  response:
+    body:
+      string: '{"fault":{"faultstring":"Invalid ApiKey","detail":{"errorcode":"oauth.v2.InvalidApiKey"}}}'
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=2592000
+      Connection:
+      - close
+      Content-Length:
+      - '90'
+      access-control-allow-headers:
+      - Accept, Content-Type, Origin, X-Forwarded-For, X-Prototype-Version, X-Requested-With
+      access-control-allow-methods:
+      - GET, OPTIONS
+      access-control-allow-origin:
+      - '*'
+      access-control-expose-headers:
+      - Content-Length, X-JSON
+      content-type:
+      - application/json
+      date:
+      - Tue, 24 Mar 2026 08:04:50 GMT
+      via:
+      - 1.1 google
+      x-request-id:
+      - fbda66f6-4995-46e2-b52a-dc57e1de16ce
+    status:
+      code: 401
+      message: Unauthorized
+version: 1

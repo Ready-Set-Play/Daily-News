@@ -1,0 +1,35 @@
+{
+  "_meta": {
+    "version": 1,
+    "last_updated": "2026-03-22",
+    "description": "Topic interest weights derived from feedback. Range 0.5-2.0. Updated weekly."
+  },
+  "topic_weights": {
+    "ai_coding": 1.5,
+    "technology": 1.2,
+    "markets": 1.3,
+    "rates_bonds": 1.1,
+    "cybersecurity": 1.2,
+    "us_politics": 1.0,
+    "world_events": 1.0,
+    "mn_politics": 1.1,
+    "printing_3d": 1.0,
+    "scifi": 0.9,
+    "tv": 0.9,
+    "culture": 0.8
+  },
+  "feedback_counts": {
+    "ai_coding": {"up": 0, "down": 0},
+    "technology": {"up": 0, "down": 0},
+    "markets": {"up": 0, "down": 0},
+    "rates_bonds": {"up": 0, "down": 0},
+    "cybersecurity": {"up": 0, "down": 0},
+    "us_politics": {"up": 0, "down": 0},
+    "world_events": {"up": 0, "down": 0},
+    "mn_politics": {"up": 0, "down": 0},
+    "printing_3d": {"up": 0, "down": 0},
+    "scifi": {"up": 0, "down": 0},
+    "tv": {"up": 0, "down": 0},
+    "culture": {"up": 0, "down": 0}
+  }
+}

@@ -1,0 +1,155 @@
+"""
+render.py — Build the HTML email from selected, summarized articles.
+"""
+
+import base64
+import os
+from datetime import datetime, timezone
+from typing import Any
+
+import yaml
+from jinja2 import Environment, FileSystemLoader
+
+TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "..", "templates")
+CONFIG_DIR = os.path.join(os.path.dirname(__file__), "..", "config")
+STATIC_DIR = os.path.join(os.path.dirname(__file__), "..", "static")
+
+NYT_LOGO_FILE = os.path.join(STATIC_DIR, "poweredby_nytimes_200b.png")
+
+
+def _nyt_logo_data_uri() -> str:
+    """Return a base64 data URI for the NYT logo, for inline embedding in email HTML."""
+    try:
+        with open(NYT_LOGO_FILE, "rb") as f:
+            data = base64.b64encode(f.read()).decode()
+        return f"data:image/png;base64,{data}"
+    except FileNotFoundError:
+        return ""
+
+
+# Section ordering from topics.yaml
+SECTION_ORDER: list[str] = []
+
+
+def _load_section_order() -> list[dict]:
+    with open(os.path.join(CONFIG_DIR, "topics.yaml")) as f:
+        return yaml.safe_load(f)["sections"]
+
+
+def group_by_topic(articles: list[dict]) -> list[dict]:
+    """Group articles into topic sections, ordered by topics.yaml."""
+    sections = _load_section_order()
+    section_map = {s["id"]: {**s, "items": []} for s in sections}
+
+    # Separate special items
+    xkcd = None
+    podcasts = []
+    regular = []
+
+    for a in articles:
+        if a.get("is_xkcd"):
+            xkcd = a
+        elif a.get("is_podcast"):
+            podcasts.append(a)
+        else:
+            regular.append(a)
+
+    # Place regular articles into sections
+    for a in regular:
+        topic = a.get("ai_topic") or a.get("topic_hint", "")
+        if topic in section_map:
+            section_map[topic]["items"].append(a)
+        else:
+            # Default to technology if unrecognized
+            section_map.get("technology", {"items": []})["items"].append(a)
+
+    # Build ordered section list (only include sections with items)
+    ordered = []
+    for s in sections:
+        section = section_map[s["id"]]
+        if section["items"]:
+            ordered.append(section)
+
+    # Append podcasts section if any
+    if podcasts:
+        ordered.append(
+            {
+                "id": "podcasts",
+                "label": "New Podcasts",
+                "emoji": "🎙️",
+                "items": podcasts,
+            }
+        )
+
+    # Append XKCD last
+    if xkcd:
+        ordered.append(
+            {
+                "id": "xkcd",
+                "label": "XKCD",
+                "emoji": "😄",
+                "items": [xkcd],
+                "is_xkcd_section": True,
+            }
+        )
+
+    return ordered
+
+
+def render_email(articles: list[dict]) -> tuple[str, str]:
+    """
+    Render HTML and plain-text versions of the email.
+    Returns (html_body, text_body).
+    """
+    env = Environment(loader=FileSystemLoader(TEMPLATES_DIR), autoescape=True)
+    template = env.get_template("digest.html")
+
+    now = datetime.now(tz=timezone.utc)
+    date_str = now.strftime("%A, %B %-d, %Y")  # e.g., "Sunday, March 22, 2026"
+
+    sections = group_by_topic(articles)
+    total_items = sum(len(s["items"]) for s in sections)
+    has_nyt_content = any(a.get("is_nyt") for a in articles)
+    nyt_logo_uri = _nyt_logo_data_uri() if has_nyt_content else ""
+
+    html = template.render(
+        date_str=date_str,
+        sections=sections,
+        total_items=total_items,
+        has_nyt_content=has_nyt_content,
+        nyt_logo_uri=nyt_logo_uri,
+    )
+
+    # Plain text fallback
+    text = _render_plaintext(date_str, sections)
+
+    return html, text
+
+
+def _render_plaintext(date_str: str, sections: list[dict]) -> str:
+    lines = [
+        f"DAILY BRIEF — {date_str}",
+        "=" * 50,
+        "",
+    ]
+    for section in sections:
+        lines.append(f"{section['emoji']} {section['label'].upper()}")
+        lines.append("-" * 30)
+        for item in section["items"]:
+            lines.append(f"• {item['title']}")
+            if item.get("tldr_summary"):
+                lines.append(f"  {item['tldr_summary']}")
+            lines.append(f"  {item['url']}")
+            lines.append("")
+        lines.append("")
+    return "\n".join(lines)
+
+
+if __name__ == "__main__":
+    import json
+    import sys
+
+    articles = json.load(sys.stdin)
+    html, text = render_email(articles)
+    print(html[:500])
+    print("...")

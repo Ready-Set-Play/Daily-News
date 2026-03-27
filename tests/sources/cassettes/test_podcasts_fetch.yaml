@@ -1,0 +1,86 @@
+interactions:
+- request:
+    body: null
+    headers:
+      A-Im:
+      - feed
+      Accept:
+      - application/atom+xml,application/rdf+xml,application/rss+xml,application/x-netcdf,application/xml;q=0.9,text/xml;q=0.2,*/*;q=0.1
+      Accept-Encoding:
+      - gzip, deflate
+      Connection:
+      - close
+      Host:
+      - feeds.simplecast.com
+      User-Agent:
+      - feedparser/6.0.12 +https://github.com/kurtmckee/feedparser/
+    method: GET
+    uri: https://feeds.simplecast.com/tti9gUEk
+  response:
+    body:
+      string: '<html>
+
+        <head><title>404 Not Found</title></head>
+
+        <body>
+
+        <h1>404 Not Found</h1>
+
+        <ul>
+
+        <li>Code: NoSuchKey</li>
+
+        <li>Message: The specified key does not exist.</li>
+
+        <li>Key: prod/rss/tti9gUEk</li>
+
+        <li>RequestId: CKWC72GSB62FJ5X6</li>
+
+        <li>HostId: O9XbP0zipLvm+z60+q97JD7/y2meaTwHpWgYPhnenPP/K+I438xcavU3HNGZ/OvPngWpEoeakQY=</li>
+
+        </ul>
+
+        <hr/>
+
+        </body>
+
+        </html>
+
+        '
+    headers:
+      Alt-Svc:
+      - h3=":443"; ma=86400
+      Connection:
+      - close
+      Content-Length:
+      - '352'
+      Content-Type:
+      - text/html; charset=utf-8
+      Date:
+      - Tue, 24 Mar 2026 07:07:33 GMT
+      Referrer-Policy:
+      - strict-origin-when-cross-origin
+      Server:
+      - AmazonS3
+      Strict-Transport-Security:
+      - max-age=31536000
+      Vary:
+      - Origin
+      Via:
+      - 1.1 ced159cf6139bc70eb5089a450122800.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - IyRFItV3AN2s_ADnU4nWDAwXFocSU5oSRExEJaR8FrLht6MwGUpQaQ==
+      X-Amz-Cf-Pop:
+      - PHX52-P2
+      X-Cache:
+      - Error from cloudfront
+      X-Content-Type-Options:
+      - nosniff
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-XSS-Protection:
+      - 1; mode=block
+    status:
+      code: 404
+      message: Not Found
+version: 1
