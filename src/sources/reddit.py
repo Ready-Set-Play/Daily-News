@@ -27,7 +27,11 @@ class Source(BaseSource):
         sort = self.config.get("sort", "hot")
         limit = self.config.get("limit", 10)
         min_score = self.config.get("min_score", 100)
-        headers = {"User-Agent": "daily-news-digest/1.0 (personal project)"}
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
+            "Accept": "application/json, text/plain, */*",
+            "Accept-Language": "en-US,en;q=0.9",
+        }
 
         articles = []
 
