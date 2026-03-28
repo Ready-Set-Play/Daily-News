@@ -1,0 +1,7 @@
+name = "daily-brief-feedback"
+main = "worker.js"
+compatibility_date = "2024-03-20"
+
+[vars]
+GITHUB_REPO = "YOUR_GITHUB_USER/YOUR_REPO_NAME"
+GITHUB_BRANCH = "main"

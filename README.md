@@ -407,7 +407,7 @@ daily-brief/
 │   └── sources/
 │       ├── base.py                 # BaseSource ABC + SourceFetchError
 │       ├── __init__.py             # load_sources() dynamic plugin loader
-│       ├── nyt.py                  # New York Times API
+│       ├── nyt.py                  # New York OPes API
 │       ├── google_news.py          # Google News RSS (per-topic queries)
 │       ├── reddit.py               # Reddit public JSON API
 │       ├── podcasts.py             # Podcast RSS feeds

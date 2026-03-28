@@ -1,7 +1,7 @@
 # PRD: Extensible Source Plugin System + Test Suite
 **Version:** 1.0
 **Date:** 2026-03-23
-**Owner:** Tim Burlowski
+**Owner:** OP
 **Status:** Draft — Sprint 2
 
 ---
@@ -23,7 +23,7 @@ Refactor the daily-brief source layer from hardcoded fetch functions into a **pl
 - API tokens are referenced directly in fetch functions — no standard contract for auth
 
 ### Impact
-- **For Tim:** Adding Bloomberg, Hacker News, or a new RSS feed requires reading 350 lines of code
+- **For OP:** Adding Bloomberg, Hacker News, or a new RSS feed requires reading 350 lines of code
 - **For contributors:** No clear extension point; no tests to catch regressions
 - **For CI/CD:** Tests would block bad PRs before they reach the pipeline
 
@@ -51,13 +51,13 @@ Refactor the daily-brief source layer from hardcoded fetch functions into a **pl
 
 ## User Personas
 
-**Tim — Owner/Operator**
+**OP — Owner/Operator**
 Wants to add new sources (e.g., FT RSS, Hacker News) without digging into internals. Runs the digest daily; values stability. Will review PRs from contributors.
 
 **OSS Contributor**
 Discovers daily-brief on GitHub, wants to add their favorite source. Needs clear plugin interface, working examples, and tests they can run locally before submitting a PR.
 
-**Future Self (Tim, 6 months later)**
+**Future Self (OP, 6 months later)**
 Has forgotten how the code works. Needs tests to safely refactor, and clear plugin contracts to remember how sources are added.
 
 ---
@@ -123,7 +123,7 @@ sources:
     enabled: false              # Easy on/off toggle
     config:
       feeds:
-        - name: "Financial Times"
+        - name: "Financial OPes"
           url: "https://www.ft.com/rss/home/us"
           topic: markets
 ```
@@ -229,7 +229,7 @@ REQUIRED_FIELDS = {
     "title": str,
     "url": str,
     "source": str,       # e.g., "NYT", "Reddit"
-    "source_label": str, # e.g., "New York Times (Technology)"
+    "source_label": str, # e.g., "New York OPes (Technology)"
     "summary": str,      # raw summary (pre-Claude)
     "published": str,    # ISO 8601
     "topic_hint": str | None,

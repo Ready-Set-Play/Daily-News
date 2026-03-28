@@ -1,31 +1,31 @@
 # PRD: Daily Curated News Digest
 **Version:** 1.0
 **Date:** 2026-03-22
-**Owner:** Tim Burlowski
+**Owner:** OP
 **Status:** Draft
 
 ---
 
 ## Executive Summary
 
-A fully automated, personalized daily news digest delivered to Tim's email inbox each morning. The service aggregates content from NYT, Google News, Reddit, and podcast feeds; uses Claude AI to score, de-duplicate, and summarize; and delivers a scannable HTML email in the Anthropic × TLDR aesthetic — max 15 items, 2-minute read, 2–5 follow-up hooks per issue. A lightweight feedback loop (one-click thumbs up/down links) teaches the system Tim's preferences over time, progressively improving curation without any manual curation work.
+A fully automated, personalized daily news digest delivered to OP's email inbox each morning. The service aggregates content from NYT, Google News, Reddit, and podcast feeds; uses Claude AI to score, de-duplicate, and summarize; and delivers a scannable HTML email in the Anthropic × TLDR aesthetic — max 15 items, 2-minute read, 2–5 follow-up hooks per issue. A lightweight feedback loop (one-click thumbs up/down links) teaches the system OP's preferences over time, progressively improving curation without any manual curation work.
 
-**Core value proposition:** Replace 45 minutes of fragmented news browsing with a 2-minute briefing that surfaces the most interesting 1% of daily news across Tim's specific interest domains.
+**Core value proposition:** Replace 45 minutes of fragmented news browsing with a 2-minute briefing that surfaces the most interesting 1% of daily news across OP's specific interest domains.
 
 ---
 
 ## Problem Statement
 
-Tim currently has no systematic way to stay current across his 12+ interest domains without either:
+OP currently has no systematic way to stay current across his 12+ interest domains without either:
 - **Over-consuming** — spending 30–60 min/day across multiple apps and sites
 - **Under-consuming** — missing important developments in niche areas (MN politics, sovereign debt, 3D printing)
 
 Existing solutions fail because:
-- General newsletters (Morning Brew, TLDR) don't cover Tim's specific niche mix
+- General newsletters (Morning Brew, TLDR) don't cover OP's specific niche mix
 - RSS readers require active management and don't de-duplicate cross-source stories
 - No existing service learns individual preferences over time at the article level
 
-**Success looks like:** Tim opens the email every morning, spends 2 minutes scanning, and identifies 2–5 items worth following up on — without having opened any other news source.
+**Success looks like:** OP opens the email every morning, spends 2 minutes scanning, and identifies 2–5 items worth following up on — without having opened any other news source.
 
 ---
 
@@ -50,7 +50,7 @@ Existing solutions fail because:
 
 ## User Persona
 
-**Tim — VP Product, Power News Consumer**
+**OP — VP Product, Power News Consumer**
 - Reads widely across tech, finance, politics, and culture
 - High cognitive load from day job; wants information density, not volume
 - Technically capable: comfortable with GitHub, APIs, Python
@@ -119,7 +119,7 @@ When 2+ sources cover the same story, the system SHALL merge them into a single 
 
 ### FR-003 — AI Scoring & Ranking
 Claude SHALL score each candidate article 0–100 across:
-- **Relevance** to Tim's topic list (0–40 pts)
+- **Relevance** to OP's topic list (0–40 pts)
 - **Novelty / Unusualness** — not just "big story everyone covers" (0–30 pts)
 - **Preference alignment** — weighted by historical thumbs-up/down feedback (0–30 pts)
 
@@ -136,7 +136,7 @@ The system SHALL always include the latest XKCD comic (image + alt text + title)
 When a tracked podcast publishes a new episode within 48 hours, include it as a digest item with episode title, show name, runtime, and one-sentence description. Max 2 podcast slots per digest. Podcasts compete for the 15-slot budget.
 
 ### FR-007 — Email Delivery
-The system SHALL send a single HTML email to Tim's configured address via Resend API (free tier: 3,000/month). Subject line format: `📰 Daily Brief — {Day}, {Month} {Date}`.
+The system SHALL send a single HTML email to OP's configured address via Resend API (free tier: 3,000/month). Subject line format: `📰 Daily Brief — {Day}, {Month} {Date}`.
 
 ### FR-008 — Feedback Loop (One-Click Learning)
 Each digest item SHALL include discreet 👍 / 👎 links. Clicking a link:
@@ -287,10 +287,10 @@ daily-news-digest/
 
 | Secret | Value |
 |--------|-------|
-| `ANTHROPIC_API_KEY` | Tim's Anthropic API key |
+| `ANTHROPIC_API_KEY` | OP's Anthropic API key |
 | `NYT_API_KEY` | NYT developer API key (free) |
 | `RESEND_API_KEY` | Resend transactional email key |
-| `RECIPIENT_EMAIL` | Tim's email address |
+| `RECIPIENT_EMAIL` | OP's email address |
 | `REDDIT_CLIENT_ID` | Reddit app client ID |
 | `REDDIT_CLIENT_SECRET` | Reddit app secret |
 
@@ -331,7 +331,7 @@ Add feedback and preference learning.
 - [ ] Weekly GitHub Actions workflow to recalculate `preferences.json` from feedback
 - [ ] Claude scoring updated to use preference weights
 
-**Deliverable:** System learns Tim's preferences; scores adapt over 2–4 weeks.
+**Deliverable:** System learns OP's preferences; scores adapt over 2–4 weeks.
 
 ### Phase 4 — Polish (Week 5+)
 - [ ] Mobile-optimized email layout

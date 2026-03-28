@@ -21,3 +21,7 @@ firebase-debug.log
 
 # Feedback history (accumulates personal vote data)
 feedback/history.jsonl
+
+# Cloudflare Worker config and state
+feedback/.wrangler/
+feedback/wrangler.toml
