@@ -44,7 +44,7 @@ send.py  ── Resend API delivers to your inbox
 
 A lightweight feedback loop (thumbs up/down links in each email) records your preferences and progressively improves curation over time.
 
-**Estimated cost:** ~$0.25/day in Claude API credits (~$7.50/month).
+**Estimated cost:** ~$0.06/run in Claude API credits (~$0.72/month) if you run 3x per week.
 
 ---
 
