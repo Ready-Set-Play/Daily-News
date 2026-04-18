@@ -1,4 +1,4 @@
-# Daily Brief
+# Daily Brief [![Test Suite](https://github.com/Ready-Set-Play/Daily-News/actions/workflows/test.yml/badge.svg)](https://github.com/Ready-Set-Play/Daily-News/actions/workflows/test.yml)
 
 A self-hosted, AI-curated daily news digest delivered to your inbox each morning. Aggregates articles from NYT, Google News, Reddit, podcast feeds, and XKCD; uses Claude AI to score, deduplicate, and summarize; and sends a scannable HTML email — max 15 items, 2-minute read.
 
@@ -44,7 +44,7 @@ send.py  ── Resend API delivers to your inbox
 
 A lightweight feedback loop (thumbs up/down links in each email) records your preferences and progressively improves curation over time.
 
-**Estimated cost:** ~$0.06/run in Claude API credits (~$0.72/month) if you run 3x per week.
+**Estimated cost:** $0.06/run in Claude API credits, assuming Haiku model, if you run 3x per week with 200 sources, YMMV
 
 ---
 
