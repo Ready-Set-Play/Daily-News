@@ -17,7 +17,7 @@ def send_email(
     text_body: str,
     resend_api_key: str,
     recipient_email: str,
-    from_email: str = "Daily Brief <digest@yourdomain.com>",
+    from_email: str = "",
 ) -> bool:
     """Send the digest email via Resend SDK. Returns True on success."""
     resend.api_key = resend_api_key
@@ -36,9 +36,7 @@ def send_email(
     logger.info(
         f"Resend → from={from_email!r} to={recipient_email!r} subject={subject!r}"
     )
-    logger.info(
-        f"Resend → payload size: {len(html_body):,} bytes  key=...{resend_api_key[-6:]}"
-    )
+    logger.info(f"Resend → payload size: {len(html_body):,} bytes")
 
     max_attempts = 3
     for attempt in range(1, max_attempts + 1):

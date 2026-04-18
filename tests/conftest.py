@@ -30,7 +30,14 @@ def mock_env(monkeypatch):
     monkeypatch.setenv("RECIPIENT_EMAIL", "test@example.com")
     monkeypatch.setenv("NYT_API_KEY", "test-nyt-key")
     monkeypatch.setenv("FROM_EMAIL", "Daily Brief <digest@example.com>")
+    monkeypatch.setenv("FEEDBACK_BASE_URL", "https://feedback.example.com")
     monkeypatch.setenv("LLM_PROVIDER", "anthropic")
+    # FEEDBACK_BASE_URL is a module-level constant in summarize — patch it directly
+    try:
+        import summarize
+        monkeypatch.setattr(summarize, "FEEDBACK_BASE_URL", "https://feedback.example.com")
+    except Exception:
+        pass
 
 
 # ---------------------------------------------------------------------------

@@ -8,6 +8,7 @@ Otherwise delegates to the configured LLM provider.
 import json
 import logging
 import os
+import random
 from typing import Any
 
 import yaml
@@ -123,8 +124,6 @@ def score_articles(
     override_items = [a for a in articles if "score_override" in a]
     to_score = [a for a in articles if "score_override" not in a]
 
-    import random
-
     max_candidates = int(os.environ.get("MAX_SCORE_CANDIDATES", 120))
     random.shuffle(to_score)
     to_score = to_score[:max_candidates]
@@ -132,10 +131,11 @@ def score_articles(
     if client.name == "none":
         scored = _score_heuristic(to_score)
     else:
+        topics = load_topics()
         batch_size = 30
         scored = []
         for i in range(0, len(to_score), batch_size):
-            scored.extend(_score_batch(to_score[i : i + batch_size], client))
+            scored.extend(_score_batch(to_score[i : i + batch_size], client, topics))
 
     for a in scored:
         topic = a.get("topic_hint") or a.get("ai_topic", "")
@@ -199,7 +199,19 @@ def _score_heuristic(articles: list[dict]) -> list[dict]:
     return articles
 
 
-def _score_batch(articles: list[dict], client: LLMClient) -> list[dict]:
+def _weight_label(weight: float) -> str:
+    if weight >= 1.4:
+        return "very high"
+    if weight >= 1.2:
+        return "high"
+    if weight >= 1.1:
+        return "medium-high"
+    if weight >= 1.0:
+        return "medium"
+    return "low"
+
+
+def _score_batch(articles: list[dict], client: LLMClient, topics: list[dict]) -> list[dict]:
     if not articles:
         return []
 
@@ -214,21 +226,14 @@ def _score_batch(articles: list[dict], client: LLMClient) -> list[dict]:
         for i, a in enumerate(articles)
     ]
 
-    topic_list = """
-Topics of interest (score higher for these):
-- AI Coding & LLMs (weight: very high)
-- Cybersecurity (weight: high)
-- Markets, stocks, US/international indexes (weight: high)
-- Interest rates, Treasury yields, sovereign debt (weight: high)
-- Minnesota politics (weight: high — niche, rarely covered)
-- Technology & startups (weight: medium-high)
-- US & World politics (weight: medium)
-- 3D printing & additive manufacturing (weight: medium)
-- Science fiction (books, film) (weight: medium)
-- Prestige / intelligent TV (weight: medium)
-"""
+    topic_lines = "\n".join(
+        f"- {t['label']} (weight: {_weight_label(t.get('weight', 1.0))})"
+        for t in topics
+    )
+    topic_ids = ", ".join(t["id"] for t in topics)
+    topic_list = f"Topics of interest (score higher for these):\n{topic_lines}"
 
-    prompt = f"""You are a news curation AI for a senior tech executive. Score each article 0-100.
+    prompt = f"""You are a news curation AI for the digest owner. Score each article 0-100.
 
 Scoring criteria:
 - Relevance (0-40): How well does it match the reader's interest topics?
@@ -238,7 +243,7 @@ Scoring criteria:
 {topic_list}
 
 For each article, also identify the best-matching topic from:
-ai_coding, technology, markets, rates_bonds, cybersecurity, us_politics, world_events, mn_politics, printing_3d, scifi, tv, culture
+{topic_ids}
 
 Articles to score:
 {json.dumps(compact, indent=2)}

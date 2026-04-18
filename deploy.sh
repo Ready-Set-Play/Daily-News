@@ -3,7 +3,7 @@
 # Does NOT modify this source repo. Safe to run anytime.
 #
 # Usage:
-#   ./deploy.sh                  # Deploy to ~/Scripts/daily-brief
+#   ./deploy.sh                  # Deploy to ~/daily-brief
 #   ./deploy.sh ~/mydir          # Deploy to a custom path
 #   ./deploy.sh --run            # Deploy + run the pipeline immediately
 #   ./deploy.sh --dry-run        # Show what would be fetched (no email sent)
@@ -14,7 +14,7 @@ set -euo pipefail
 
 # ── Config ────────────────────────────────────────────────────────────────────
 SOURCE_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-DEFAULT_DEPLOY="$HOME/Scripts/daily-brief"
+DEFAULT_DEPLOY="$HOME/daily-brief"
 DEPLOY_DIR="${1:-$DEFAULT_DEPLOY}"
 MODE="deploy"
 
@@ -44,7 +44,7 @@ Usage:
   ./deploy.sh [TARGET_DIR] [MODE]
 
 TARGET_DIR (optional):
-  Directory to deploy into. Default: ~/Scripts/daily-brief
+  Directory to deploy into. Default: ~/daily-brief
 
 Modes:
   (none)          Deploy/sync files only. No pipeline run.
@@ -55,12 +55,12 @@ Modes:
 
 First-time setup:
   1. Run: ./deploy.sh
-  2. Edit: ~/Scripts/daily-brief/.env  (fill in your API keys)
+  2. Edit: ~/daily-brief/.env  (fill in your API keys)
   3. Test: ./deploy.sh --dry-run
   4. Send:  ./deploy.sh --run
 
 Examples:
-  ./deploy.sh                        # Sync files to ~/Scripts/daily-brief
+  ./deploy.sh                        # Sync files to ~/daily-brief
   ./deploy.sh /tmp/brief-test --run  # Deploy to custom path and run
   ./deploy.sh --dry-run              # Test without sending email
 EOF

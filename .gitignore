@@ -16,6 +16,9 @@ dist/
 # OS artifacts
 .DS_Store
 
+# Generated output
+digest_preview.html
+
 # Firebase debug log
 firebase-debug.log
 

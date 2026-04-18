@@ -47,11 +47,12 @@ jobs:
         env:
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
+          FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'onboarding@resend.dev' }}
         run: |
           python -c "
           import urllib.request, json, os
           payload = json.dumps({
-            'from': 'Daily Brief <digest@yourdomain.com>',
+            'from': os.environ.get('FROM_EMAIL', 'onboarding@resend.dev'),
             'to': [os.environ['RECIPIENT_EMAIL']],
             'subject': 'Daily Brief failed to deliver',
             'text': 'The daily digest pipeline failed. Check GitHub Actions logs for details.',

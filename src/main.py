@@ -183,7 +183,7 @@ modes:
     nyt_api_key = os.environ.get("NYT_API_KEY", "")
     resend_api_key = os.environ.get("RESEND_API_KEY", "")
     recipient_email = os.environ.get("RECIPIENT_EMAIL", "")
-    from_email = os.environ.get("FROM_EMAIL", "Daily Brief <digest@yourdomain.com>")
+    from_email = os.environ.get("FROM_EMAIL", "")
 
     if args.mode == "update-prefs":
         mode_update_prefs()
@@ -207,6 +207,7 @@ modes:
             for k, v in {
                 "RESEND_API_KEY": resend_api_key,
                 "RECIPIENT_EMAIL": recipient_email,
+                "FROM_EMAIL": from_email,
             }.items()
             if not v
         ]

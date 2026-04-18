@@ -252,11 +252,11 @@ Tests run automatically on every push and pull request via `.github/workflows/te
 ### Local preview (render only, no email)
 
 ```bash
-# Deploy to ~/Scripts/daily-brief and render a preview HTML file
+# Deploy to ~/daily-brief and render a preview HTML file
 ./deploy.sh --render-only
 
 # Then open:
-open ~/Scripts/daily-brief/digest_preview.html
+open ~/daily-brief/digest_preview.html
 ```
 
 ---
@@ -407,7 +407,7 @@ daily-brief/
 │   └── sources/
 │       ├── base.py                 # BaseSource ABC + SourceFetchError
 │       ├── __init__.py             # load_sources() dynamic plugin loader
-│       ├── nyt.py                  # New York OPes API
+│       ├── nyt.py                  # New York Times API
 │       ├── google_news.py          # Google News RSS (per-topic queries)
 │       ├── reddit.py               # Reddit public JSON API
 │       ├── podcasts.py             # Podcast RSS feeds
@@ -428,7 +428,7 @@ daily-brief/
 │   │   └── test_*.py               # Per-plugin unit tests
 │   └── fixtures/
 │       └── sample_articles.json    # 20 realistic article dicts for pipeline tests
-├── deploy.sh                       # Local deploy script (syncs to ~/Scripts/daily-brief)
+├── deploy.sh                       # Local deploy script (syncs to ~/daily-brief)
 ├── test.sh                         # Test runner shortcut
 ├── requirements.txt
 └── .gitignore                      # Excludes .env, feedback/history.jsonl, __pycache__

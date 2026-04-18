@@ -13,9 +13,7 @@ from llm import load_llm_client
 
 logger = logging.getLogger(__name__)
 
-FEEDBACK_BASE_URL = os.environ.get(
-    "FEEDBACK_BASE_URL", "https://your-feedback-worker.workers.dev"
-)
+FEEDBACK_BASE_URL = os.environ.get("FEEDBACK_BASE_URL", "")
 
 
 def generate_summaries(articles: list[dict]) -> list[dict]:
@@ -33,12 +31,12 @@ def generate_summaries(articles: list[dict]) -> list[dict]:
             _batch_summarize(needs_summary, client)
 
     for a in articles:
-        a["feedback_up_url"] = (
-            f"{FEEDBACK_BASE_URL}/feedback?id={a['id']}&dir=up&topic={a.get('ai_topic', '')}"
-        )
-        a["feedback_down_url"] = (
-            f"{FEEDBACK_BASE_URL}/feedback?id={a['id']}&dir=down&topic={a.get('ai_topic', '')}"
-        )
+        if FEEDBACK_BASE_URL:
+            a["feedback_up_url"] = f"{FEEDBACK_BASE_URL}/feedback?id={a['id']}&dir=up&topic={a.get('ai_topic', '')}"
+            a["feedback_down_url"] = f"{FEEDBACK_BASE_URL}/feedback?id={a['id']}&dir=down&topic={a.get('ai_topic', '')}"
+        else:
+            a["feedback_up_url"] = ""
+            a["feedback_down_url"] = ""
 
     return articles
 
