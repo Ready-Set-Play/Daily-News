@@ -159,7 +159,7 @@ set_config_secret() {
     tmp=$(mktemp)
     _TMPFILES+=("$tmp")
     b64_encode "$file" > "$tmp"
-    gh secret set "$secret_name" --repo "$repo" --body "$tmp"
+    gh secret set "$secret_name" --repo "$repo" < "$tmp"
     ok "Secret '$secret_name' set in $repo."
 }
 
@@ -181,7 +181,7 @@ set_nyt_secret() {
     tmp=$(mktemp)
     _TMPFILES+=("$tmp")
     printf '%s' "$nyt_key" > "$tmp"
-    gh secret set "NYT_API_KEY" --repo "$repo" --body "$tmp"
+    gh secret set "NYT_API_KEY" --repo "$repo" < "$tmp"
     ok "Secret 'NYT_API_KEY' set in $repo."
 }
 
