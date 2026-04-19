@@ -27,6 +27,14 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Decode config secrets
+        env:
+          CONFIG_SOURCES_B64: ${{ secrets.CONFIG_SOURCES_B64 }}
+          CONFIG_TOPICS_B64: ${{ secrets.CONFIG_TOPICS_B64 }}
+        run: |
+          echo "$CONFIG_SOURCES_B64" | base64 -d > config/sources.yaml
+          echo "$CONFIG_TOPICS_B64"  | base64 -d > config/topics.yaml
+
       - name: Run daily digest pipeline
         env:
           NYT_API_KEY: ${{ secrets.NYT_API_KEY }}

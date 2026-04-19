@@ -138,7 +138,7 @@ set_config_secret() {
         if [[ -f "$example" ]]; then
             printf "\n  '%s' not found.\n" "$file"
             read -r -p "  Copy from '$example' and edit now? (Y/n): " copy_confirm
-            [[ "${copy_confirm,,}" == "n" ]] && die "Please create '$file' before running this script."
+            [[ "$copy_confirm" == "n" || "$copy_confirm" == "N" ]] && die "Please create '$file' before running this script."
             cp "$example" "$file"
             info "Copied '$example' to '$file'. Open it in your editor, fill in your preferences, then press Enter."
             read -r -p "  Press Enter when done editing... "
@@ -152,14 +152,14 @@ set_config_secret() {
     if secret_exists "$repo" "$secret_name"; then
         printf "\n  Secret '%s' already exists in %s.\n" "$secret_name" "$repo"
         read -r -p "  Overwrite it? (y/N): " overwrite_confirm
-        [[ "${overwrite_confirm,,}" == "y" ]] || { info "Skipping '$secret_name'."; return; }
+        [[ "$overwrite_confirm" == "y" || "$overwrite_confirm" == "Y" ]] || { info "Skipping '$secret_name'."; return; }
     fi
 
     info "Encoding '$file' and uploading to GitHub Secrets..."
     tmp=$(mktemp)
     _TMPFILES+=("$tmp")
     b64_encode "$file" > "$tmp"
-    gh secret set "$secret_name" --repo "$repo" --body-file "$tmp"
+    gh secret set "$secret_name" --repo "$repo" --body "$tmp"
     ok "Secret '$secret_name' set in $repo."
 }
 
@@ -172,7 +172,7 @@ set_nyt_secret() {
 
     printf "\n  The NYT source plugin requires an 'NYT_API_KEY' secret.\n"
     read -r -p "  Set NYT_API_KEY now? (y/N): " nyt_confirm
-    [[ "${nyt_confirm,,}" == "y" ]] || return
+    [[ "$nyt_confirm" == "y" || "$nyt_confirm" == "Y" ]] || return
 
     read -r -s -p "  Enter your New York Times API Key: " nyt_key
     echo
@@ -181,7 +181,7 @@ set_nyt_secret() {
     tmp=$(mktemp)
     _TMPFILES+=("$tmp")
     printf '%s' "$nyt_key" > "$tmp"
-    gh secret set "NYT_API_KEY" --repo "$repo" --body-file "$tmp"
+    gh secret set "NYT_API_KEY" --repo "$repo" --body "$tmp"
     ok "Secret 'NYT_API_KEY' set in $repo."
 }
 
@@ -198,7 +198,7 @@ check_deps
 check_auth
 check_git_history
 
-REPO=$(gh repo view --json fullName -q .fullName 2>/dev/null) \
+REPO=$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null) \
     || die "Could not detect the GitHub repo. Run this script from inside the cloned repository."
 info "Target repo: $REPO"
 echo
