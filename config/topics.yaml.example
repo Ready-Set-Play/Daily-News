@@ -1,0 +1,56 @@
+# --------------------------------------------------------------------------
+# Daily News Digest — Topic Configuration
+#
+# INSTRUCTIONS:
+# 1. Copy this file to 'config/topics.yaml'.
+# 2. Edit 'config/topics.yaml' to define the sections of your newsletter.
+#    You can reorder, add, or remove topics.
+# 3. Run './config/setup-secrets.sh' to encrypt and store your config.
+#
+# IMPORTANT: The 'config/topics.yaml' file is git-ignored and should NEVER be committed.
+# --------------------------------------------------------------------------
+
+# This file controls the sections in your final email digest.
+# The `id` is used to link articles from sources.yaml to a topic.
+# The `label`, `emoji`, and `weight` control the presentation.
+sections:
+  - id: ai_coding
+    label: "AI & Coding"
+    emoji: "🤖"
+    # Weight controls how high up in the email this section appears. Higher is first.
+    weight: 1.5
+
+  - id: technology
+    label: "Technology"
+    emoji: "💻"
+    weight: 1.2
+
+  - id: markets
+    label: "Markets & Finance"
+    emoji: "📈"
+    weight: 1.3
+
+  - id: cybersecurity
+    label: "Cybersecurity"
+    emoji: "🔐"
+    weight: 1.2
+
+  - id: us_politics
+    label: "US Politics"
+    emoji: "🇺🇸"
+    weight: 1.0
+
+  - id: world_events
+    label: "World Events"
+    emoji: "🌍"
+    weight: 1.0
+
+  - id: scifi
+    label: "Science Fiction"
+    emoji: "🚀"
+    weight: 0.9
+
+  - id: culture
+    label: "Culture"
+    emoji: "🎙️"
+    weight: 0.8

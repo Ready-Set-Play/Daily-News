@@ -1,0 +1,97 @@
+# --------------------------------------------------------------------------
+# Daily News Digest — Source Plugin Configuration
+#
+# INSTRUCTIONS:
+# 1. Copy this file to 'config/sources.yaml'.
+# 2. Edit 'config/sources.yaml' to enable/disable sources and add your preferences.
+# 3. For sources requiring API keys (like NYT), add the key to the file.
+# 4. Run './config/setup-secrets.sh' to encrypt and store your config.
+#
+# IMPORTANT: The 'config/sources.yaml' file is git-ignored and should NEVER be committed.
+# --------------------------------------------------------------------------
+
+# A list of source plugins to fetch articles from.
+sources:
+
+  # The New York Times plugin.
+  # Requires an API key. Get one at https://developer.nytimes.com/
+  - plugin: nyt
+    enabled: true
+    auth:
+      # The script will prompt you for this key. In GitHub Actions, it will look for a
+      # secret named NYT_API_KEY.
+      api_key_env: NYT_API_KEY
+    config:
+      # You can change the sections you're interested in.
+      # Full list available at the NYT developer portal.
+      sections:
+        - technology
+        - science
+        - world
+      # How many days back to look for "most popular" articles.
+      most_popular_days: 7
+
+  # Google News plugin, uses RSS. No API key needed.
+  - plugin: google_news
+    enabled: true
+    config:
+      # Define topics and the search queries for them.
+      # The keys (e.g., 'ai_coding') should match topic 'id's in topics.yaml.
+      queries:
+        ai_coding:
+          - "AI coding tools"
+          - "large language models programming"
+        technology:
+          - "technology news"
+        cybersecurity:
+          - "cybersecurity breach"
+
+  # Reddit plugin. No API key needed for public subreddits.
+  - plugin: reddit
+    enabled: true
+    config:
+      # Define topics and the subreddits for them.
+      subreddits:
+        ai_coding:
+          - LocalLLaMA
+          - MachineLearning
+          - programming
+        technology:
+          - technology
+          - Futurology
+      # Sort method for fetching posts. Can be 'hot', 'new', 'top', 'rising'.
+      sort: hot
+      # Max number of posts to fetch from each subreddit.
+      limit: 10
+      # Only include posts with a score greater than this.
+      min_score: 100
+
+  # Podcasts plugin. Fetches episodes from RSS feeds.
+  - plugin: podcasts
+    enabled: true
+    config:
+      feeds:
+        - name: "Acquired"
+          url: "https://feeds.simplecast.com/tti9gUEk"
+          topic: technology # This should match a topic 'id' in topics.yaml
+        - name: "a16z AI"
+          url: "https://feeds.simplecast.com/qiDNAKiN"
+          topic: ai_coding
+      # Don't include episodes older than this (in hours).
+      max_age_hours: 48
+      # Max number of new episodes to include in a single digest.
+      max_per_digest: 2
+
+  # XKCD comic plugin. Fetches the latest comic.
+  - plugin: xkcd
+    enabled: true
+    config: {} # No config needed.
+
+  # Hacker News plugin.
+  - plugin: hackernews
+    enabled: false # Disabled by default, enable if you want it.
+    config:
+      # Only include stories with a score greater than this.
+      min_score: 200
+      # Max number of stories to fetch.
+      limit: 20
