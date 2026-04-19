@@ -61,7 +61,7 @@ git remote set-url origin https://github.com/YOUR_USERNAME/daily-brief.git
 git push -u origin main
 ```
 
-> **Public vs. private:** Public repos get unlimited free GitHub Actions minutes. Private repos get 2,000 free minutes/month — the digest uses ~20–30 min/day, well within that limit.
+> **Public vs. private:** Public repos get unlimited free GitHub Actions minutes. Private repos get 2,000 free minutes/month — the digest uses ~1-2 min/run, well within that limits, depending on the number of sources and complexity of the LLM API calls. 
 
 ### Step 2 — Get your API keys
 
