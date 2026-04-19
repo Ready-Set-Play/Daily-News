@@ -2,6 +2,8 @@ name: Test Suite
 
 on:
   push:
+    path-ignore:
+      - '*.md'    
     branches: ["**"]
   pull_request:
     branches: ["**"]
