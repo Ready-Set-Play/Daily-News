@@ -30,6 +30,7 @@ class Source(BaseSource):
     def fetch(self) -> list[dict]:
         feeds = self.config.get("feeds", [])
         max_age_hours = self.config.get("max_age_hours", 48)
+        max_per_digest = self.config.get("max_per_digest", 2)
         cutoff = datetime.now(tz=timezone.utc) - timedelta(hours=max_age_hours)
 
         articles = []
@@ -77,5 +78,7 @@ class Source(BaseSource):
             except Exception as e:
                 logger.warning(f"Podcast {podcast['name']} failed: {e}")
 
+        articles.sort(key=lambda a: a["published"], reverse=True)
+        articles = articles[:max_per_digest]
         logger.info(f"Podcasts: found {len(articles)} new episodes")
         return articles
