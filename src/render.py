@@ -32,7 +32,10 @@ SECTION_ORDER: list[str] = []
 
 
 def _load_section_order() -> list[dict]:
-    with open(os.path.join(CONFIG_DIR, "topics.yaml")) as f:
+    path = os.path.join(CONFIG_DIR, "topics.yaml")
+    if not os.path.exists(path):
+        path = os.path.join(CONFIG_DIR, "topics.yaml.example")
+    with open(path) as f:
         return yaml.safe_load(f)["sections"]
 
 

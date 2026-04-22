@@ -42,7 +42,10 @@ def load_preferences() -> dict:
 
 
 def load_topics() -> list[dict]:
-    with open(os.path.join(CONFIG_DIR, "topics.yaml")) as f:
+    path = os.path.join(CONFIG_DIR, "topics.yaml")
+    if not os.path.exists(path):
+        path = os.path.join(CONFIG_DIR, "topics.yaml.example")
+    with open(path) as f:
         return yaml.safe_load(f)["sections"]
 
 
