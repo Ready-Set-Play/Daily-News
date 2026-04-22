@@ -1,0 +1,38 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Connection:
+      - close
+      Host:
+      - gnews.io
+      User-Agent:
+      - daily-news-digest/1.0
+    method: GET
+    uri: https://gnews.io/api/v4/search?q=Claude+Anthropic&lang=en&country=us&max=10
+  response:
+    body:
+      string: "{\"totalArticles\": 2, \"articles\": [{\"title\": \"Anthropic Launches\
+        \ Claude 3.7 With Enhanced Reasoning\", \"description\": \"Anthropic has released\
+        \ its latest Claude model with significant improvements in reasoning and coding\
+        \ capabilities.\", \"content\": \"Anthropic has released its latest Claude\
+        \ model. The new release outperforms previous versions on a range of benchmarks.\
+        \ [...]\", \"url\": \"https://techcrunch.com/2026/04/21/anthropic-claude-3-7/\"\
+        , \"image\": \"https://techcrunch.com/wp-content/uploads/2026/04/claude.jpg\"\
+        , \"publishedAt\": \"2026-04-21T10:00:00Z\", \"source\": {\"name\": \"TechCrunch\"\
+        , \"url\": \"https://techcrunch.com\"}}, {\"title\": \"Claude vs GPT-4: A\
+        \ Developer Comparison\", \"description\": \"An in-depth look at how Claude\
+        \ and GPT-4 stack up for software development tasks.\", \"content\": \"Both\
+        \ models offer strong coding capabilities but differ in key areas. [...]\"\
+        , \"url\": \"https://www.theverge.com/2026/4/20/claude-gpt4-comparison\",\
+        \ \"image\": null, \"publishedAt\": \"2026-04-20T15:30:00Z\", \"source\":\
+        \ {\"name\": \"The Verge\", \"url\": \"https://www.theverge.com\"}}]}"
+    headers:
+      Content-Type:
+      - application/json; charset=utf-8
+    status:
+      code: 200
+      message: OK
+version: 1

@@ -32,5 +32,6 @@ jobs:
           ANTHROPIC_API_KEY: test
           RESEND_API_KEY: test
           NYT_API_KEY: test
+          GNEWS_API_KEY: test
           RECIPIENT_EMAIL: test@example.com
           FROM_EMAIL: "Daily Brief <digest@example.com>"

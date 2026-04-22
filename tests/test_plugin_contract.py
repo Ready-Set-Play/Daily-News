@@ -44,10 +44,15 @@ PLUGIN_CONFIGS = [
         "test_nyt_fetch.yaml",
     ),
     (
-        "google_news",
-        {"queries": {"ai_coding": ["Claude Anthropic"]}},
-        {},
-        "test_google_news_fetch.yaml",
+        "gnews",
+        {
+            "queries": {"ai_coding": ["Claude Anthropic"]},
+            "max_per_query": 10,
+            "lang": "en",
+            "country": "us",
+        },
+        {"api_key_env": "GNEWS_API_KEY"},
+        "test_gnews_fetch.yaml",
     ),
     (
         "reddit",
@@ -108,7 +113,7 @@ def test_plugin_schema(plugin_name, config, auth, cassette, mock_env):
         cassette_path,
         record_mode="new_episodes",
         allow_playback_repeats=True,
-        filter_query_parameters=["api-key"],
+        filter_query_parameters=["api-key", "apikey"],
     ):
         articles = plugin.fetch()
 

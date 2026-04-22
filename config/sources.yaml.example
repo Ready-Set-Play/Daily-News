@@ -31,9 +31,13 @@ sources:
       # How many days back to look for "most popular" articles.
       most_popular_days: 7
 
-  # Google News plugin, uses RSS. No API key needed.
-  - plugin: google_news
+  # GNews plugin — real article URLs, no Google redirect wrapper.
+  # Free tier: 100 requests/day. Get a key at https://gnews.io.
+  # In GitHub Actions, set the GNEWS_API_KEY secret.
+  - plugin: gnews
     enabled: true
+    auth:
+      api_key_env: GNEWS_API_KEY
     config:
       # Define topics and the search queries for them.
       # The keys (e.g., 'ai_coding') should match topic 'id's in topics.yaml.
@@ -45,6 +49,8 @@ sources:
           - "technology news"
         cybersecurity:
           - "cybersecurity breach"
+      # Max articles per query (free tier max is 10).
+      max_per_query: 10
 
   # Reddit plugin. No API key needed for public subreddits.
   - plugin: reddit

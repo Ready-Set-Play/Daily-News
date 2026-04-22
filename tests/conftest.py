@@ -29,6 +29,7 @@ def mock_env(monkeypatch):
     monkeypatch.setenv("RESEND_API_KEY", "test-resend-key")
     monkeypatch.setenv("RECIPIENT_EMAIL", "test@example.com")
     monkeypatch.setenv("NYT_API_KEY", "test-nyt-key")
+    monkeypatch.setenv("GNEWS_API_KEY", "test-gnews-key")
     monkeypatch.setenv("FROM_EMAIL", "Daily Brief <digest@example.com>")
     monkeypatch.setenv("FEEDBACK_BASE_URL", "https://feedback.example.com")
     monkeypatch.setenv("LLM_PROVIDER", "anthropic")
