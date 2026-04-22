@@ -33,5 +33,7 @@ jobs:
           RESEND_API_KEY: test
           NYT_API_KEY: test
           GNEWS_API_KEY: test
+          REDDIT_CLIENT_ID: test
+          REDDIT_CLIENT_SECRET: test
           RECIPIENT_EMAIL: test@example.com
           FROM_EMAIL: "Daily Brief <digest@example.com>"

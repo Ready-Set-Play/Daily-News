@@ -52,9 +52,13 @@ sources:
       # Max articles per query (free tier max is 10).
       max_per_query: 10
 
-  # Reddit plugin. No API key needed for public subreddits.
+  # Reddit plugin. Requires an OAuth app (script type) from reddit.com/prefs/apps.
+  # In GitHub Actions, set REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET secrets.
   - plugin: reddit
     enabled: true
+    auth:
+      client_id_env: REDDIT_CLIENT_ID
+      client_secret_env: REDDIT_CLIENT_SECRET
     config:
       # Define topics and the subreddits for them.
       subreddits:

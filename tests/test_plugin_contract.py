@@ -62,7 +62,10 @@ PLUGIN_CONFIGS = [
             "limit": 5,
             "min_score": 100,
         },
-        {},
+        {
+            "client_id_env": "REDDIT_CLIENT_ID",
+            "client_secret_env": "REDDIT_CLIENT_SECRET",
+        },
         "test_reddit_fetch.yaml",
     ),
     (
@@ -114,6 +117,7 @@ def test_plugin_schema(plugin_name, config, auth, cassette, mock_env):
         record_mode="new_episodes",
         allow_playback_repeats=True,
         filter_query_parameters=["api-key", "apikey"],
+        filter_headers=["Authorization"],
     ):
         articles = plugin.fetch()
 

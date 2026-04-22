@@ -37,17 +37,28 @@ REDDIT_CONFIG = {
     "min_score": 100,
 }
 
+REDDIT_AUTH = {
+    "client_id_env": "REDDIT_CLIENT_ID",
+    "client_secret_env": "REDDIT_CLIENT_SECRET",
+}
 
-@vcr.use_cassette(CASSETTE, record_mode="new_episodes", allow_playback_repeats=True)
-def test_reddit_returns_articles():
-    plugin = Source(REDDIT_CONFIG, {})
+VCR_OPTS = dict(
+    record_mode="new_episodes",
+    allow_playback_repeats=True,
+    filter_headers=["Authorization"],
+)
+
+
+@vcr.use_cassette(CASSETTE, **VCR_OPTS)
+def test_reddit_returns_articles(mock_env):
+    plugin = Source(REDDIT_CONFIG, REDDIT_AUTH)
     articles = plugin.fetch()
-    assert len(articles) >= 0  # May be empty if all posts below min_score in cassette
+    assert len(articles) >= 0
 
 
-@vcr.use_cassette(CASSETTE, record_mode="new_episodes", allow_playback_repeats=True)
-def test_reddit_required_fields():
-    plugin = Source(REDDIT_CONFIG, {})
+@vcr.use_cassette(CASSETTE, **VCR_OPTS)
+def test_reddit_required_fields(mock_env):
+    plugin = Source(REDDIT_CONFIG, REDDIT_AUTH)
     articles = plugin.fetch()
     for article in articles:
         for field in REQUIRED_FIELDS:
@@ -56,21 +67,20 @@ def test_reddit_required_fields():
             ), f"Missing field '{field}' in article: {article.get('title')}"
 
 
-@vcr.use_cassette(CASSETTE, record_mode="new_episodes", allow_playback_repeats=True)
-def test_reddit_source_field():
-    plugin = Source(REDDIT_CONFIG, {})
+@vcr.use_cassette(CASSETTE, **VCR_OPTS)
+def test_reddit_source_field(mock_env):
+    plugin = Source(REDDIT_CONFIG, REDDIT_AUTH)
     articles = plugin.fetch()
     for article in articles:
         assert article["source"] == "Reddit"
         assert article["source_label"].startswith("r/")
 
 
-@vcr.use_cassette(CASSETTE, record_mode="new_episodes", allow_playback_repeats=True)
-def test_reddit_published_is_iso8601():
+@vcr.use_cassette(CASSETTE, **VCR_OPTS)
+def test_reddit_published_is_iso8601(mock_env):
     from datetime import datetime
 
-    plugin = Source(REDDIT_CONFIG, {})
+    plugin = Source(REDDIT_CONFIG, REDDIT_AUTH)
     articles = plugin.fetch()
     for article in articles:
-        # Should parse without error
         datetime.fromisoformat(article["published"])
