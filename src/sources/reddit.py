@@ -28,46 +28,43 @@ class Source(BaseSource):
         limit = self.config.get("limit", 10)
         min_score = self.config.get("min_score", 100)
         headers = {
-            "User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36",
-            "Accept": "application/json, text/plain, */*",
-            "Accept-Language": "en-US,en;q=0.9",
+            "User-Agent": "daily-news-digest/1.0 (personal project)",
         }
 
         articles = []
 
-        import feedparser
-
         for topic, subs in subreddits.items():
             for sub in subs:
-                url = f"https://www.reddit.com/r/{sub}/{sort}.rss?limit={limit}"
+                url = f"https://www.reddit.com/r/{sub}/{sort}.json?limit={limit}"
                 try:
                     req = urllib.request.Request(url, headers=headers)
                     with urllib.request.urlopen(req, timeout=10) as resp:
-                        raw_xml = resp.read()
-                    
-                    feed = feedparser.parse(raw_xml)
+                        data = json.loads(resp.read())
 
-                    for entry in feed.entries:
-                        link = entry.get("link", "")
-                        if not link:
+                    for post in data["data"]["children"]:
+                        p = post["data"]
+                        score = p.get("score", 0)
+                        if score < min_score:
                             continue
-                        
-                        summary_html = entry.get("summary", "")
-                        
+                        link = p.get("url", "")
+                        permalink = "https://www.reddit.com" + p.get("permalink", "")
+                        published = datetime.fromtimestamp(
+                            p.get("created_utc", 0), tz=timezone.utc
+                        ).isoformat()
                         articles.append(
                             {
-                                "id": _make_id(link, entry.get("title", "")),
-                                "title": entry.get("title", ""),
-                                "url": link,
-                                "reddit_url": link,  # RSS link is the reddit permalink
+                                "id": _make_id(permalink, p.get("title", "")),
+                                "title": p.get("title", ""),
+                                "url": link if link else permalink,
+                                "reddit_url": permalink,
                                 "source": "Reddit",
                                 "source_label": f"r/{sub}",
-                                "summary": summary_html[:500],  # HTML snippet
-                                "published": entry.get("published", ""),
+                                "summary": p.get("selftext", "")[:500],
+                                "published": published,
                                 "topic_hint": topic,
-                                "image_url": None, # Complex to extract from RSS HTML reliably
-                                "reddit_score": 0, # Not provided in RSS
-                                "num_comments": 0, # Not provided in RSS
+                                "image_url": None,
+                                "reddit_score": score,
+                                "num_comments": p.get("num_comments", 0),
                             }
                         )
                 except Exception as e:
