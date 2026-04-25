@@ -1,4 +1,5 @@
 name: Update Preferences
+  run: echo "SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_ENV
 
 on:
   schedule:
