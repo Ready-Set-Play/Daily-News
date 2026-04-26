@@ -1,5 +1,5 @@
 name: Update Preferences
-  run: echo "SHORT_SHA=$(echo ${{ github.sha }} | cut -c1-7)" >> $GITHUB_ENV
+
 
 on:
   schedule:
@@ -16,7 +16,8 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+      - uses: actions/checkout@e67bc1ef94569855e506f97182f7d064a62db7ab
+
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
