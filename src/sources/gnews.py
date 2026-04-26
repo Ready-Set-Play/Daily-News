@@ -9,7 +9,6 @@ Get a key at https://gnews.io.
 import json
 import logging
 import os
-import time
 import urllib.parse
 import urllib.request
 
@@ -74,8 +73,6 @@ class Source(BaseSource):
                         })
                 except Exception as e:
                     logger.warning(f"GNews query '{query}' failed: {e}")
-                finally:
-                    time.sleep(1)
 
         logger.info(f"GNews: fetched {len(articles)} articles")
         return articles
