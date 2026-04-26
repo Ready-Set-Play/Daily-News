@@ -2,7 +2,6 @@
 render.py — Build the HTML email from selected, summarized articles.
 """
 
-import base64
 import os
 from datetime import datetime, timezone
 from typing import Any
@@ -61,17 +60,7 @@ def _token_expiry_context() -> dict | None:
         "urgency": urgency,
     }
 
-NYT_LOGO_FILE = os.path.join(STATIC_DIR, "poweredby_nytimes_200b.png")
 
-
-def _nyt_logo_data_uri() -> str:
-    """Return a base64 data URI for the NYT logo, for inline embedding in email HTML."""
-    try:
-        with open(NYT_LOGO_FILE, "rb") as f:
-            data = base64.b64encode(f.read()).decode()
-        return f"data:image/png;base64,{data}"
-    except FileNotFoundError:
-        return ""
 
 
 # Section ordering from topics.yaml
@@ -160,14 +149,12 @@ def render_email(articles: list[dict]) -> tuple[str, str]:
     sections = group_by_topic(articles)
     total_items = sum(len(s["items"]) for s in sections)
     has_nyt_content = any(a.get("is_nyt") for a in articles)
-    nyt_logo_uri = _nyt_logo_data_uri() if has_nyt_content else ""
 
     html = template.render(
         date_str=date_str,
         sections=sections,
         total_items=total_items,
         has_nyt_content=has_nyt_content,
-        nyt_logo_uri=nyt_logo_uri,
         token_expiry=_token_expiry_context(),
     )
 
