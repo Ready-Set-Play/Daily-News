@@ -14,6 +14,53 @@ TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "..", "templates")
 CONFIG_DIR = os.path.join(os.path.dirname(__file__), "..", "config")
 STATIC_DIR = os.path.join(os.path.dirname(__file__), "..", "static")
 
+
+def _token_expiry_context() -> dict | None:
+    """
+    Returns expiry display data for the email footer, or None if suppressed/unconfigured.
+    Reads GITHUB_TOKEN_EXPIRES (YYYY-MM-DD) and notifications.token_expiry_reminder from sources.yaml.
+    """
+    sources_path = os.path.join(CONFIG_DIR, "sources.yaml")
+    if not os.path.exists(sources_path):
+        sources_path = os.path.join(CONFIG_DIR, "sources.yaml.example")
+    try:
+        with open(sources_path) as f:
+            sources_cfg = yaml.safe_load(f)
+        enabled = sources_cfg.get("notifications", {}).get("token_expiry_reminder", True)
+    except Exception:
+        enabled = True
+
+    if not enabled:
+        return None
+
+    expires_str = os.environ.get("GITHUB_TOKEN_EXPIRES", "").strip()
+    if not expires_str:
+        return None
+
+    try:
+        expiry_dt = datetime.strptime(expires_str, "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    except ValueError:
+        return None
+
+    days = (expiry_dt - datetime.now(tz=timezone.utc)).days
+
+    if days > 30:
+        color = "#aaaaaa"
+        urgency = "normal"
+    elif days > 10:
+        color = "#b86e00"
+        urgency = "warning"
+    else:
+        color = "#b91c1c"
+        urgency = "urgent"
+
+    return {
+        "date": expiry_dt.strftime("%B %-d, %Y"),
+        "days_remaining": days,
+        "color": color,
+        "urgency": urgency,
+    }
+
 NYT_LOGO_FILE = os.path.join(STATIC_DIR, "poweredby_nytimes_200b.png")
 
 
@@ -121,6 +168,7 @@ def render_email(articles: list[dict]) -> tuple[str, str]:
         total_items=total_items,
         has_nyt_content=has_nyt_content,
         nyt_logo_uri=nyt_logo_uri,
+        token_expiry=_token_expiry_context(),
     )
 
     # Plain text fallback

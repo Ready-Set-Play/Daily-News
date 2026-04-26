@@ -484,6 +484,19 @@
     </p>
     {% endif %}
     <p style="margin-top:10px;"><a href="mailto:unsubscribe@yourdomain.com">Unsubscribe</a></p>
+    {% if token_expiry %}
+    <p style="margin-top:14px; font-size:11px; color:{{ token_expiry.color }}; font-family:monospace;">
+      {%- if token_expiry.days_remaining <= 0 -%}
+        GitHub token EXPIRED {{ token_expiry.date }} &mdash; update GITHUB_TOKEN in Cloudflare Worker secrets and GITHUB_TOKEN_EXPIRES in GitHub Actions secrets.
+      {%- elif token_expiry.urgency == "urgent" -%}
+        GitHub token expires {{ token_expiry.date }} &mdash; {{ token_expiry.days_remaining }} days remaining. Rotate now.
+      {%- elif token_expiry.urgency == "warning" -%}
+        GitHub token expires {{ token_expiry.date }} ({{ token_expiry.days_remaining }} days).
+      {%- else -%}
+        GitHub token expires {{ token_expiry.date }}.
+      {%- endif -%}
+    </p>
+    {% endif %}
   </div>
 
 </div>

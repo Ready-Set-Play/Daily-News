@@ -47,6 +47,7 @@ jobs:
           RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
           FROM_EMAIL: ${{ secrets.FROM_EMAIL || 'onboarding@resend.dev' }}
           FEEDBACK_BASE_URL: ${{ secrets.FEEDBACK_BASE_URL }}
+          GITHUB_TOKEN_EXPIRES: ${{ secrets.GITHUB_TOKEN_EXPIRES }}
         run: |
           cd src
           python main.py
