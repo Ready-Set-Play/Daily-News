@@ -61,6 +61,21 @@ def _token_expiry_context() -> dict | None:
     }
 
 
+def _theme_context() -> str:
+    """
+    Returns the selected theme from sources.yaml (design.theme).
+    Defaults to 'the_situation' if not specified.
+    """
+    sources_path = os.path.join(CONFIG_DIR, "sources.yaml")
+    if not os.path.exists(sources_path):
+        sources_path = os.path.join(CONFIG_DIR, "sources.yaml.example")
+    try:
+        with open(sources_path) as f:
+            sources_cfg = yaml.safe_load(f)
+        return sources_cfg.get("design", {}).get("theme", "the_situation")
+    except Exception:
+        return "the_situation"
+
 
 
 # Section ordering from topics.yaml
@@ -140,7 +155,12 @@ def render_email(articles: list[dict]) -> tuple[str, str]:
     Render HTML and plain-text versions of the email.
     Returns (html_body, text_body).
     """
-    env = Environment(loader=FileSystemLoader(TEMPLATES_DIR), autoescape=True)
+    theme = _theme_context()
+    theme_dir = os.path.join(TEMPLATES_DIR, theme)
+    if not os.path.exists(theme_dir):
+        theme_dir = os.path.join(TEMPLATES_DIR, "the_situation")
+
+    env = Environment(loader=FileSystemLoader(theme_dir), autoescape=True)
     template = env.get_template("digest.html")
 
     now = datetime.now(tz=timezone.utc)

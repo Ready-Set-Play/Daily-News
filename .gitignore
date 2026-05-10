@@ -18,6 +18,7 @@ dist/
 
 # Generated output
 digest_preview.html
+mockup.html
 
 # Firebase debug log
 firebase-debug.log

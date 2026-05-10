@@ -120,9 +120,9 @@
     font-weight: 400;
     font-size: 44px;
     line-height: 0.85;
-    letter-spacing: -2px;
+    letter-spacing: -1px;
     color: #0c8a7a;
-    min-width: 54px;
+    min-width: 74px;
     flex-shrink: 0;
   }
   .article-body { flex: 1; min-width: 0; }
@@ -338,7 +338,7 @@
     .container { border-left: none; border-right: none; }
     .mast-title { font-size: 56px; letter-spacing: -2px; }
     .sh-label { font-size: 28px; }
-    .article-num { font-size: 34px; min-width: 42px; }
+    .article-num { font-size: 34px; min-width: 54px; }
     .funnies-head { font-size: 36px; }
     .footer-big { font-size: 28px; }
   }
@@ -390,7 +390,7 @@
     {% elif section.id == 'podcasts' %}
       <div class="section">
         <div class="section-head">
-          <span class="sh-mark">&sect; {{ '%02d' % loop.index }}</span>
+          <span class="sh-mark">{{ '%02d' % loop.index }}</span>
           <h2 class="sh-label">In your ears.</h2>
           <span class="sh-count">{{ section['items']|length }} new</span>
         </div>
@@ -417,7 +417,7 @@
     {% else %}
       <div class="section">
         <div class="section-head">
-          <span class="sh-mark">&sect; {{ '%02d' % loop.index }}</span>
+          <span class="sh-mark">{{ '%02d' % loop.index }}</span>
           <h2 class="sh-label">{{ section.label }}.</h2>
           <span class="sh-count">{{ section['items']|length }} filed</span>
         </div>
