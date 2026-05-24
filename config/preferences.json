@@ -1,7 +1,7 @@
 {
   "_meta": {
     "version": 1,
-    "last_updated": "2026-05-17",
+    "last_updated": "2026-05-24",
     "description": "Topic interest weights derived from feedback. Range 0.5-2.0. Updated weekly."
   },
   "topic_weights": {
