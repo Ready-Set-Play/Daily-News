@@ -10,7 +10,7 @@ import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 
-from .base import BaseSource, SourceFetchError
+from .base import BaseSource
 
 logger = logging.getLogger(__name__)
 

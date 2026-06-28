@@ -9,7 +9,7 @@ from datetime import datetime, timedelta, timezone
 
 import feedparser
 
-from .base import BaseSource, SourceFetchError
+from .base import BaseSource
 
 logger = logging.getLogger(__name__)
 

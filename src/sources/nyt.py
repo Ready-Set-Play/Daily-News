@@ -9,7 +9,7 @@ import os
 import urllib.error
 import urllib.request
 
-from .base import BaseSource, SourceFetchError
+from .base import BaseSource
 
 logger = logging.getLogger(__name__)
 

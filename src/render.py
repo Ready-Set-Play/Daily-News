@@ -4,7 +4,6 @@ render.py — Build the HTML email from selected, summarized articles.
 
 import os
 from datetime import datetime, timezone
-from typing import Any
 
 import yaml
 from jinja2 import Environment, FileSystemLoader
