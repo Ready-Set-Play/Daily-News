@@ -202,15 +202,13 @@ modes:
         mode_render_only(nyt_api_key)
 
     elif args.mode == "full":
-        missing = [
-            k
-            for k, v in {
-                "RESEND_API_KEY": resend_api_key,
-                "RECIPIENT_EMAIL": recipient_email,
-                "FROM_EMAIL": from_email,
-            }.items()
-            if not v
-        ]
+        missing = []
+        if not resend_api_key:
+            missing.append("RESEND_API_KEY")
+        if not recipient_email:
+            missing.append("RECIPIENT_EMAIL")
+        if not from_email:
+            missing.append("FROM_EMAIL")
         if missing:
             logger.error(f"Missing for full send: {', '.join(missing)}")
             return 1

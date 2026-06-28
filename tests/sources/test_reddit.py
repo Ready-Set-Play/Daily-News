@@ -84,3 +84,17 @@ def test_reddit_published_is_iso8601(mock_env):
     articles = plugin.fetch()
     for article in articles:
         datetime.fromisoformat(article["published"])
+
+
+def test_reddit_is_configured_without_keys(monkeypatch):
+    monkeypatch.delenv("REDDIT_CLIENT_ID", raising=False)
+    monkeypatch.delenv("REDDIT_CLIENT_SECRET", raising=False)
+    plugin = Source(REDDIT_CONFIG, REDDIT_AUTH)
+    assert plugin.is_configured() is False
+
+
+def test_reddit_is_configured_with_keys(monkeypatch):
+    monkeypatch.setenv("REDDIT_CLIENT_ID", "test-id")
+    monkeypatch.setenv("REDDIT_CLIENT_SECRET", "test-secret")
+    plugin = Source(REDDIT_CONFIG, REDDIT_AUTH)
+    assert plugin.is_configured() is True

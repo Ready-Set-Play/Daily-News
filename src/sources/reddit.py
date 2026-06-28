@@ -45,6 +45,12 @@ class Source(BaseSource):
     name = "reddit"
     requires_auth = True
 
+    def is_configured(self) -> bool:
+        import os
+        client_id_env = self.auth.get("client_id_env", "REDDIT_CLIENT_ID")
+        client_secret_env = self.auth.get("client_secret_env", "REDDIT_CLIENT_SECRET")
+        return bool(os.environ.get(client_id_env, "")) and bool(os.environ.get(client_secret_env, ""))
+
     def fetch(self) -> list[dict]:
         import os
 

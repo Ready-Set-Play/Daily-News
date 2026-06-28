@@ -30,8 +30,7 @@ def load_sources(config: list[dict]) -> list[BaseSource]:
             instance = cls(entry.get("config", {}), entry.get("auth", {}))
             if not instance.is_configured():
                 logger.warning(
-                    f"Source plugin '{plugin_name}' is missing credentials "
-                    f"({instance.auth.get('api_key_env', '?')} not set) — skipping"
+                    f"Source plugin '{plugin_name}' is missing credentials — skipping"
                 )
                 continue
             sources.append(instance)
