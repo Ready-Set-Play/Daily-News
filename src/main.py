@@ -17,7 +17,7 @@ import logging
 import os
 import sys
 
-from fetch import fetch_all
+from fetch import fetch_all, save_sent_history
 from score import select_top
 from summarize import generate_summaries
 from render import render_email
@@ -114,6 +114,7 @@ def mode_full(nyt_api_key, resend_api_key, recipient_email, from_email):
     )
     if success:
         logger.info("=== DIGEST DELIVERED SUCCESSFULLY ===")
+        save_sent_history(selected)
     else:
         logger.error("=== DELIVERY FAILED ===")
         sys.exit(1)

@@ -35,6 +35,7 @@ def mock_env(monkeypatch):
     monkeypatch.setenv("FROM_EMAIL", "Daily Brief <digest@example.com>")
     monkeypatch.setenv("FEEDBACK_BASE_URL", "https://feedback.example.com")
     monkeypatch.setenv("LLM_PROVIDER", "anthropic")
+    monkeypatch.setenv("DISABLE_HISTORY_FILTER", "true")
     # FEEDBACK_BASE_URL is a module-level constant in summarize — patch it directly
     try:
         import summarize
