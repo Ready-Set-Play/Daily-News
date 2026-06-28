@@ -1,0 +1,634 @@
+
+
+<!DOCTYPE html>
+<html lang="en" class="fixed_navbar">
+	<head>
+		
+		<title>
+	LocalLlama
+	
+</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="View on Redlib, an alternative private front-end to Reddit.">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		
+		<meta name="robots" content="noindex, nofollow">
+		
+		<!-- General PWA -->
+		<meta name="theme-color" content="#1F1F1F">
+		<!-- iOS Application -->
+		<meta name="apple-mobile-web-app-title" content="Redlib">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="default">
+		<!-- Android -->
+		<meta name="mobile-web-app-capable" content="yes">
+		<!-- iOS Logo -->
+		<link href="/touch-icon-iphone.png" rel="apple-touch-icon">
+		<!-- OpenSearch description file -->
+		<link rel="search" type="application/opensearchdescription+xml" title="Search Redlib" href="/opensearch.xml">
+		<!-- PWA Manifest -->
+		<link rel="manifest" type="application/json" href="/manifest.json">
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="/style.css?v=0.36.0">
+		<!-- Video quality -->
+		<div id="video_quality" data-value=""></div>
+		
+		</head>
+	<body class="
+		
+		
+		 
+		 fixed_navbar">
+		<!-- NAVIGATION BAR -->
+		<nav class="
+			 fixed_navbar">
+			<div id="logo">
+				<a id="redlib" href="/"><span id="red">red</span><span id="lib">lib.</span></a>
+				
+	<details id="feeds">
+		<summary>Feeds</summary>
+		<div id="feed_list">
+			<p>MAIN FEEDS</p>
+			<a href="/">Home</a>
+			
+				<a href="/r/popular">Popular</a>
+				<a href="/r/all">All</a>
+			
+			
+		</div>
+	</details>
+
+			</div>
+			
+	<form action="/r/LocalLLaMA/search" id="searchbox">
+	<input id="search" type="text" name="q" placeholder="Search" title="Search redlib" value="">
+	
+	<div id="inside">
+		<input type="checkbox" name="restrict_sr" id="restrict_sr" checked>
+		<label for="restrict_sr" class="search_label" title="Restrict search to this subreddit">in /r/LocalLLaMA</label>
+	</div>
+	
+	<button class="submit">
+		<svg width="15" viewBox="0 0 110 100" fill="none" stroke-width="10" stroke-linecap="round">
+			<path d="M20 50 H100" />
+			<path d="M75 15 L100 50 L75 85" />
+			&rarr;
+		</svg>
+	</button>
+</form>
+
+			<div id="links">
+				<a id="reddit_link" href="#popup">
+					<span>reddit</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M22 2L12 22"/>
+						<path d="M2 6.70587C3.33333 8.07884 3.33333 11.5971 3.33333 11.5971M3.33333 19.647V11.5971M3.33333 11.5971C3.33333 11.5971 5.125 7.47817 8 7.47817C10.875 7.47817 12 8.85114 12 8.85114"/>
+					</svg>
+				</a>
+				
+					<div class="popup" id="popup">
+	<div class="popup-inner">
+		<h1>You are about to leave Redlib</h1>
+		<p>Do you want to continue?</p>
+		<p id="reddit_url">https://www.reddit.com/r/LocalLLaMA/hot</p>
+		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 639.24 563">
+			<defs>
+				<style>.cls-1{fill:#000000;}.cls-2{fill:#f8aa00;}</style>
+			</defs>
+			<path class="cls-2" d="M322.03,0c1.95,2.5,4.88,.9,7.33,1.65,10.5,3.21,17.65,10.39,22.83,19.35,93.64,162.06,186.98,324.29,280.25,486.56,15.73,20.19,2.49,51.27-22.92,54.37-1.21,.19-2.72-.54-3.49,1.08H239.03c-70.33-2.43-141.6,.79-212.08-1.74-17.49-4.92-23.16-15.88-26.91-32.26l-.04-1.97C88.74,354.76,194.49,188.2,289.92,18.43c6.2-10.66,15.03-16.94,27.61-17.36,.95-.03,2.05,.18,2.51-1.07h2Zm-2.43,545c94.95-.02,189.9,.04,284.85-.02,11.84-.73,20.75-13.19,16.68-23.55C523.83,355.97,430.74,187.62,332.05,23.07c-7.93-9.02-22.2-6.58-27.23,3.22C230.28,156.11,155.21,285.64,80.41,415.31c-19.88,34.41-39.31,69.07-59.78,103.14-2.43,4.05-4.24,8.8-1.68,14.18,3.92,8.24,9.59,12.37,18.82,12.37,93.95,0,187.9,0,281.85,0Z"/>
+			<path class="cls-1" d="M319.61,545c-93.95,0-187.9,0-281.85,0-9.22,0-14.89-4.13-18.82-12.37-2.56-5.38-.75-10.13,1.68-14.18,20.47-34.07,39.9-68.73,59.78-103.14C155.21,285.64,230.28,156.11,304.82,26.29c5.03-9.8,19.3-12.24,27.23-3.22,98.7,164.55,191.79,332.9,289.1,498.35,4.06,10.36-4.85,22.82-16.68,23.55-94.94,.06-189.9,0-284.85,.02Zm.44-462.31C238.88,223.22,158.17,362.95,77.28,503h485.54c-80.94-140.13-161.61-279.79-242.77-420.31Z"/>
+			<path class="cls-2" d="M320.05,82.69c81.16,140.52,161.83,280.18,242.77,420.31H77.28C158.17,362.95,238.88,223.22,320.05,82.69Zm36.05,118.99c-.14-46.75-68.32-52.32-74.66-4.76,.73,51.49,9.2,102.97,12.63,154.49,1.18,13.14,10.53,21.81,23.32,22.76,13.12,.97,23.89-9.13,24.96-21.58,4.44-49.99,9.4-101.22,13.76-150.91Zm-36.56,271.4c48.8,.76,49.24-74.7-.31-75.47-53.45,3-46.02,78.12,.31,75.47Z"/>
+			<path class="cls-1" d="M356.1,201.67c-4.36,49.69-9.31,100.91-13.76,150.91-1.07,12.45-11.84,22.56-24.96,21.58-12.79-.95-22.14-9.63-23.31-22.76-3.43-51.52-11.9-103-12.63-154.49,6.33-47.53,74.51-42.03,74.66,4.76Z"/>
+			<path class="cls-1" d="M319.54,473.08c-46.34,2.64-53.75-72.47-.31-75.47,49.56,.78,49.1,76.24,.31,75.47Z"/>
+		</svg>
+		<a id="goback" href="#">No, go back!</a>
+		<a id="toreddit" href="https://www.reddit.com/r/LocalLLaMA/hot" rel="nofollow">Yes, take me to Reddit</a>
+	</div>
+</div>
+				
+				<a id="settings_link" href="/settings">
+					<span>settings</span>
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<title>settings</title>
+						<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+					</svg>
+				</a>
+			</div>
+		</nav>
+		
+		<!-- MAIN CONTENT -->
+		
+	<main>
+		
+		<div id="column_one">
+			<form id="sort">
+				<div id="sort_options">
+					
+						
+		<a class="selected" href="/r/LocalLLaMA/hot">
+			Hot
+		</a>
+	
+		<a  href="/r/LocalLLaMA/new">
+			New
+		</a>
+	
+		<a  href="/r/LocalLLaMA/top">
+			Top
+		</a>
+	
+		<a  href="/r/LocalLLaMA/rising">
+			Rising
+		</a>
+	
+		<a  href="/r/LocalLLaMA/controversial">
+			Controversial
+		</a>
+	
+					
+				</div>
+				
+			</form>
+
+			
+
+			
+
+			
+
+			
+			<div id="posts">
+			
+			
+			<hr class="sep" />
+			<div class="post stickied" id="1uaebfe">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/LocalLLaMA">r/LocalLLaMA</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author moderator" href="/u/rm-rf-rm">u/rm-rf-rm</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 19 2026, 21:29:33 UTC">8d ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+		<a href="/r/LocalLLaMA/comments/1uaebfe/best_local_agents_jun_2026/">Best Local Agents - Jun 2026</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_score" title="175">
+    
+    175
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>A megathread that is overdue! Let&#39;s discuss and debate on what the <strong><em>best local agents</em></strong> available today are</p>
+
+<h1>Prologue</h1>
+
+<p>First a note on terminology: While most regular users are going to have a general sense of what these are, I think its worth a brief pause to preempt turbulence in the discussion. </p>
+
+<ul>
+<li><strong>Agent</strong>: There is no standard/universally agreed upon term that I can find - and rightly so. Its hard to tell if this is a hypecycle buzzword or a new primitive. I think its important to first relate to stuff that already exist and highlight how its new/different. So from that lens, I think it should largely be thought of just another software that takes autonomous/semi-autonomous action based on user input, with the distuinguishing aspect being that it can self determine path/logic and does not require to be pre-programmed (unlike IFTTT, n8n, Apple Shortcuts etc.). This definition largely agrees with <a href="/r/AI_Agents">/r/AI_Agents</a>&#39;s . Or put in another way, we&#39;re talking about pi, opencode, hermes etc.</li>
+<li><strong>Harness</strong>: I specifically did not use this neologism which seems to be the new buzzword replacing the Agent buzzword, but without any sufficient need. Search/LLMs dont offer a substantative or consensus definition for it either. The best that can eked out is LLM+Harness=Agent. However, I think that&#39;s the equivalent of saying Engine+Chassis/Wheels/Steering=Car. So its much more useful to talk about the &quot;Car&quot; and thus the titling of this post</li>
+</ul>
+
+<h1>The standard spiel:</h1>
+
+<p>still applies.. </p>
+
+<p>Share what you are running right now and <strong>why</strong>. Given the nature of the beast in evaluating these immature systems (rapidly changing landscape, untrustworthiness of benchmarks, immature tooling, intrinsic stochasticity), please be as detailed as possible in describing your setup, nature of your usage (how much, personal/professional use), how you evaluate etc. Eg: comments like <a href="/r/LocalLLaMA/comments/1u6njs5/i_think_we_need_a_localharnessllm_or_something/ortxda3/">&quot;pi is the best&quot;</a> that doesnt have any substance reduce the quality of the discussion </p>
+
+<h1>Rules</h1>
+
+<ol>
+<li>Agents must be using open weight models</li>
+<li>Agents must be running locally (a.k.a hardware, including VPCs, that you control)</li>
+<li>Strongly recommend discussing OSS Agent software but doesn&#39;t necessarily have to be so. Why? Claude Code/Codex are relatively the most mature, well understood, largest ecosystem softwares today + they can be used with local models. At least for now we cant ignore the reality that many of us are using those - so its worth allowing at least as a reference point.</li>
+</ol>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/LocalLLaMA/comments/1uaebfe/best_local_agents_jun_2026/" class="post_comments" title="292 comments">292 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uht2m0">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/LocalLLaMA">r/LocalLLaMA</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/Nunki08">u/Nunki08</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 28 2026, 09:46:12 UTC">5h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/LocalLLaMA/search?q=flair_name%3A%22Discussion%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#646d73;"
+				dir="ltr"><span>Discussion</span></a>
+		
+		<a href="/r/LocalLLaMA/comments/1uht2m0/were_probably_going_to_need_that_soon/">We&#39;re probably going to need that soon.</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<a class="post_thumbnail" href="/r/LocalLLaMA/comments/1uht2m0/were_probably_going_to_need_that_soon/" rel="nofollow">
+		
+		<div style="max-width:140px;max-height:105px;">
+			<svg width="140px" height="105px" xmlns="http://www.w3.org/2000/svg">
+				<image width="100%" height="100%" href="/preview/pre/a2scxop2vz9h1.jpg?width=140&#38;height=105&#38;auto=webp&#38;s=5682e984606a883c6082b5fb9a61155b3328edab"/>
+				<desc>
+					<img loading="lazy" alt="Thumbnail" src="/preview/pre/a2scxop2vz9h1.jpg?width=140&#38;height=105&#38;auto=webp&#38;s=5682e984606a883c6082b5fb9a61155b3328edab"/>
+				</desc>
+			</svg>
+		</div>
+		
+		<span>gallery</span>
+	</a>
+	
+	<div class="post_score" title="1660">
+    
+    1.7k
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>From: </p>
+
+<p>Vladik on 𝕏: <a href="https://x.com/Kostoglodov/status/2071144065857679631">https://x.com/Kostoglodov/status/2071144065857679631</a></p>
+
+<p>Shaw (spirit/acc) on 𝕏: <a href="https://x.com/shawmakesmagic/status/2070918006033817867">https://x.com/shawmakesmagic/status/2070918006033817867</a></p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/LocalLLaMA/comments/1uht2m0/were_probably_going_to_need_that_soon/" class="post_comments" title="221 comments">221 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uhv3wc">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/LocalLLaMA">r/LocalLLaMA</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/codehamr">u/codehamr</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 28 2026, 11:40:51 UTC">3h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/LocalLLaMA/search?q=flair_name%3A%22Discussion%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#646d73;"
+				dir="ltr"><span>Discussion</span></a>
+		
+		<a href="/r/LocalLLaMA/comments/1uhv3wc/qwen36_27b_local_vs_opus_48_voxel_engine_in_raw_c/">Qwen3.6 27B local vs Opus 4.8, voxel engine in raw C with zero frameworks</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	
+	<div class="post_media_content">
+        <video class="post_media_video short" width="1920" height="1080" poster="/preview/external-pre/MmRhNGJjcTNmMGFoMRDI8FF2XYacwyB_jZ-RMP2IJAdY7BNaXZKTsjuu23BF.png?format=pjpg&#38;auto=webp&#38;s=d90c58afddaec6f4636d53d1653a0f35b729f2cd" controls preload="none">
+			<source src="/hls/yysjs5q3f0ah1/HLSPlaylist.m3u8?a=1785252121%2CNGI4ZWYxYTM4YzM5Njc3ZTU1ZTVkYTI0OGFlZWUwZDhjODJmY2I2YzI4OWQzYzhkZTNlYzQ3ZWYzNGFhZWIzZA%3D%3D&#38;v=1&#38;f=sd" type="application/vnd.apple.mpegurl" />
+			<source src="" type="video/mp4" />
+		</video>
+	</div>
+	
+	
+	<div class="post_score" title="241">
+    
+    241
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>Sunday experiment. Same prompt to both. Build a voxel world in plain C. No engine, no game library, no framework, just the compiler. The model does its own chunk meshing, render loop and memory management by hand.</p>
+
+<p>Left is Claude Code on Opus 4.8. Right is Qwen3.6 27B local on vLLM, the new NVFP4 quant, 256k context. Runs around 130 TPS on an RTX 6000 Blackwell 96GB through my own <a href="https://github.com/codehamr/codehamr">coding agent</a>.</p>
+
+<p>Opus clearly understands voxel physics. Terrain holds, chunks line up, collision works. The 27B compiles and renders, then tears itself apart on screen.</p>
+
+<p>The quality gap I expected. What I did not expect was a local 27B handling C at all. Almost every local demo is Python or TypeScript with a framework doing the work. Strip that away and you are left with raw pointers and manual allocation, exactly where I assumed a quantized model would fall over. It did not. Rough, but it builds and runs.</p>
+
+<p>Everyone watches the frontier race. Nobody talks about the bottom catching up. Two years ago this prompt gave you a segfault on a local model. Now it gives you a broken world that still runs on a card under your desk. The ceiling barely moved. The floor sprinted.</p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/LocalLLaMA/comments/1uhv3wc/qwen36_27b_local_vs_opus_48_voxel_engine_in_raw_c/" class="post_comments" title="51 comments">51 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uhx862">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/LocalLLaMA">r/LocalLLaMA</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/sammcj">u/sammcj</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 28 2026, 13:24:00 UTC">1h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/LocalLLaMA/search?q=flair_name%3A%22News%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#cc3600;"
+				dir="ltr"><span>News</span></a>
+		
+		<a href="/r/LocalLLaMA/comments/1uhx862/dflash_support_merged_into_llamacpp/">DFlash support merged into llama.cpp</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<a class="post_thumbnail" href="https://github.com/ggml-org/llama.cpp/pull/22105#event-27298914025" rel="nofollow">
+		
+		<div style="max-width:140px;max-height:70px;">
+			<svg width="140px" height="70px" xmlns="http://www.w3.org/2000/svg">
+				<image width="100%" height="100%" href="/preview/external-pre/M3mdnEysfP0uVC2ZSlECyu-WrkIZqJe9ud0VDkfR66g.png?width=140&#38;height=70&#38;auto=webp&#38;s=419416f2a47ac69e2fdb68677ce1ac62341769a9"/>
+				<desc>
+					<img loading="lazy" alt="Thumbnail" src="/preview/external-pre/M3mdnEysfP0uVC2ZSlECyu-WrkIZqJe9ud0VDkfR66g.png?width=140&#38;height=70&#38;auto=webp&#38;s=419416f2a47ac69e2fdb68677ce1ac62341769a9"/>
+				</desc>
+			</svg>
+		</div>
+		
+		<span>github.com</span>
+	</a>
+	
+	<div class="post_score" title="Hidden">
+    
+    •
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/LocalLLaMA/comments/1uhx862/dflash_support_merged_into_llamacpp/" class="post_comments" title="21 comments">21 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uhyhl3">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/LocalLLaMA">r/LocalLLaMA</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/pmttyji">u/pmttyji</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 28 2026, 14:18:54 UTC">1h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/LocalLLaMA/search?q=flair_name%3A%22New Model%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#ffb000;"
+				dir="ltr"><span>New Model</span></a>
+		
+		<a href="/r/LocalLLaMA/comments/1uhyhl3/deepspec_a_deepseekai_collection/">DeepSpec - a deepseek-ai Collection</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<a class="post_thumbnail" href="https://huggingface.co/collections/deepseek-ai/deepspec" rel="nofollow">
+		
+		<div style="max-width:140px;max-height:75px;">
+			<svg width="140px" height="75px" xmlns="http://www.w3.org/2000/svg">
+				<image width="100%" height="100%" href="/preview/external-pre/5-XPYpuVHq2kvgibNUvpTu-iQyUDKm1kz61KOP8bp-o.png?width=140&#38;height=75&#38;auto=webp&#38;s=5289e2432c872132bb8653470bae175a261423ae"/>
+				<desc>
+					<img loading="lazy" alt="Thumbnail" src="/preview/external-pre/5-XPYpuVHq2kvgibNUvpTu-iQyUDKm1kz61KOP8bp-o.png?width=140&#38;height=75&#38;auto=webp&#38;s=5289e2432c872132bb8653470bae175a261423ae"/>
+				</desc>
+			</svg>
+		</div>
+		
+		<span>huggingface.co</span>
+	</a>
+	
+	<div class="post_score" title="Hidden">
+    
+    •
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><h1>DeepSpec</h1>
+
+<p><a href="https://github.com/deepseek-ai/DeepSpec#deepspec"></a></p>
+
+<p>DeepSpec is a full-stack codebase for training and evaluating draft models for speculative decoding. It contains data preparation utilities, draft model implementations, training code, and evaluation scripts.</p>
+
+<h1>Released Checkpoints</h1>
+
+<p><a href="https://github.com/deepseek-ai/DeepSpec#released-checkpoints"></a></p>
+
+<p>The checkpoints below are the ones used for Table 1 in the <a href="https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf">paper</a>. Each checkpoint was trained on <a href="https://huggingface.co/datasets/mlabonne/open-perfectblend">open-perfectblend</a> data generated by its corresponding target model in non-thinking mode, and is the direct output of the corresponding training configuration under <a href="https://github.com/deepseek-ai/DeepSpec/blob/main/config">config/</a>.</p>
+
+<table><thead>
+<tr>
+<th align="left">Algorithm</th>
+<th align="left"><code>Qwen/Qwen3-4B</code></th>
+<th align="left"><code>Qwen/Qwen3-8B</code></th>
+<th align="left"><code>Qwen/Qwen3-14B</code></th>
+<th align="left"><code>google/gemma-4-12B-it</code></th>
+</tr>
+</thead><tbody>
+<tr>
+<td align="left">Eagle3</td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/eagle3_qwen3_4b_ttt7">deepseek-ai/eagle3_qwen3_4b_ttt7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/eagle3_qwen3_8b_ttt7">deepseek-ai/eagle3_qwen3_8b_ttt7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/eagle3_qwen3_14b_ttt7">deepseek-ai/eagle3_qwen3_14b_ttt7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/eagle3_gemma4_12b_ttt7">deepseek-ai/eagle3_gemma4_12b_ttt7</a></td>
+</tr>
+<tr>
+<td align="left">DFlash</td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/dflash_qwen3_4b_block7">deepseek-ai/dflash_qwen3_4b_block7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/dflash_qwen3_8b_block7">deepseek-ai/dflash_qwen3_8b_block7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/dflash_qwen3_14b_block7">deepseek-ai/dflash_qwen3_14b_block7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/dflash_gemma4_12b_block7">deepseek-ai/dflash_gemma4_12b_block7</a></td>
+</tr>
+<tr>
+<td align="left">DSpark</td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/dspark_qwen3_4b_block7">deepseek-ai/dspark_qwen3_4b_block7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/dspark_qwen3_8b_block7">deepseek-ai/dspark_qwen3_8b_block7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/dspark_qwen3_14b_block7">deepseek-ai/dspark_qwen3_14b_block7</a></td>
+<td align="left"><a href="https://huggingface.co/deepseek-ai/dspark_gemma4_12b_block7">deepseek-ai/dspark_gemma4_12b_block7</a></td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p><strong>Important</strong>  </p>
+</blockquote>
+
+<p>If you cite these results in a new paper, align your setup with the training settings in this repository; otherwise, the comparison is not meaningful. For domain-specific use, fine-tune the draft model again for better results, especially if the target model is expected to run in thinking mode.</p>
+
+<h1>Supported Algorithms</h1>
+
+<p><a href="https://github.com/deepseek-ai/DeepSpec#supported-algorithms"></a></p>
+
+<p>Currently, DeepSpec includes three draft models: <a href="https://github.com/deepseek-ai/DeepSpec/blob/main/DSpark_paper.pdf">DSpark</a>, <a href="https://arxiv.org/abs/2602.06036">DFlash</a> and <a href="https://arxiv.org/abs/2503.01840">Eagle3</a>.</p>
+
+<p><strong>HuggingFace</strong> : <a href="https://huggingface.co/collections/deepseek-ai/deepspec">https://huggingface.co/collections/deepseek-ai/deepspec</a></p>
+
+<p><strong>GitHub</strong> : <a href="https://github.com/deepseek-ai/DeepSpec">https://github.com/deepseek-ai/DeepSpec</a></p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/LocalLLaMA/comments/1uhyhl3/deepspec_a_deepseekai_collection/" class="post_comments" title="1 comment">1 comment</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uhummm">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/LocalLLaMA">r/LocalLLaMA</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/pmttyji">u/pmttyji</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 28 2026, 11:14:56 UTC">4h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/LocalLLaMA/search?q=flair_name%3A%22Discussion%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#646d73;"
+				dir="ltr"><span>Discussion</span></a>
+		
+		<a href="/r/LocalLLaMA/comments/1uhummm/how_many_of_you_do_use_q1_or_q2_of_big/">How many of you do use Q1 or Q2 of Big models(100-250B)? How&#39;s it?</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_score" title="23">
+    
+    23
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>Sharing popular(also recent) models for reference:</p>
+
+<p><strong>151-250B</strong> :</p>
+
+<ul>
+<li>DeepSeek-V4-Flash</li>
+<li>Step-3.X-Flash</li>
+<li>Command-a-plus-05-2026</li>
+<li>Laguna-M.1</li>
+<li>MiniMax-M2.X</li>
+<li>Qwen3-235B-A22B</li>
+</ul>
+
+<p><strong>100-150B</strong> :</p>
+
+<ul>
+<li>GLM-4.5-Air</li>
+<li>Qwen3.5-122B-A10B</li>
+<li>NVIDIA-Nemotron-3-Super-120B-A12B</li>
+<li>Mistral-Small-4-119B-2603</li>
+<li>Devstral-2-123B-Instruct-2512</li>
+<li>Mistral-Medium-3.5-128B</li>
+<li>Llama-4-Scout-17B-16E-Instruct (Yay! got your attention)</li>
+</ul>
+
+<p><strong>&lt;100B</strong> :</p>
+
+<ul>
+<li>Llama-3.3-70B-Instruct</li>
+<li>Qwen3-Coder-Next</li>
+<li>Qwen3-Next-80B-A3B</li>
+</ul>
+
+<p>I see that some people do use Q3(even up to IQ3_XXS) whenever they couldn&#39;t run Q4 on their rig. Ex: Noticed that some DGX/SH users do use Q3 of MiniMax-M2 models as Q4 is so tight.</p>
+
+<p>I guess Q1/Q2 won&#39;t be good for small/medium size models(~40B size) .... Talking about Agentic coding level. Chatting would be semi-usable quality-wise I think, though I&#39;m not sure. </p>
+
+<p>But I believe it&#39;s totally opposite for Big/Large models due to bigger size of the models. <strong>So how many of you do use Q1 or Q2 of Big models(100-250B)? How&#39;s it &amp; are those enough for you now? Please share your feedback on both Agentic coding, Writing &amp; Chatting stuffs with such quants of those above models. Also please let us know what issues are you facing with Q1/Q2 quants? Ex: Looping issues, Repetition issues, Tool calling issues, etc.,</strong></p>
+
+<p>Personally I don&#39;t go below Q4 of small/medium models even though I have only 8GB VRAM on my current laptop. My upcoming rig comes with 96GB VRAM + 128GB RAM so posted this thread. Thought of trying Q1/Q2 of models like NVIDIA-Nemotron-3-Ultra-550B-A55B, GLM-5.X, etc.,</p>
+</div><!-- SC_ON -->
+	</div>
+
+	
+	
+
+	<div class="post_footer">
+		<a href="/r/LocalLLaMA/comments/1uhummm/how_many_of_you_do_use_q1_or_q2_of_big/" class="post_comments" title="28 comments">28 comments</a>
+	</div>
+</div>
+			
+			
+			
+			<hr class="sep" />
+			<div class="post" id="1uht9rf">
+	<p class="post_header">
+		<a class="post_subreddit" href="/r/LocalLLaMA">r/LocalLLaMA</a>
+		<span class="dot">&bull;</span>
+		<a class="post_author " href="/u/jakint0sh">u/jakint0sh</a>
+		<span class="dot">&bull;</span>
+		<span class="created" title="Jun 28 2026, 09:58:10 UTC">5h ago</span>
+		
+	</p>
+	<h2 class="post_title">
+		
+			<a href="/r/LocalLLaMA/search?q=flair_name%3A%22Resources%22&restrict_sr=on"
+				class="post_flair"
+				style="color:white; background:#ccac2b;"
+				dir="ltr"><span>Resources</span></a>
+		
+		<a href="/r/LocalLLaMA/comments/1uht9rf/a_barebones_cpuonly_inference_engine_for_qwen_3/">A barebones CPU-only inference engine for Qwen 3, written from scratch in pure C</a>
+	</h2>
+	<!-- POST MEDIA/THUMBNAIL -->
+	
+	<div class="post_score" title="26">
+    
+    26
+    
+    <span class="label"> Upvotes</span></div>
+	<div class="post_body post_preview">
+		<!-- SC_OFF --><div class="md"><p>TL;DR: The (very messy) code and writeups can be found at <a href="https://github.com/jakint0sh/qwen3-engine">https://github.com/jakint0sh/qwen3-engine</a></p>
+
+<p>Read the README for instructions on how to get started.</p>
+
+<p>And for those who just want a bulleted list:
+- Inference engine for Qwen 3 sizes 4B and below
+- Written from scratch in pure C
+- No dependencies except libc, libm, and cJSON (and OpenMP if compiled with parallelization)
+- Loads directly from HF safetensors, does 4-bit affine quant on the fly
+- Does KV caching
+- Built-in chat interface
+- Very slow, but the code is readable and tractable, and would be good to learn from</p>
+
+<p>And now for the blab-fest...</p>
+
+<p>So, as the title would suggest, I wrote my own LLM inference engine, specifically targeting the smaller Qwen 3 models, from scratch in pure C.  Now, you may very well ask why anyone would do such a thing.  It was partly a learning experience for me, since I didn&#39;t know how LLMs worked and I wanted to learn, and partly it was that I was challenged to write my own inference engine, and I decided I wasn&#39;t going to take the easy way out and glue python libraries together.  I&#39;m a decent C programmer, and figured that C would be a good choice to attack the problem with since you need speed in inference anyway.</p>
+
+<p>So, I ended up spending about a week and a half in a loop of eat, read, write code, sleep, repeat, and in that time, I went from knowing nothing about how transformer models work to having implemented all of inference in my own code from scratch.  It was quite the experience.</p>
+
+<p>I relied heavily on ChatGPT to explain all of the core LLM concepts to me (tokenization, the transformer math, KV caching, quantization, etc) as I had no machine learning, numerics, or HPC background.  I had a math background, so the linear algebra and general math concepts weren&#39;t an issue for me.  But I definitely would have run into a number of issues surrounding quantization, softmax, and similar had I not had the robot overlords helping me.</p>
+
+<p>I made a number of choices while writing the code.  Firstly, I heavily prioritized representational correctness and clarity over performance.  I was moving <strong>FAST</strong>, and learning and implementing such a massive amount of machinery that I knew I would just get mired in implementation details and bugs if I didn&#39;t put guardrails in place to save me from some of C&#39;s sharp edges early on.  I took the easy way out and put asserts everywhere, and oddly enough, I don&#39;t remember a single time where one of those asserts tripped, but I felt better knowing that

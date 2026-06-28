@@ -151,3 +151,32 @@ def sample_articles():
     """Load the 20 realistic article dicts used in pipeline tests."""
     with open(FIXTURES_DIR / "sample_articles.json") as f:
         return json.load(f)
+
+
+@pytest.fixture(autouse=True)
+def mock_reddit_http(monkeypatch):
+    import urllib.request
+    from unittest.mock import MagicMock
+
+    original_urlopen = urllib.request.urlopen
+
+    def mock_urlopen(req, *args, **kwargs):
+        if isinstance(req, urllib.request.Request):
+            url = req.full_url
+        else:
+            url = req
+
+        if "redlib" in url or "artemislena" in url:
+            fixture_path = FIXTURES_DIR / "redlib_llama.html"
+            with open(fixture_path, "rb") as f:
+                content = f.read()
+
+            mock_resp = MagicMock()
+            mock_resp.read.return_value = content
+            mock_resp.__enter__.return_value = mock_resp
+            return mock_resp
+
+        return original_urlopen(req, *args, **kwargs)
+
+    monkeypatch.setattr(urllib.request, "urlopen", mock_urlopen)
+
