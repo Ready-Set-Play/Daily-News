@@ -1,12 +1,14 @@
 """
 reddit.py — Reddit source plugin.
-Fetches hot/top posts via public Redlib instances (without OAuth/authentication).
+Supports both official Reddit OAuth API (recommended) and fallback to public Redlib instances.
 """
 
+import base64
 import json
 import logging
 import random
 import re
+import urllib.parse
 import urllib.request
 from datetime import datetime, timezone
 from html.parser import HTMLParser
@@ -135,6 +137,9 @@ class RedlibParser(HTMLParser):
             self.posts.append(self.current_post)
 
 
+_TOKEN_URL = "https://www.reddit.com/api/v1/access_token"
+_API_BASE = "https://oauth.reddit.com"
+
 DEFAULT_INSTANCES = [
     "https://red.artemislena.eu",
     "https://redlib.privacyredirect.com",
@@ -147,6 +152,23 @@ DEFAULT_INSTANCES = [
 ]
 
 
+def _get_token(client_id: str, client_secret: str) -> str:
+    credentials = base64.b64encode(f"{client_id}:{client_secret}".encode()).decode()
+    body = urllib.parse.urlencode({"grant_type": "client_credentials"}).encode()
+    req = urllib.request.Request(
+        _TOKEN_URL,
+        data=body,
+        headers={
+            "Authorization": f"Basic {credentials}",
+            "User-Agent": "daily-news-digest/1.0 (personal project)",
+            "Content-Type": "application/x-www-form-urlencoded",
+        },
+    )
+    with urllib.request.urlopen(req, timeout=10) as resp:
+        data = json.loads(resp.read().decode("utf-8"))
+    return data["access_token"]
+
+
 class Source(BaseSource):
     name = "reddit"
     requires_auth = False
@@ -155,6 +177,86 @@ class Source(BaseSource):
         return True
 
     def fetch(self) -> list[dict]:
+        import os
+
+        client_id = os.environ.get(
+            self.auth.get("client_id_env", "REDDIT_CLIENT_ID"), ""
+        )
+        client_secret = os.environ.get(
+            self.auth.get("client_secret_env", "REDDIT_CLIENT_SECRET"), ""
+        )
+
+        if client_id and client_secret:
+            logger.info("Reddit: Using official Reddit OAuth API")
+            return self._fetch_oauth(client_id, client_secret)
+        else:
+            logger.warning(
+                "Reddit: REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET are not set. "
+                "Falling back to public Redlib instances (may be rate-limited or blocked)."
+            )
+            return self._fetch_redlib()
+
+    def _fetch_oauth(self, client_id: str, client_secret: str) -> list[dict]:
+        subreddits = self.config.get("subreddits", {})
+        sort = self.config.get("sort", "hot")
+        limit = self.config.get("limit", 10)
+        min_score = self.config.get("min_score", 100)
+
+        try:
+            token = _get_token(client_id, client_secret)
+        except Exception as e:
+            logger.error(f"Reddit OAuth token fetch failed: {e}")
+            logger.info("Falling back to public Redlib instances...")
+            return self._fetch_redlib()
+
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "User-Agent": "daily-news-digest/1.0 (personal project)",
+        }
+
+        articles = []
+
+        for topic, subs in subreddits.items():
+            for sub in subs:
+                url = f"{_API_BASE}/r/{sub}/{sort}.json?limit={limit}"
+                try:
+                    req = urllib.request.Request(url, headers=headers)
+                    with urllib.request.urlopen(req, timeout=10) as resp:
+                        data = json.loads(resp.read().decode("utf-8"))
+
+                    for post in data["data"]["children"]:
+                        p = post["data"]
+                        score = p.get("score", 0)
+                        if score < min_score:
+                            continue
+                        link = p.get("url", "")
+                        permalink = "https://www.reddit.com" + p.get("permalink", "")
+                        published = datetime.fromtimestamp(
+                            p.get("created_utc", 0), tz=timezone.utc
+                        ).isoformat()
+                        articles.append(
+                            {
+                                "id": _make_id(permalink, p.get("title", "")),
+                                "title": p.get("title", ""),
+                                "url": link if link else permalink,
+                                "reddit_url": permalink,
+                                "source": "Reddit",
+                                "source_label": f"r/{sub}",
+                                "summary": p.get("selftext", "")[:500],
+                                "published": published,
+                                "topic_hint": topic,
+                                "image_url": None,
+                                "reddit_score": score,
+                                "num_comments": p.get("num_comments", 0),
+                            }
+                        )
+                except Exception as e:
+                    logger.warning(f"Reddit API fetch for r/{sub} failed: {e}")
+
+        logger.info(f"Reddit: fetched {len(articles)} posts via API")
+        return articles
+
+    def _fetch_redlib(self) -> list[dict]:
         subreddits = self.config.get("subreddits", {})
         sort = self.config.get("sort", "hot")
         limit = self.config.get("limit", 10)
@@ -183,6 +285,9 @@ class Source(BaseSource):
                         parser = RedlibParser()
                         parser.feed(html_content)
                         parser.close()
+
+                        if len(parser.posts) == 0:
+                            raise Exception("Zero posts parsed (instance may be showing turnstile/captcha bot check)")
 
                         count = 0
                         for p in parser.posts:
@@ -241,5 +346,11 @@ class Source(BaseSource):
                         f"Failed to fetch r/{sub} from all configured Redlib instances."
                     )
 
-        logger.info(f"Reddit: fetched {len(articles)} posts")
+        logger.info(f"Reddit: fetched {len(articles)} posts via Redlib")
+        if len(articles) == 0:
+            logger.error(
+                "Reddit: Fetched 0 posts in total. Public Redlib instances appear to be completely blocked. "
+                "To fix this, please configure REDDIT_CLIENT_ID and REDDIT_CLIENT_SECRET in your .env file "
+                "to use the official Reddit API."
+            )
         return articles
