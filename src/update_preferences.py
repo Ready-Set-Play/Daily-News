@@ -100,8 +100,6 @@ def update_preferences():
         )
 
     # Update feedback counts in preferences
-    from collections import defaultdict
-
     counts: dict[str, dict[str, int]] = defaultdict(lambda: {"up": 0, "down": 0})
     for entry in feedback:
         topic = entry.get("topic", "")
