@@ -1,12 +1,12 @@
 {
   "_meta": {
     "version": 1,
-    "last_updated": "2026-06-28",
+    "last_updated": "2026-07-05",
     "description": "Topic interest weights derived from feedback. Range 0.5-2.0. Updated weekly."
   },
   "topic_weights": {
-    "ai_coding": 1.353,
-    "technology": 1.2,
+    "ai_coding": 1.375,
+    "technology": 1.125,
     "markets": 1.3,
     "rates_bonds": 1.1,
     "cybersecurity": 1.2,
@@ -20,8 +20,12 @@
   },
   "feedback_counts": {
     "ai_coding": {
-      "up": 10,
+      "up": 11,
       "down": 2
+    },
+    "technology": {
+      "up": 1,
+      "down": 0
     }
   }
 }
