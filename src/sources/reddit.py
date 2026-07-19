@@ -345,67 +345,85 @@ class Source(BaseSource):
 
         for topic, subs in subreddits.items():
             for sub in subs:
-                base_url = working_instance.rstrip("/")
-                url = f"{base_url}/r/{sub}/{sort}"
-                try:
-                    req = urllib.request.Request(url, headers=headers)
-                    with urllib.request.urlopen(req, timeout=10) as resp:
-                        html_content = resp.read().decode("utf-8", errors="ignore")
-
-                    parser = RedlibParser()
-                    parser.feed(html_content)
-                    parser.close()
-
-                    if len(parser.posts) == 0:
-                        raise Exception("Zero posts parsed (instance may be showing turnstile/captcha bot check)")
-
-                    count = 0
-                    for p in parser.posts:
-                        if limit and count >= limit:
+                max_retries = 3
+                for attempt in range(max_retries):
+                    if not working_instance:
+                        if is_test:
+                            working_instance = DEFAULT_INSTANCES[0]
+                        else:
+                            working_instance = _find_working_instance(instances)
+                        if not working_instance:
+                            logger.error(f"Reddit: Could not find a working Redlib instance to fetch r/{sub}.")
                             break
 
-                        score = p["score"]
-                        if score < min_score:
-                            continue
+                    base_url = working_instance.rstrip("/")
+                    url = f"{base_url}/r/{sub}/{sort}"
+                    try:
+                        req = urllib.request.Request(url, headers=headers)
+                        with urllib.request.urlopen(req, timeout=10) as resp:
+                            html_content = resp.read().decode("utf-8", errors="ignore")
 
-                        permalink = "https://www.reddit.com" + p["permalink"]
-                        url_field = p["external_url"]
-                        if not url_field or url_field.startswith("/"):
-                            url_field = permalink
+                        parser = RedlibParser()
+                        parser.feed(html_content)
+                        parser.close()
 
-                        published = ""
-                        if p["created_time"]:
-                            try:
-                                dt = datetime.strptime(
-                                    p["created_time"], "%b %d %Y, %H:%M:%S UTC"
-                                ).replace(tzinfo=timezone.utc)
-                                published = dt.isoformat()
-                            except Exception:
+                        if len(parser.posts) == 0:
+                            raise Exception("Zero posts parsed (instance may be showing turnstile/captcha bot check)")
+
+                        count = 0
+                        for p in parser.posts:
+                            if limit and count >= limit:
+                                break
+
+                            score = p["score"]
+                            if score < min_score:
+                                continue
+
+                            permalink = "https://www.reddit.com" + p["permalink"]
+                            url_field = p["external_url"]
+                            if not url_field or url_field.startswith("/"):
+                                url_field = permalink
+
+                            published = ""
+                            if p["created_time"]:
+                                try:
+                                    dt = datetime.strptime(
+                                        p["created_time"], "%b %d %Y, %H:%M:%S UTC"
+                                    ).replace(tzinfo=timezone.utc)
+                                    published = dt.isoformat()
+                                except Exception:
+                                    published = datetime.now(timezone.utc).isoformat()
+                            else:
                                 published = datetime.now(timezone.utc).isoformat()
-                        else:
-                            published = datetime.now(timezone.utc).isoformat()
 
-                        articles.append(
-                            {
-                                "id": _make_id(permalink, p["title"].strip()),
-                                "title": p["title"].strip(),
-                                "url": url_field,
-                                "reddit_url": permalink,
-                                "source": "Reddit",
-                                "source_label": f"r/{sub}",
-                                "summary": p["selftext"][:500],
-                                "published": published,
-                                "topic_hint": topic,
-                                "image_url": None,
-                                "reddit_score": score,
-                                "num_comments": p["comments_count"],
-                            }
+                            articles.append(
+                                {
+                                    "id": _make_id(permalink, p["title"].strip()),
+                                    "title": p["title"].strip(),
+                                    "url": url_field,
+                                    "reddit_url": permalink,
+                                    "source": "Reddit",
+                                    "source_label": f"r/{sub}",
+                                    "summary": p["selftext"][:500],
+                                    "published": published,
+                                    "topic_hint": topic,
+                                    "image_url": None,
+                                    "reddit_score": score,
+                                    "num_comments": p["comments_count"],
+                                }
+                            )
+                            count += 1
+                        
+                        # Successfully fetched, break the retry/attempt loop
+                        break
+                    except Exception as e:
+                        logger.warning(
+                            f"Reddit fetch from {working_instance} for r/{sub} failed (Attempt {attempt+1}/{max_retries}): {e}"
                         )
-                        count += 1
-                except Exception as e:
-                    logger.warning(
-                        f"Reddit fetch from {working_instance} for r/{sub} failed: {e}"
-                    )
+                        # Remove this failed instance from candidates list to avoid picking it again
+                        if working_instance in instances:
+                            instances.remove(working_instance)
+                        working_instance = None
 
         logger.info(f"Reddit: fetched {len(articles)} posts via Redlib")
         return articles
