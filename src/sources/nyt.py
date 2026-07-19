@@ -6,6 +6,7 @@ Fetches Top Stories (per section) and Most Popular articles.
 import json
 import logging
 import os
+import time
 import urllib.error
 import urllib.request
 
@@ -54,7 +55,9 @@ class Source(BaseSource):
 
         articles = []
 
-        for section in sections:
+        for i, section in enumerate(sections):
+            if i > 0:
+                time.sleep(12)  # Delay between requests to prevent hitting rate limits (max 5/min)
             url = f"{base}/topstories/v2/{section}.json?api-key={api_key}"
             try:
                 with urllib.request.urlopen(url, timeout=10) as resp:
@@ -79,6 +82,8 @@ class Source(BaseSource):
             except Exception as e:
                 logger.warning(f"NYT top stories ({section}) failed: {e}")
 
+        if sections:
+            time.sleep(12)  # Delay before most popular request
         url = f"{base}/mostpopular/v2/shared/{most_popular_days}.json?api-key={api_key}"
         try:
             with urllib.request.urlopen(url, timeout=10) as resp:

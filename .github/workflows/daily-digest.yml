@@ -43,6 +43,8 @@ jobs:
         env:
           NYT_API_KEY: ${{ secrets.NYT_API_KEY }}
           GNEWS_API_KEY: ${{ secrets.GNEWS_API_KEY }}
+          REDDIT_CLIENT_ID: ${{ secrets.REDDIT_CLIENT_ID }}
+          REDDIT_CLIENT_SECRET: ${{ secrets.REDDIT_CLIENT_SECRET }}
           LLM_PROVIDER: ${{ secrets.LLM_PROVIDER || 'anthropic' }}
           LLM_MODEL: ${{ secrets.LLM_MODEL }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}

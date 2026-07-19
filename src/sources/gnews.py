@@ -9,6 +9,7 @@ Get a key at https://gnews.io.
 import json
 import logging
 import os
+import time
 import urllib.parse
 import urllib.request
 
@@ -36,9 +37,13 @@ class Source(BaseSource):
         country = self.config.get("country", "us")
 
         articles = []
+        request_count = 0
 
         for topic, query_list in queries.items():
             for query in query_list:
+                if request_count > 0:
+                    time.sleep(1.2)  # Delay to respect the 1 request/sec rate limit on GNews free tier
+                request_count += 1
                 params = urllib.parse.urlencode({
                     "q": query,
                     "lang": lang,
