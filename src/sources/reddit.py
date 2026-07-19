@@ -190,12 +190,15 @@ def _find_working_instance(instances: list[str]) -> str | None:
         base_url = instance.rstrip("/")
         url = f"{base_url}/r/{test_sub}/hot"
         try:
-            req = urllib.request.Request(url, headers=headers)
-            with urllib.request.urlopen(req, timeout=5) as resp:
-                content = resp.read(2048).decode("utf-8", errors="ignore")
-                if "post" in content or "class=\"post\"" in content or "redlib" in content.lower():
+            from curl_cffi import requests
+            resp = requests.get(url, headers=headers, impersonate="chrome120", timeout=5)
+            content = resp.text
+            if "post" in content or "class=\"post\"" in content or "redlib" in content.lower():
+                if "verifying your browser" not in content.lower() and "checking you are not a bot" not in content.lower() and "making sure you're not a bot" not in content.lower():
                     logger.info(f"Reddit: Found working instance up-front: {instance}")
                     return instance
+                else:
+                    logger.debug(f"Reddit: Instance {instance} returned a bot verification challenge page.")
         except Exception as e:
             logger.debug(f"Reddit: Instance test failed for {instance}: {e}")
             continue
@@ -359,9 +362,14 @@ class Source(BaseSource):
                     base_url = working_instance.rstrip("/")
                     url = f"{base_url}/r/{sub}/{sort}"
                     try:
-                        req = urllib.request.Request(url, headers=headers)
-                        with urllib.request.urlopen(req, timeout=10) as resp:
-                            html_content = resp.read().decode("utf-8", errors="ignore")
+                        if is_test:
+                            req = urllib.request.Request(url, headers=headers)
+                            with urllib.request.urlopen(req, timeout=10) as resp:
+                                html_content = resp.read().decode("utf-8", errors="ignore")
+                        else:
+                            from curl_cffi import requests
+                            resp = requests.get(url, headers=headers, impersonate="chrome120", timeout=10)
+                            html_content = resp.text
 
                         parser = RedlibParser()
                         parser.feed(html_content)
