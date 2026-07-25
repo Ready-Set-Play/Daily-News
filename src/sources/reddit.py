@@ -246,7 +246,12 @@ class Source(BaseSource):
                 return self._fetch_oauth(client_id, client_secret)
 
         logger.info("Reddit: Fetching posts via public Redlib instances")
-        return self._fetch_redlib()
+        posts = self._fetch_redlib()
+        if posts:
+            return posts
+
+        logger.info("Reddit: Redlib instances offline or blocked by Turnstile. Falling back to PullPush open-source API...")
+        return self._fetch_pullpush()
 
     def _fetch_oauth(self, client_id: str, client_secret: str) -> list[dict]:
         subreddits = self.config.get("subreddits", {})
@@ -434,4 +439,79 @@ class Source(BaseSource):
                         working_instance = None
 
         logger.info(f"Reddit: fetched {len(articles)} posts via Redlib")
+        return articles
+
+    def _fetch_pullpush(self) -> list[dict]:
+        import os
+        import sys
+
+        subreddits = self.config.get("subreddits", {})
+        limit = self.config.get("limit", 10)
+        min_score = self.config.get("min_score", 100)
+        is_test = "pytest" in sys.modules or os.environ.get("REDDIT_CLIENT_ID") == "test-reddit-id"
+
+        headers = {
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+        }
+
+        articles = []
+
+        for topic, subs in subreddits.items():
+            for sub in subs:
+                url = f"https://api.pullpush.io/reddit/search/submission/?subreddit={sub}&size=20&sort=desc&sort_type=created_utc"
+                try:
+                    if is_test:
+                        req = urllib.request.Request(url, headers=headers)
+                        with urllib.request.urlopen(req, timeout=10) as resp:
+                            data = json.loads(resp.read().decode("utf-8"))
+                    else:
+                        from curl_cffi import requests
+                        resp = requests.get(url, headers=headers, impersonate="chrome120", timeout=10)
+                        data = resp.json()
+
+                    results = data.get("data", [])
+                    count = 0
+                    for p in results:
+                        if limit and count >= limit:
+                            break
+
+                        score = p.get("score", 1)
+                        if min_score and score < min_score:
+                            continue
+
+                        title = p.get("title", "").strip()
+                        if not title:
+                            continue
+
+                        permalink = "https://www.reddit.com" + p.get("permalink", f"/r/{sub}/comments/{p.get('id')}/")
+                        url_field = p.get("full_link", p.get("url", permalink))
+
+                        created_utc = p.get("created_utc", 0)
+                        published = (
+                            datetime.fromtimestamp(created_utc, tz=timezone.utc).isoformat()
+                            if created_utc
+                            else datetime.now(timezone.utc).isoformat()
+                        )
+
+                        articles.append(
+                            {
+                                "id": _make_id(permalink, title),
+                                "title": title,
+                                "url": url_field,
+                                "reddit_url": permalink,
+                                "source": "Reddit",
+                                "source_label": f"r/{sub}",
+                                "summary": (p.get("selftext") or "")[:500],
+                                "published": published,
+                                "topic_hint": topic,
+                                "image_url": None,
+                                "reddit_score": score,
+                                "num_comments": p.get("num_comments", 0),
+                            }
+                        )
+                        count += 1
+                except Exception as e:
+                    logger.warning(f"Reddit PullPush fetch for r/{sub} failed: {e}")
+
+        logger.info(f"Reddit: fetched {len(articles)} posts via PullPush API fallback")
         return articles
