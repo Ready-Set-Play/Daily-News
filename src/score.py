@@ -165,7 +165,7 @@ def score_articles(
             break
 
     logger.info(
-        f"Scoring: {len(articles)} candidates → {len(final)} selected (provider: {client.name})"
+        f"Scoring: {len(articles)} candidates -> {len(final)} selected (provider: {client.name})"
     )
     return final
 
