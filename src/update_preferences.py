@@ -96,7 +96,7 @@ def update_preferences():
     for topic, weight in new_weights.items():
         updated[topic] = weight
         print(
-            f"  {topic}: {current_weights.get(topic, BASE_WEIGHT):.2f} → {weight:.2f}"
+            f"  {topic}: {current_weights.get(topic, BASE_WEIGHT):.2f} -> {weight:.2f}"
         )
 
     # Update feedback counts in preferences

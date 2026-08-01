@@ -34,19 +34,19 @@ def send_email(
     }
 
     logger.info(
-        f"Resend → from={from_email!r} to={recipient_email!r} subject={subject!r}"
+        f"Resend -> from={from_email!r} to={recipient_email!r} subject={subject!r}"
     )
-    logger.info(f"Resend → payload size: {len(html_body):,} bytes")
+    logger.info(f"Resend -> payload size: {len(html_body):,} bytes")
 
     max_attempts = 3
     for attempt in range(1, max_attempts + 1):
-        logger.info(f"Resend → attempt {attempt}/{max_attempts}")
+        logger.info(f"Resend -> attempt {attempt}/{max_attempts}")
         try:
             result = resend.Emails.send(params)
-            logger.info(f"Resend → delivered  id={result.get('id')!r}")
+            logger.info(f"Resend -> delivered  id={result.get('id')!r}")
             return True
         except resend.exceptions.ResendError as e:
-            logger.error(f"Resend → API error ({type(e).__name__}): {e}")
+            logger.error(f"Resend -> API error ({type(e).__name__}): {e}")
             # Non-retryable: auth failure, domain not verified, bad payload
             if hasattr(e, "status_code") and e.status_code not in (
                 429,
@@ -57,14 +57,14 @@ def send_email(
             ):
                 return False
         except Exception as e:
-            logger.error(f"Resend → unexpected error ({type(e).__name__}): {e}")
+            logger.error(f"Resend -> unexpected error ({type(e).__name__}): {e}")
 
         if attempt < max_attempts:
             wait = 2**attempt  # 2s, 4s
-            logger.info(f"Resend → retrying in {wait}s...")
+            logger.info(f"Resend -> retrying in {wait}s...")
             time.sleep(wait)
 
-    logger.error(f"Resend → delivery failed after {max_attempts} attempts")
+    logger.error(f"Resend -> delivery failed after {max_attempts} attempts")
     return False
 
 

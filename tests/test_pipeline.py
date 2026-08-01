@@ -1,7 +1,7 @@
 """
 test_pipeline.py — Full pipeline smoke test (FR-008).
 
-Exercises the complete fetch → score → summarize → render → send pipeline using:
+Exercises the complete fetch -> score -> summarize -> render -> send pipeline using:
   - Fixture articles from tests/fixtures/sample_articles.json (bypasses real fetch)
   - mock_anthropic: canned score/summary JSON — zero API calls, zero cost
   - mock_resend: no email sent

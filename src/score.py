@@ -111,7 +111,7 @@ Return format: [[0, 3, 7], [12, 15]] — just the JSON array, no explanation."""
     result = [a for i, a in enumerate(articles) if i not in merged_indices]
     result.extend(merged_articles)
     logger.info(
-        f"Deduplication: {len(articles)} → {len(result)} articles ({len(merged_articles)} merges)"
+        f"Deduplication: {len(articles)} -> {len(result)} articles ({len(merged_articles)} merges)"
     )
     return result
 
