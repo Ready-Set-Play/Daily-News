@@ -109,6 +109,8 @@ def update_preferences():
 
     prefs["topic_weights"] = updated
     prefs["feedback_counts"] = {t: dict(c) for t, c in counts.items()}
+    if not isinstance(prefs.get("_meta"), dict):
+        prefs["_meta"] = {}
     prefs["_meta"]["last_updated"] = datetime.now(tz=timezone.utc).date().isoformat()
 
     with open(PREFS_FILE, "w") as f:
