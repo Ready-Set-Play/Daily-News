@@ -17,6 +17,7 @@ LOOKBACK_DAYS = 90
 MIN_WEIGHT = 0.5
 MAX_WEIGHT = 2.0
 BASE_WEIGHT = 1.0
+ADJUSTMENT_MULTIPLIER = 0.75
 
 
 def load_feedback(lookback_days: int) -> list[dict]:
@@ -68,7 +69,7 @@ def calculate_weights(feedback: list[dict]) -> dict[str, float]:
         # Wilson-score-inspired: net positive ratio adjusted for sample size
         net_ratio = (ups - downs) / (total + smoothing)
         # Map net_ratio (-1 to 1) to weight adjustment (-0.5 to +1.0)
-        adjustment = net_ratio * 0.75
+        adjustment = net_ratio * ADJUSTMENT_MULTIPLIER
         weight = BASE_WEIGHT + adjustment
         weights[topic] = round(max(MIN_WEIGHT, min(MAX_WEIGHT, weight)), 3)
 
