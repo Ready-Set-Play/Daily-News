@@ -14,6 +14,7 @@ from llm import load_llm_client
 logger = logging.getLogger(__name__)
 
 FEEDBACK_BASE_URL = os.environ.get("FEEDBACK_BASE_URL", "")
+MAX_TLDR_WORDS = 60
 
 
 def generate_summaries(articles: list[dict]) -> list[dict]:
@@ -42,11 +43,11 @@ def generate_summaries(articles: list[dict]) -> list[dict]:
 
 
 def _truncate_summaries(articles: list[dict]) -> None:
-    """Fallback: trim existing summary to 60 words. Modifies in place."""
+    """Fallback: trim existing summary to MAX_TLDR_WORDS words. Modifies in place."""
     for a in articles:
         raw = (a.get("summary") or "").strip()
         words = raw.split()
-        a["tldr_summary"] = " ".join(words[:60]) + ("..." if len(words) > 60 else "")
+        a["tldr_summary"] = " ".join(words[:MAX_TLDR_WORDS]) + ("..." if len(words) > MAX_TLDR_WORDS else "")
 
 
 def _batch_summarize(articles: list[dict], client) -> None:

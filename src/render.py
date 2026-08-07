@@ -12,6 +12,9 @@ TEMPLATES_DIR = os.path.join(os.path.dirname(__file__), "..", "templates")
 CONFIG_DIR = os.path.join(os.path.dirname(__file__), "..", "config")
 STATIC_DIR = os.path.join(os.path.dirname(__file__), "..", "static")
 
+NORMAL_URGENCY_DAYS_THRESHOLD = 30
+WARNING_URGENCY_DAYS_THRESHOLD = 10
+
 
 def _token_expiry_context() -> dict | None:
     """
@@ -42,10 +45,10 @@ def _token_expiry_context() -> dict | None:
 
     days = (expiry_dt - datetime.now(tz=timezone.utc)).days
 
-    if days > 30:
+    if days > NORMAL_URGENCY_DAYS_THRESHOLD:
         color = "#aaaaaa"
         urgency = "normal"
-    elif days > 10:
+    elif days > WARNING_URGENCY_DAYS_THRESHOLD:
         color = "#b86e00"
         urgency = "warning"
     else:

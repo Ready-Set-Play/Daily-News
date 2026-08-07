@@ -20,6 +20,10 @@ CONFIG_DIR = os.path.join(os.path.dirname(__file__), "..", "config")
 MAX_ITEMS = 15
 MIN_SCORE = 45
 MAX_PODCAST_ITEMS = 2
+MIN_DUPLICATE_GROUP_SIZE = 2
+VERY_HIGH_WEIGHT_THRESHOLD = 1.4
+HIGH_WEIGHT_THRESHOLD = 1.2
+MEDIUM_HIGH_WEIGHT_THRESHOLD = 1.1
 
 # Source reputation weights used by heuristic fallback
 _SOURCE_BASE_SCORES = {
@@ -90,7 +94,7 @@ Return format: [[0, 3, 7], [12, 15]] — just the JSON array, no explanation."""
     merged_articles = []
 
     for group in groups:
-        if not group or len(group) < 2:
+        if not group or len(group) < MIN_DUPLICATE_GROUP_SIZE:
             continue
         primary_idx = group[0]
         primary = dict(articles[primary_idx])
@@ -202,11 +206,11 @@ def _score_heuristic(articles: list[dict]) -> list[dict]:
 
 
 def _weight_label(weight: float) -> str:
-    if weight >= 1.4:
+    if weight >= VERY_HIGH_WEIGHT_THRESHOLD:
         return "very high"
-    if weight >= 1.2:
+    if weight >= HIGH_WEIGHT_THRESHOLD:
         return "high"
-    if weight >= 1.1:
+    if weight >= MEDIUM_HIGH_WEIGHT_THRESHOLD:
         return "medium-high"
     if weight >= 1.0:
         return "medium"
