@@ -40,6 +40,8 @@ def mock_env(monkeypatch):
         import summarize
         monkeypatch.setattr(summarize, "FEEDBACK_BASE_URL", "https://feedback.example.com")
     except Exception:
+        # summarize may not be importable in every test context; the env var
+        # set above is enough for tests that don't touch the module.
         pass
 
 
@@ -110,10 +112,13 @@ def mock_anthropic(monkeypatch):
     try:
         monkeypatch.setattr("score.load_llm_client", lambda: mock_client)
     except Exception:
+        # score isn't imported in every test run; patching llm.load_llm_client
+        # above already covers those cases.
         pass
     try:
         monkeypatch.setattr("summarize.load_llm_client", lambda: mock_client)
     except Exception:
+        # Same as above: summarize may not be imported in this test run.
         pass
     return mock_client
 

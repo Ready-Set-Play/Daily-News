@@ -15,4 +15,3 @@ class LLMClient(ABC):
     @abstractmethod
     def complete(self, prompt: str, max_tokens: int = 2000) -> str:
         """Send a prompt and return the response text."""
-        ...
