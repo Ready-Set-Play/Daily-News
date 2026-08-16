@@ -3,7 +3,6 @@
 generate_mockup.py — Generates a sample HTML digest with dummy data for UI testing.
 """
 
-import os
 from src.render import render_email
 
 def main():

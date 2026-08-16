@@ -12,7 +12,6 @@ Runs in < 5 seconds. No API keys required.
 import sys
 import os
 
-import pytest
 
 # Ensure src/ is on the path for direct module imports
 sys.path.insert(0, os.path.join(os.path.dirname(__file__), "..", "src"))
@@ -44,7 +43,6 @@ def test_pipeline_summarize_step(sample_articles, mock_anthropic, mock_env):
 
 def test_pipeline_render_step(sample_articles, mock_env):
     """Render step produces valid HTML containing expected sections."""
-    from summarize import generate_summaries
     from render import render_email
 
     # Add tldr_summary so renderer has content
@@ -177,7 +175,6 @@ def test_fetch_dedup(mock_env):
 
 def test_source_fetch_error_doesnt_crash_pipeline(mock_env):
     """A SourceFetchError in one plugin should not prevent other plugins from running."""
-    from sources.base import BaseSource, SourceFetchError
     from sources import load_sources
 
     # Simulate config with one broken plugin name

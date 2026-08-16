@@ -90,6 +90,8 @@ class RedlibParser(HTMLParser):
                     if title_score:
                         self.current_post["score"] = int(title_score)
                 except ValueError:
+                    # Non-numeric title attribute: leave score unset so the
+                    # post_score element parsed below can supply it.
                     pass
 
         elif tag == "div" and "post_body" in class_name:

@@ -1,5 +1,3 @@
-import os
-import json
 import pytest
 from unittest.mock import patch
 from fetch import load_sent_history, save_sent_history, fetch_all

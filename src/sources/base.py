@@ -44,7 +44,6 @@ class BaseSource(ABC):
         Raise SourceFetchError on unrecoverable failure.
         The pipeline will skip this source and continue with others.
         """
-        ...
 
     def is_configured(self) -> bool:
         """Return False if required credentials are missing.
