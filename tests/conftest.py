@@ -8,9 +8,8 @@ Three stub layers (per FR-006):
 """
 
 import json
-import os
 from pathlib import Path
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
 
 import pytest
 
@@ -109,14 +108,10 @@ def mock_anthropic(monkeypatch):
     monkeypatch.setattr("llm.load_llm_client", lambda: mock_client)
     # Patch in score and summarize modules if already imported
     try:
-        import score
-
         monkeypatch.setattr("score.load_llm_client", lambda: mock_client)
     except Exception:
         pass
     try:
-        import summarize
-
         monkeypatch.setattr("summarize.load_llm_client", lambda: mock_client)
     except Exception:
         pass
